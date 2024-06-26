@@ -177,7 +177,7 @@ interface State {
 export class OuiContextMenu extends Component<OuiContextMenuProps, State> {
   static defaultProps: Partial<OuiContextMenuProps> = {
     panels: [],
-    size: 'm',
+    size: 's',
   };
 
   static getDerivedStateFromProps(

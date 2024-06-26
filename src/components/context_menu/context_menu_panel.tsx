@@ -111,6 +111,7 @@ interface State {
 
 export class OuiContextMenuPanel extends Component<Props, State> {
   static defaultProps: Partial<Props> = {
+    size: 's',
     hasFocus: true,
     items: [],
   };

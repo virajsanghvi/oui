@@ -335,7 +335,7 @@ export class OuiPopover extends Component<Props, State> {
     isOpen: false,
     ownFocus: true,
     anchorPosition: 'downCenter',
-    panelPaddingSize: 'm',
+    panelPaddingSize: 's',
     hasArrow: true,
     display: 'inlineBlock',
   };

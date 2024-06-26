@@ -133,7 +133,8 @@ export const OuiDatePopoverContent: FunctionComponent<OuiDatePopoverContentProps
             }}
             fullWidth
             size="s"
-            fill>
+            //fill
+            >
             Set {position} date and time to now
           </OuiButton>
         </OuiText>

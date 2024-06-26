@@ -17,14 +17,14 @@ $ouiColorGhost: #FCFEFF !default;
 $ouiColorInk: #0A121A !default;
 
 // Core
-$ouiColorPrimary: #07827E !default;
-$ouiColorSecondary: #017D73 !default;
-$ouiColorAccent: #DD0A73 !default;
+$ouiColorPrimary: #006BC2 !default;
+$ouiColorSecondary: #EAF6FD !default;
+$ouiColorAccent: #FF0299 !default;
 
 // Status
-$ouiColorSuccess: $ouiColorSecondary !default;
-$ouiColorWarning: #F5A700 !default;
-$ouiColorDanger: #BD271E !default;
+$ouiColorSuccess: #40C464 !default;
+$ouiColorWarning: #F99D00 !default;
+$ouiColorDanger: #EB364C !default;
 
 // Grays
 $ouiColorEmptyShade: #FCFEFF !default;
@@ -36,14 +36,14 @@ $ouiColorDarkestShade: #2A3947 !default;
 $ouiColorFullShade: #0A1219 !default;
 
 // Backgrounds
-$ouiPageBackgroundColor: #F0F2F4 !default;
+$ouiPageBackgroundColor: #FFFFFF !default;
 $ouiColorHighlight: #FFFCDD !default;
 
 // Every color below must be based mathematically on the set above and in a particular order.
-$ouiTextColor: $ouiColorDarkestShade !default;
+$ouiTextColor: #202F38 !default;
 $ouiTitleColor: shade($ouiTextColor, 50%) !default;
-$ouiTextSubduedColor: makeHighContrastColor($ouiColorMediumShade) !default;
-$ouiColorDisabled: tint($ouiTextColor, 70%) !default;
+$ouiTextSubduedColor: #656F75 !default;
+$ouiColorDisabled: #B0B5B8 !default;
 
 // Contrasty text variants
 $ouiColorPrimaryText: makeHighContrastColor($ouiColorPrimary) !default;

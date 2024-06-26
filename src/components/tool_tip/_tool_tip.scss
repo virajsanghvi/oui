@@ -14,7 +14,7 @@
  */
 
 .ouiToolTip {
-  @include ouiToolTipStyle;
+  @include ouiToolTipStyle('s');
   @include ouiToolTipAnimation('top');
   position: absolute;
   opacity: 0;
@@ -82,51 +82,53 @@
   }
 }
 
+$tooltipTranslateLength: 2px;
+
 // Keyframes to animate in the tooltip.
 @keyframes ouiToolTipTop {
   0% {
     opacity: 0;
-    transform: translateY(-$ouiSize);
+    //transform: translateY(-$tooltipTranslateLength);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
+    //transform: translateY(0);
   }
 }
 
 @keyframes ouiToolTipBottom {
   0% {
     opacity: 0;
-    transform: translateY($ouiSize);
+    //transform: translateY($tooltipTranslateLength);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
+    //transform: translateY(0);
   }
 }
 
 @keyframes ouiToolTipLeft {
   0% {
     opacity: 0;
-    transform: translateX(-$ouiSize);
+    //transform: translateX(-$tooltipTranslateLength);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
+    //transform: translateY(0);
   }
 }
 
 @keyframes ouiToolTipRight {
   0% {
     opacity: 0;
-    transform: translateX($ouiSize);
+    //transform: translateX($tooltipTranslateLength);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
+    //transform: translateY(0);
   }
 }

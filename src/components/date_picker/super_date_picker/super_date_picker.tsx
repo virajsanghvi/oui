@@ -76,6 +76,7 @@ export interface OnRefreshProps extends DurationRange {
 }
 
 export type OuiSuperDatePickerProps = CommonProps & {
+  compressed?: boolean;
   commonlyUsedRanges: DurationRange[];
   customQuickSelectPanels?: QuickSelectPanel[];
 
@@ -188,6 +189,7 @@ export class OuiSuperDatePicker extends Component<
 > {
   static defaultProps = {
     commonlyUsedRanges: commonDurationRanges,
+    compressed: false,
     dateFormat: 'MMM D, YYYY @ HH:mm:ss.SSS',
     end: 'now',
     isAutoRefreshOnly: false,
@@ -520,6 +522,7 @@ export class OuiSuperDatePicker extends Component<
   render() {
     const {
       commonlyUsedRanges,
+      compressed,
       customQuickSelectPanels,
       dateFormat,
       end,
@@ -566,6 +569,7 @@ export class OuiSuperDatePicker extends Component<
           <OuiFormControlLayout
             className="ouiSuperDatePicker"
             isDisabled={isDisabled}
+            compressed={!!compressed}
             prepend={quickSelect}>
             {this.renderDatePickerRange()}
           </OuiFormControlLayout>
