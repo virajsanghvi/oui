@@ -1,7 +1,7 @@
 {
   "name": "@virajsanghvi/oui",
   "description": "shadcn-based OpenSearch UI Component Library",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -26,9 +26,9 @@
   "scripts": {
     "clean": "rm -rf build node_modules dist lib",
     "prebuild": "mkdir -p dist",
-    "build": "tsc && tsc-alias && cp src/styles/preset.css dist/style.css",
+    "build": "tsc && tsc-alias && npx @tailwindcss/cli -i src/styles/preset.css -o dist/style.css",
     "watch": "tsc -w",
-    "prepublishOnly": "npm run build && npm run test",
+    "prepublishOnly": "yarn run build && yarn run test",
     "test": "jest --collectCoverage --collectCoverageFrom=src/**/*.{ts,js} --passWithNoTests"
   },
   "repository": {
@@ -67,6 +67,7 @@
     "@radix-ui/react-toggle": "^1.1.10",
     "@radix-ui/react-toggle-group": "^1.1.11",
     "@radix-ui/react-tooltip": "^1.2.8",
+    "@tailwindcss/cli": "^4.1.13",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",

@@ -11,7 +11,7 @@
     "declarationMap": true,
 
     // re-use info from previous runs to improve performance
-    "incremental": true,
+    //"incremental": true,
 
     // don't allow un-used variables
     "noUnusedLocals": true,
