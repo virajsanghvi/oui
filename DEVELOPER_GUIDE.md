@@ -37,10 +37,15 @@ yarn node --version
 
 ### Start documentation server
 
-You can run the documentation locally at [http://localhost:8030/](http://localhost:8030/) by running the following.
+Make sure dependencies are installed with:
 
 ```
 yarn
+```
+
+You can run the documentation locally at [http://localhost:8030/](http://localhost:8030/) by running the following.
+
+```
 yarn start
 ```
 
@@ -53,6 +58,15 @@ yarn start --port 9000
 
 [CONTRIBUTING.md](CONTRIBUTING.md)
 
+We are in the process of creating a new design system based on shadcn, so old documentation may still be present. Please keep new documentation up to date.
+
+New documentation to follow:
+* [Naming conventions reference](wiki/naming-conventions-reference.md)
+* [Component development](wiki/components.md)
+* [Storybook naming conventions](wiki/storybook-naming-conventions.md)
+* [Storybook template pattern](wiki/storybook-template pattern.md)
+
+Out of date documentation (to be removed/updated):
 * [Component design](wiki/component-design.md)
 * [Component development](wiki/component-development.md)
   * [Creating components manually](wiki/creating-components-manually.md)
