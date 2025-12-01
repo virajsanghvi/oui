@@ -5,9 +5,9 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from '@/components/ui/input-otp';
-import { Button } from '@/components/ui/button';
-import { Label } from '@/components/ui/label';
+} from '@/components';
+import { Button } from '@/components';
+import { Label } from '@/components';
 import { createDocsWithWarning } from './utils/warning-banner';
 import React from 'react';
 

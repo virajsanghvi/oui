@@ -10,10 +10,10 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from '@/components/ui/drawer';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+} from '@/components';
+import { Button } from '@/components';
+import { Input } from '@/components';
+import { Label } from '@/components';
 import { createDocsWithWarning } from './utils/warning-banner';
 
 const meta: Meta<typeof Drawer> = {

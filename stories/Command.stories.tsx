@@ -22,9 +22,9 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from '@/components/ui/command';
+} from '@/components';
 import { createDocsWithWarning } from './utils/warning-banner';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components';
 
 const meta: Meta<typeof Command> = {
   title: 'UI/Command',

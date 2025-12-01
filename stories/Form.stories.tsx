@@ -10,13 +10,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Checkbox } from '@/components/ui/checkbox';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+} from '@/components';
+import { Input } from '@/components';
+import { Button } from '@/components';
+import { Textarea } from '@/components';
+import { Checkbox } from '@/components';
+import { RadioGroup, RadioGroupItem } from '@/components';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components';
 import { createDocsWithWarning } from './utils/warning-banner';
 
 const meta: Meta<typeof Form> = {

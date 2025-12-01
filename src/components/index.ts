@@ -39,6 +39,7 @@ export * from './ui/sidebar';
 export * from './ui/skeleton';
 export * from './ui/slider';
 export * from './ui/sonner';
+export * from './ui/spinner';
 export * from './custom/switch';
 export * from './ui/table';
 export * from './custom/tabs';

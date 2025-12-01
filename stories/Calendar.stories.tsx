@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Calendar } from '@/components/ui/calendar';
+import { Calendar } from '@/components';
 import { createDocsWithWarning } from './utils/warning-banner';
 import { useState } from 'react';
 

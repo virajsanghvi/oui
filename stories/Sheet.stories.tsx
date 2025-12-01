@@ -10,13 +10,13 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components/ui/sheet';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Separator } from '@/components/ui/separator';
+} from '@/components';
+import { Button } from '@/components';
+import { Input } from '@/components';
+import { Label } from '@/components';
+import { Separator } from '@/components';
 import { createDocsWithWarning } from './utils/warning-banner';
-import { Switch } from '@/components/ui/switch';
+import { Switch } from '@/components';
 
 const meta: Meta<typeof Sheet> = {
   title: 'UI/Sheet',

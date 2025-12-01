@@ -1,10 +1,10 @@
 import * as React from "react"
-import { Checkbox as UICheckbox } from "@/components/ui/checkbox"
+import { Checkbox as BaseCheckbox } from "../ui/checkbox"
 import { cn } from "@/lib/utils"
 
-function Checkbox({ className, ...props }: React.ComponentProps<typeof UICheckbox>) {
+function Checkbox({ className, ...props }: React.ComponentProps<typeof BaseCheckbox>) {
   return (
-    <UICheckbox
+    <BaseCheckbox
       className={cn("[&_svg]:!text-white", className)}
       {...props}
     />

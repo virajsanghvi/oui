@@ -4,9 +4,9 @@ import * as React from "react"
 import { Check, ChevronsUpDown, X } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components"
+import { Checkbox } from "@/components"
+import { Badge } from "@/components"
 import {
   Command,
   CommandEmpty,
@@ -15,12 +15,12 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/components/ui/command"
+} from "../ui/command"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "../ui/popover"
 
 export interface ComboboxOption {
   value: string

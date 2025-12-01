@@ -4,10 +4,10 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from '@/components/ui/hover-card';
-import { Button } from '@/components/ui/button';
+} from '@/components';
+import { Button } from '@/components';
 
-import { createDocsWithWarning } from './utils/warning-banner';import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { createDocsWithWarning } from './utils/warning-banner';import { Avatar, AvatarFallback, AvatarImage } from '@/components';
 
 const meta: Meta<typeof HoverCard> = {
   title: 'UI/HoverCard',

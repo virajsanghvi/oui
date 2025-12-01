@@ -32,8 +32,8 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Button } from '@/components/ui/button';
+} from '@/components';
+import { Button } from '@/components';
 import { createDocsWithWarning } from './utils/warning-banner';
 
 const meta: Meta<typeof DropdownMenu> = {

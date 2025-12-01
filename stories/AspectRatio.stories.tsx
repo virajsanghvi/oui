@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { AspectRatio } from '@/components';
 import { createDocsWithWarning } from './utils/warning-banner';
 
 const meta: Meta<typeof AspectRatio> = {

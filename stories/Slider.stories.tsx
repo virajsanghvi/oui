@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { Slider } from '@/components/ui/slider';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Slider } from '@/components';
+import { Label } from '@/components';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components';
 import { createDocsWithWarning } from './utils/warning-banner';
 
 const meta: Meta<typeof Slider> = {

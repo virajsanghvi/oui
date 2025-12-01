@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Label } from '@/components';
+import { Input } from '@/components';
+import { Checkbox } from '@/components';
+import { RadioGroup, RadioGroupItem } from '@/components';
 import { createDocsWithWarning } from './utils/warning-banner';
-import { Switch } from '@/components/ui/switch';
-import { Textarea } from '@/components/ui/textarea';
+import { Switch } from '@/components';
+import { Textarea } from '@/components';
 
 const meta: Meta<typeof Label> = {
   title: 'UI/Label',

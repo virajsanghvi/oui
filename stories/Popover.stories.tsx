@@ -5,13 +5,13 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/components/ui/popover';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Separator } from '@/components/ui/separator';
+} from '@/components';
+import { Button } from '@/components';
+import { Input } from '@/components';
+import { Label } from '@/components';
+import { Separator } from '@/components';
 import { createDocsWithWarning } from './utils/warning-banner';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components';
 
 const meta: Meta<typeof Popover> = {
   title: 'UI/Popover',

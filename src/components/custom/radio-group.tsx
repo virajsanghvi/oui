@@ -2,10 +2,11 @@
 
 import * as React from "react"
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
-import { CircleIcon } from "lucide-react"
+
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
+import { RadioGroup as BaseRadioGroup, RadioGroupItem as BaseRadioGroupItem } from "../ui/radio-group"
 
 const radioGroupVariants = cva("grid", {
   variants: {
@@ -36,13 +37,24 @@ const radioGroupItemVariants = cva(
 
 interface RadioGroupProps
   extends React.ComponentProps<typeof RadioGroupPrimitive.Root>,
-    VariantProps<typeof radioGroupVariants> {}
+  VariantProps<typeof radioGroupVariants> { }
 
 function RadioGroup({
   className,
   variant,
   ...props
 }: RadioGroupProps) {
+  // For default variant, use the base UI component
+  if (variant === "default" || !variant) {
+    return (
+      <BaseRadioGroup
+        className={cn(radioGroupVariants({ variant }), className)}
+        {...props}
+      />
+    )
+  }
+
+  // For custom variants, use the primitive directly
   return (
     <RadioGroupPrimitive.Root
       data-slot="radio-group"
@@ -54,7 +66,7 @@ function RadioGroup({
 
 interface RadioGroupItemProps
   extends React.ComponentProps<typeof RadioGroupPrimitive.Item>,
-    VariantProps<typeof radioGroupItemVariants> {
+  VariantProps<typeof radioGroupItemVariants> {
   children?: React.ReactNode
 }
 
@@ -64,6 +76,7 @@ function RadioGroupItem({
   children,
   ...props
 }: RadioGroupItemProps) {
+  // For box variant, use custom implementation
   if (variant === "box") {
     return (
       <RadioGroupPrimitive.Item
@@ -88,19 +101,12 @@ function RadioGroupItem({
     )
   }
 
+  // For default variant, extend the base UI component
   return (
-    <RadioGroupPrimitive.Item
-      data-slot="radio-group-item"
+    <BaseRadioGroupItem
       className={cn(radioGroupItemVariants({ variant }), className)}
       {...props}
-    >
-      <RadioGroupPrimitive.Indicator
-        data-slot="radio-group-indicator"
-        className="relative flex items-center justify-center"
-      >
-        <CircleIcon className="fill-primary absolute top-1/2 left-1/2 size-2 -translate-x-1/2 -translate-y-1/2" />
-      </RadioGroupPrimitive.Indicator>
-    </RadioGroupPrimitive.Item>
+    />
   )
 }
 

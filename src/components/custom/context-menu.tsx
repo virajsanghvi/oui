@@ -17,7 +17,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger as BaseContextMenuSubTrigger,
   ContextMenuRadioGroup,
-} from "@/components/ui/context-menu"
+} from "../ui/context-menu"
 import { cn } from "@/lib/utils"
 
 // Components that need secondary color overrides

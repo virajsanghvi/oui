@@ -1,16 +1,16 @@
 import { cn } from "@/lib/utils"
 import {
-  ButtonGroup as UIButtonGroup,
+  ButtonGroup as BaseButtonGroup,
   ButtonGroupText,
-  ButtonGroupSeparator as UIButtonGroupSeparator
-} from "@/components/ui/button-group"
+  ButtonGroupSeparator as BaseButtonGroupSeparator
+} from "../ui/button-group"
 
 function ButtonGroup({
   className,
   ...props
 }: React.ComponentProps<"div">) {
   return (
-    <UIButtonGroup
+    <BaseButtonGroup
       orientation="horizontal"
       className={cn(className)}
       {...props}
@@ -21,9 +21,9 @@ function ButtonGroup({
 function ButtonGroupSeparator({
   className,
   ...props
-}: Omit<React.ComponentProps<typeof UIButtonGroupSeparator>, "orientation">) {
+}: Omit<React.ComponentProps<typeof BaseButtonGroupSeparator>, "orientation">) {
   return (
-    <UIButtonGroupSeparator
+    <BaseButtonGroupSeparator
       orientation="vertical"
       className={cn(className)}
       {...props}

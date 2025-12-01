@@ -15,7 +15,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarTrigger,
-} from '@/components/ui/menubar';
+} from '@/components';
 
 const meta: Meta<typeof Menubar> = {
   title: 'UI/Menubar',
