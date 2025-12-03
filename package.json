@@ -14,6 +14,9 @@
     },
     "./style.css": {
       "default": "./dist/style.css"
+    },
+    "./style.scoped.css": {
+      "default": "./dist/style.scoped.css"
     }
   },
   "files": [
@@ -31,7 +34,7 @@
     "clean": "rm -rf build node_modules dist lib",
     "prebuild": "mkdir -p dist",
     "build": "yarn run build:lib && yarn run build:storybook",
-    "build:lib": "tsc && tsc-alias && npx @tailwindcss/cli -i src/styles/preset.css -o dist/style.css",
+    "build:lib": "tsc && tsc-alias && npx @tailwindcss/cli -i src/styles/preset.css -o dist/style.css && npx tsx scripts/scope-css.ts",
     "build:storybook": "storybook build -o ./build/storybook",
     "watch": "tsc -w",
     "prepublishOnly": "yarn run build && yarn run test",
