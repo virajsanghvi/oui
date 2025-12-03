@@ -84,24 +84,24 @@ const invoices = [
 
 export const Default: Story = {
   render: () => (
-    <div className="w-[800px]">
+    <div className="oui:w-[800px]">
       <Table>
         <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">Invoice</TableHead>
+            <TableHead className="oui:w-[100px]">Invoice</TableHead>
             <TableHead>Status</TableHead>
             <TableHead>Method</TableHead>
-            <TableHead className="text-right">Amount</TableHead>
+            <TableHead className="oui:text-right">Amount</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {invoices.map((invoice) => (
             <TableRow key={invoice.invoice}>
-              <TableCell className="font-medium">{invoice.invoice}</TableCell>
+              <TableCell className="oui:font-medium">{invoice.invoice}</TableCell>
               <TableCell>{invoice.paymentStatus}</TableCell>
               <TableCell>{invoice.paymentMethod}</TableCell>
-              <TableCell className="text-right">{invoice.totalAmount}</TableCell>
+              <TableCell className="oui:text-right">{invoice.totalAmount}</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -112,31 +112,31 @@ export const Default: Story = {
 
 export const WithFooter: Story = {
   render: () => (
-    <div className="w-[800px]">
+    <div className="oui:w-[800px]">
       <Table>
         <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">Invoice</TableHead>
+            <TableHead className="oui:w-[100px]">Invoice</TableHead>
             <TableHead>Status</TableHead>
             <TableHead>Method</TableHead>
-            <TableHead className="text-right">Amount</TableHead>
+            <TableHead className="oui:text-right">Amount</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {invoices.slice(0, 5).map((invoice) => (
             <TableRow key={invoice.invoice}>
-              <TableCell className="font-medium">{invoice.invoice}</TableCell>
+              <TableCell className="oui:font-medium">{invoice.invoice}</TableCell>
               <TableCell>{invoice.paymentStatus}</TableCell>
               <TableCell>{invoice.paymentMethod}</TableCell>
-              <TableCell className="text-right">{invoice.totalAmount}</TableCell>
+              <TableCell className="oui:text-right">{invoice.totalAmount}</TableCell>
             </TableRow>
           ))}
         </TableBody>
         <TableFooter>
           <TableRow>
             <TableCell colSpan={3}>Total</TableCell>
-            <TableCell className="text-right">$2,500.00</TableCell>
+            <TableCell className="oui:text-right">$2,500.00</TableCell>
           </TableRow>
         </TableFooter>
       </Table>
@@ -213,11 +213,11 @@ export const WithActions: Story = {
     };
 
     return (
-      <div className="w-[900px]">
+      <div className="oui:w-[900px]">
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[50px]">
+              <TableHead className="oui:w-[50px]">
                 <Checkbox
                   checked={selectedUsers.length === users.length}
                   onCheckedChange={toggleAll}
@@ -229,7 +229,7 @@ export const WithActions: Story = {
               <TableHead>Role</TableHead>
               <TableHead>Status</TableHead>
               <TableHead>Last Login</TableHead>
-              <TableHead className="w-[70px]">Actions</TableHead>
+              <TableHead className="oui:w-[70px]">Actions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -242,7 +242,7 @@ export const WithActions: Story = {
                     aria-label={`Select ${user.name}`}
                   />
                 </TableCell>
-                <TableCell className="font-medium">{user.name}</TableCell>
+                <TableCell className="oui:font-medium">{user.name}</TableCell>
                 <TableCell>{user.email}</TableCell>
                 <TableCell>{user.role}</TableCell>
                 <TableCell>{getStatusBadge(user.status)}</TableCell>
@@ -250,9 +250,9 @@ export const WithActions: Story = {
                 <TableCell>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" className="h-8 w-8 p-0">
-                        <span className="sr-only">Open menu</span>
-                        <MoreHorizontal className="h-4 w-4" />
+                      <Button variant="ghost" className="oui:h-8 oui:w-8 oui:p-0">
+                        <span className="oui:sr-only">Open menu</span>
+                        <MoreHorizontal className="oui:h-4 oui:w-4" />
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
@@ -311,15 +311,15 @@ export const Sortable: Story = {
       <Button
         variant="ghost"
         onClick={() => handleSort(field)}
-        className="h-auto p-0 font-medium hover:bg-transparent"
+        className="oui:h-auto oui:p-0 oui:font-medium oui:hover:bg-transparent"
       >
         {children}
-        <ArrowUpDown className="ml-2 h-4 w-4" />
+        <ArrowUpDown className="oui:ml-2 oui:h-4 oui:w-4" />
       </Button>
     );
 
     return (
-      <div className="w-[800px]">
+      <div className="oui:w-[800px]">
         <Table>
           <TableHeader>
             <TableRow>
@@ -343,7 +343,7 @@ export const Sortable: Story = {
           <TableBody>
             {sortedUsers.map((user) => (
               <TableRow key={user.id}>
-                <TableCell className="font-medium">{user.name}</TableCell>
+                <TableCell className="oui:font-medium">{user.name}</TableCell>
                 <TableCell>{user.email}</TableCell>
                 <TableCell>{user.role}</TableCell>
                 <TableCell>
@@ -370,13 +370,13 @@ export const Sortable: Story = {
 
 export const Showcase: Story = {
   render: () => (
-    <div className="space-y-8">
+    <div className="oui:space-y-8">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Table Examples</h3>
-        <div className="space-y-6">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Table Examples</h3>
+        <div className="oui:space-y-6">
           <div>
-            <p className="text-sm font-medium mb-4">Basic Table</p>
-            <div className="w-[600px]">
+            <p className="oui:text-sm oui:font-medium oui:mb-4">Basic Table</p>
+            <div className="oui:w-[600px]">
               <Table>
                 <TableHeader>
                   <TableRow>
@@ -407,8 +407,8 @@ export const Showcase: Story = {
           </div>
           
           <div>
-            <p className="text-sm font-medium mb-4">With Status Badges</p>
-            <div className="w-[600px]">
+            <p className="oui:text-sm oui:font-medium oui:mb-4">With Status Badges</p>
+            <div className="oui:w-[600px]">
               <Table>
                 <TableHeader>
                   <TableRow>

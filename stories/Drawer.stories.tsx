@@ -52,13 +52,13 @@ export const Default: Story = {
             Make changes to your profile here. Click save when you're done.
           </DrawerDescription>
         </DrawerHeader>
-        <div className="p-4 pb-0">
-          <div className="space-y-4">
-            <div className="space-y-2">
+        <div className="oui:p-4 oui:pb-0">
+          <div className="oui:space-y-4">
+            <div className="oui:space-y-2">
               <Label htmlFor="name">Name</Label>
               <Input id="name" placeholder="Enter your name" />
             </div>
-            <div className="space-y-2">
+            <div className="oui:space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input id="email" placeholder="Enter your email" />
             </div>
@@ -89,48 +89,48 @@ export const WithCounter: Story = {
           <Button variant="outline">Set Goal</Button>
         </DrawerTrigger>
         <DrawerContent>
-          <div className="mx-auto w-full max-w-sm">
+          <div className="oui:mx-auto oui:w-full oui:max-w-sm">
             <DrawerHeader>
               <DrawerTitle>Move Goal</DrawerTitle>
               <DrawerDescription>Set your daily activity goal.</DrawerDescription>
             </DrawerHeader>
-            <div className="p-4 pb-0">
-              <div className="flex items-center justify-center space-x-2">
+            <div className="oui:p-4 oui:pb-0">
+              <div className="oui:flex oui:items-center oui:justify-center oui:space-x-2">
                 <Button
                   variant="outline"
                   size="icon"
-                  className="h-8 w-8 shrink-0 rounded-full"
+                  className="oui:h-8 oui:w-8 oui:shrink-0 oui:rounded-full"
                   onClick={() => onClick(-10)}
                   disabled={goal <= 200}
                 >
-                  <Minus className="h-4 w-4" />
-                  <span className="sr-only">Decrease</span>
+                  <Minus className="oui:h-4 oui:w-4" />
+                  <span className="oui:sr-only">Decrease</span>
                 </Button>
-                <div className="flex-1 text-center">
-                  <div className="text-7xl font-bold tracking-tighter">
+                <div className="oui:flex-1 oui:text-center">
+                  <div className="oui:text-7xl oui:font-bold oui:tracking-tighter">
                     {goal}
                   </div>
-                  <div className="text-[0.70rem] uppercase text-muted-foreground">
+                  <div className="oui:text-[0.70rem] uppercase oui:text-muted-foreground">
                     Calories/day
                   </div>
                 </div>
                 <Button
                   variant="outline"
                   size="icon"
-                  className="h-8 w-8 shrink-0 rounded-full"
+                  className="oui:h-8 oui:w-8 oui:shrink-0 oui:rounded-full"
                   onClick={() => onClick(10)}
                   disabled={goal >= 400}
                 >
-                  <Plus className="h-4 w-4" />
-                  <span className="sr-only">Increase</span>
+                  <Plus className="oui:h-4 oui:w-4" />
+                  <span className="oui:sr-only">Increase</span>
                 </Button>
               </div>
-              <div className="mt-3 h-[120px]">
-                <div className="flex h-full items-end justify-center space-x-1">
+              <div className="oui:mt-3 oui:h-[120px]">
+                <div className="oui:flex oui:h-full oui:items-end oui:justify-center oui:space-x-1">
                   {Array.from({ length: 7 }, (_, i) => (
                     <div
                       key={i}
-                      className="bg-muted flex-1 rounded-t-sm"
+                      className="oui:bg-muted oui:flex-1 oui:rounded-t-sm"
                       style={{
                         height: `${Math.max(10, (goal - 200) / 2)}px`,
                       }}
@@ -175,34 +175,34 @@ export const FromTop: Story = {
             You have 3 unread notifications.
           </DrawerDescription>
         </DrawerHeader>
-        <div className="p-4 pb-0">
-          <div className="space-y-4">
-            <div className="flex items-start space-x-4 rounded-md border p-4">
-              <div className="space-y-1">
-                <p className="text-sm font-medium leading-none">
+        <div className="oui:p-4 oui:pb-0">
+          <div className="oui:space-y-4">
+            <div className="oui:flex oui:items-start oui:space-x-4 oui:rounded-md oui:border oui:p-4">
+              <div className="oui:space-y-1">
+                <p className="oui:text-sm oui:font-medium oui:leading-none">
                   New message from John
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Hey, how's the project going?
                 </p>
               </div>
             </div>
-            <div className="flex items-start space-x-4 rounded-md border p-4">
-              <div className="space-y-1">
-                <p className="text-sm font-medium leading-none">
+            <div className="oui:flex oui:items-start oui:space-x-4 oui:rounded-md oui:border oui:p-4">
+              <div className="oui:space-y-1">
+                <p className="oui:text-sm oui:font-medium oui:leading-none">
                   Meeting reminder
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Team standup in 15 minutes
                 </p>
               </div>
             </div>
-            <div className="flex items-start space-x-4 rounded-md border p-4">
-              <div className="space-y-1">
-                <p className="text-sm font-medium leading-none">
+            <div className="oui:flex oui:items-start oui:space-x-4 oui:rounded-md oui:border oui:p-4">
+              <div className="oui:space-y-1">
+                <p className="oui:text-sm oui:font-medium oui:leading-none">
                   System update
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="oui:text-sm oui:text-muted-foreground">
                   New features are now available
                 </p>
               </div>
@@ -236,24 +236,24 @@ export const FromRight: Story = {
             Configure your application settings.
           </DrawerDescription>
         </DrawerHeader>
-        <div className="p-4 pb-0 space-y-4">
-          <div className="space-y-2">
+        <div className="oui:p-4 oui:pb-0 oui:space-y-4">
+          <div className="oui:space-y-2">
             <Label htmlFor="theme">Theme</Label>
-            <select id="theme" className="w-full p-2 border rounded">
+            <select id="theme" className="oui:w-full oui:p-2 oui:border oui:rounded">
               <option>Light</option>
               <option>Dark</option>
               <option>System</option>
             </select>
           </div>
-          <div className="space-y-2">
+          <div className="oui:space-y-2">
             <Label htmlFor="language">Language</Label>
-            <select id="language" className="w-full p-2 border rounded">
+            <select id="language" className="oui:w-full oui:p-2 oui:border oui:rounded">
               <option>English</option>
               <option>Spanish</option>
               <option>French</option>
             </select>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="oui:flex oui:items-center oui:space-x-2">
             <input type="checkbox" id="notifications" />
             <Label htmlFor="notifications">Enable notifications</Label>
           </div>
@@ -271,13 +271,13 @@ export const FromRight: Story = {
 
 export const Showcase: Story = {
   render: () => (
-    <div className="space-y-8">
+    <div className="oui:space-y-8">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Drawer Directions</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Drawer Directions</h3>
+        <div className="oui:grid oui:grid-cols-2 oui:md:grid-cols-4 oui:gap-4">
           <Drawer direction="bottom">
             <DrawerTrigger asChild>
-              <Button variant="outline" className="w-full">
+              <Button variant="outline" className="oui:w-full">
                 From Bottom
               </Button>
             </DrawerTrigger>
@@ -288,8 +288,8 @@ export const Showcase: Story = {
                   This drawer opens from the bottom.
                 </DrawerDescription>
               </DrawerHeader>
-              <div className="p-4">
-                <p className="text-sm text-muted-foreground">
+              <div className="oui:p-4">
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Content goes here...
                 </p>
               </div>
@@ -303,7 +303,7 @@ export const Showcase: Story = {
 
           <Drawer direction="top">
             <DrawerTrigger asChild>
-              <Button variant="outline" className="w-full">
+              <Button variant="outline" className="oui:w-full">
                 From Top
               </Button>
             </DrawerTrigger>
@@ -314,8 +314,8 @@ export const Showcase: Story = {
                   This drawer opens from the top.
                 </DrawerDescription>
               </DrawerHeader>
-              <div className="p-4">
-                <p className="text-sm text-muted-foreground">
+              <div className="oui:p-4">
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Content goes here...
                 </p>
               </div>
@@ -329,7 +329,7 @@ export const Showcase: Story = {
 
           <Drawer direction="left">
             <DrawerTrigger asChild>
-              <Button variant="outline" className="w-full">
+              <Button variant="outline" className="oui:w-full">
                 From Left
               </Button>
             </DrawerTrigger>
@@ -340,8 +340,8 @@ export const Showcase: Story = {
                   This drawer opens from the left.
                 </DrawerDescription>
               </DrawerHeader>
-              <div className="p-4">
-                <p className="text-sm text-muted-foreground">
+              <div className="oui:p-4">
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Content goes here...
                 </p>
               </div>
@@ -355,7 +355,7 @@ export const Showcase: Story = {
 
           <Drawer direction="right">
             <DrawerTrigger asChild>
-              <Button variant="outline" className="w-full">
+              <Button variant="outline" className="oui:w-full">
                 From Right
               </Button>
             </DrawerTrigger>
@@ -366,8 +366,8 @@ export const Showcase: Story = {
                   This drawer opens from the right.
                 </DrawerDescription>
               </DrawerHeader>
-              <div className="p-4">
-                <p className="text-sm text-muted-foreground">
+              <div className="oui:p-4">
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Content goes here...
                 </p>
               </div>

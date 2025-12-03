@@ -29,13 +29,13 @@ function PaginationLink({
       data-active={isActive}
       className={cn(
         // Base styling with rounded rectangle shape (not circular)
-        "inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+        "oui:inline-flex oui:items-center oui:justify-center oui:whitespace-nowrap oui:text-sm oui:font-medium oui:transition-colors oui:focus-visible:outline-none oui:focus-visible:ring-1 oui:focus-visible:ring-ring oui:disabled:pointer-events-none oui:disabled:opacity-50",
         // Size variants - using rounded-md for rectangular shape
-        size === "icon" ? "size-9 rounded-md" : "h-9 px-4 py-2 rounded-md",
+        size === "icon" ? "oui:size-9 oui:rounded-md" : "oui:h-9 oui:px-4 oui:py-2 oui:rounded-md",
         // Custom pagination styling to match Figma design
         isActive
-          ? "bg-slate-50 border border-slate-200 text-slate-950 hover:bg-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:text-slate-50"
-          : "text-slate-950 hover:bg-slate-100 hover:text-slate-950 dark:text-slate-50 dark:hover:bg-slate-800",
+          ? "oui:bg-slate-50 oui:border oui:border-slate-200 oui:text-slate-950 oui:hover:bg-slate-100 oui:dark:bg-slate-800 oui:dark:border-slate-700 oui:dark:text-slate-50"
+          : "oui:text-slate-950 oui:hover:bg-slate-100 oui:hover:text-slate-950 oui:dark:text-slate-50 oui:dark:hover:bg-slate-800",
         className
       )}
       {...props}
@@ -51,11 +51,11 @@ function PaginationPrevious({
     <PaginationLink
       aria-label="Go to previous page"
       size="default"
-      className={cn("gap-1 px-2.5 sm:pl-2.5", className)}
+      className={cn("oui:gap-1 oui:px-2.5 oui:sm:pl-2.5", className)}
       {...props}
     >
-      <ChevronLeftIcon className="size-4" />
-      <span className="hidden sm:block">Previous</span>
+      <ChevronLeftIcon className="oui:size-4" />
+      <span className="oui:hidden oui:sm:block">Previous</span>
     </PaginationLink>
   )
 }
@@ -68,11 +68,11 @@ function PaginationNext({
     <PaginationLink
       aria-label="Go to next page"
       size="default"
-      className={cn("gap-1 px-2.5 sm:pr-2.5", className)}
+      className={cn("oui:gap-1 oui:px-2.5 oui:sm:pr-2.5", className)}
       {...props}
     >
-      <span className="hidden sm:block">Next</span>
-      <ChevronRightIcon className="size-4" />
+      <span className="oui:hidden oui:sm:block">Next</span>
+      <ChevronRightIcon className="oui:size-4" />
     </PaginationLink>
   )
 }
@@ -85,7 +85,7 @@ function PaginationEllipsis({
 }: React.ComponentProps<typeof BasePaginationEllipsis>) {
   return (
     <BasePaginationEllipsis
-      className={cn("text-slate-950 dark:text-slate-50", className)}
+      className={cn("oui:text-slate-950 oui:dark:text-slate-50", className)}
       {...props}
     />
   )

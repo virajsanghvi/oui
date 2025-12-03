@@ -21,12 +21,12 @@ type Story = StoryObj<typeof meta>;
 // Single comprehensive showcase story
 export const ToastShowcase: Story = {
   render: () => (
-    <div className="space-y-8 max-w-4xl">
+    <div className="oui:space-y-8 oui:max-w-4xl">
       <Toaster />
 
       <div>
-        <h3 className="text-lg font-semibold mb-4">Toast Types</h3>
-        <div className="flex flex-wrap gap-4">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Toast Types</h3>
+        <div className="oui:flex oui:flex-wrap oui:gap-4">
           <Button
             onClick={() => toast('Changes saved successfully')}
           >
@@ -64,8 +64,8 @@ export const ToastShowcase: Story = {
       </div>
 
       <div>
-        <h3 className="text-lg font-semibold mb-4">Advanced Features</h3>
-        <div className="flex flex-wrap gap-4">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Advanced Features</h3>
+        <div className="oui:flex oui:flex-wrap oui:gap-4">
           <Button
             onClick={() =>
               toast('Email sent successfully', {
@@ -123,41 +123,41 @@ export const ToastShowcase: Story = {
       </div>
 
       <div>
-        <h3 className="text-lg font-semibold mb-4">Positions</h3>
-        <div className="grid grid-cols-3 gap-4">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Positions</h3>
+        <div className="oui:grid oui:grid-cols-3 oui:gap-4">
           <Button
             size="sm"
-            onClick={() => toast('Top Left', { position: 'top-left' })}
+            onClick={() => toast('Top Left', { position: 'oui:top-left' })}
           >
             Top Left
           </Button>
           <Button
             size="sm"
-            onClick={() => toast('Top Center', { position: 'top-center' })}
+            onClick={() => toast('Top Center', { position: 'oui:top-center' })}
           >
             Top Center
           </Button>
           <Button
             size="sm"
-            onClick={() => toast('Top Right', { position: 'top-right' })}
+            onClick={() => toast('Top Right', { position: 'oui:top-right' })}
           >
             Top Right
           </Button>
           <Button
             size="sm"
-            onClick={() => toast('Bottom Left', { position: 'bottom-left' })}
+            onClick={() => toast('Bottom Left', { position: 'oui:bottom-left' })}
           >
             Bottom Left
           </Button>
           <Button
             size="sm"
-            onClick={() => toast('Bottom Center', { position: 'bottom-center' })}
+            onClick={() => toast('Bottom Center', { position: 'oui:bottom-center' })}
           >
             Bottom Center
           </Button>
           <Button
             size="sm"
-            onClick={() => toast('Bottom Right', { position: 'bottom-right' })}
+            onClick={() => toast('Bottom Right', { position: 'oui:bottom-right' })}
           >
             Bottom Right
           </Button>
@@ -165,8 +165,8 @@ export const ToastShowcase: Story = {
       </div>
 
       <div>
-        <h3 className="text-lg font-semibold mb-4">Real-world Examples</h3>
-        <div className="flex flex-wrap gap-4">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Real-world Examples</h3>
+        <div className="oui:flex oui:flex-wrap oui:gap-4">
           <Button
             onClick={() =>
               toast.success('Event has been created', {
@@ -284,8 +284,8 @@ export const ToastShowcase: Story = {
       </div>
 
       <div>
-        <h3 className="text-lg font-semibold mb-4">Duration & Persistence</h3>
-        <div className="flex flex-wrap gap-4">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Duration & Persistence</h3>
+        <div className="oui:flex oui:flex-wrap oui:gap-4">
           <Button
             onClick={() =>
               toast('Quick message', {

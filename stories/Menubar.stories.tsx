@@ -16,6 +16,7 @@ import {
   MenubarSubTrigger,
   MenubarTrigger,
 } from '@/components';
+import { createDocsWithWarning } from './utils/warning-banner';
 
 const meta: Meta<typeof Menubar> = {
   title: 'UI/Menubar',
@@ -351,12 +352,12 @@ export const MediaPlayer: Story = {
 
 export const Showcase: Story = {
   render: () => (
-    <div className="space-y-8">
+    <div className="oui:space-y-8">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Menubar Examples</h3>
-        <div className="space-y-6">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Menubar Examples</h3>
+        <div className="oui:space-y-6">
           <div>
-            <p className="text-sm font-medium mb-4">Basic Menubar</p>
+            <p className="oui:text-sm oui:font-medium oui:mb-4">Basic Menubar</p>
             <Menubar>
               <MenubarMenu>
                 <MenubarTrigger>File</MenubarTrigger>
@@ -386,7 +387,7 @@ export const Showcase: Story = {
           </div>
           
           <div>
-            <p className="text-sm font-medium mb-4">With Shortcuts</p>
+            <p className="oui:text-sm oui:font-medium oui:mb-4">With Shortcuts</p>
             <Menubar>
               <MenubarMenu>
                 <MenubarTrigger>File</MenubarTrigger>

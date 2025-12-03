@@ -37,7 +37,7 @@ type Story = StoryObj<typeof meta>;
 // Default card with basic structure
 export const Default: Story = {
   render: () => (
-    <Card className="w-[350px]">
+    <Card className="oui:w-[350px]">
       <CardHeader>
         <CardTitle>User Profile</CardTitle>
         <CardDescription>Manage your account settings and preferences</CardDescription>
@@ -55,7 +55,7 @@ export const Default: Story = {
 // Card with action button in header
 export const WithHeaderAction: Story = {
   render: () => (
-    <Card className="w-[400px]">
+    <Card className="oui:w-[400px]">
       <CardHeader>
         <CardTitle>Project Overview</CardTitle>
         <CardDescription>Track progress and manage project tasks</CardDescription>
@@ -64,22 +64,22 @@ export const WithHeaderAction: Story = {
         </CardAction>
       </CardHeader>
       <CardContent>
-        <div className="space-y-2">
-          <div className="flex justify-between">
+        <div className="oui:space-y-2">
+          <div className="oui:flex oui:justify-between">
             <span>Tasks Completed</span>
-            <span className="font-medium">24/30</span>
+            <span className="oui:font-medium">24/30</span>
           </div>
-          <div className="flex justify-between">
+          <div className="oui:flex oui:justify-between">
             <span>Team Members</span>
-            <span className="font-medium">8</span>
+            <span className="oui:font-medium">8</span>
           </div>
-          <div className="flex justify-between">
+          <div className="oui:flex oui:justify-between">
             <span>Due Date</span>
-            <span className="font-medium">March 15, 2024</span>
+            <span className="oui:font-medium">March 15, 2024</span>
           </div>
         </div>
       </CardContent>
-      <CardFooter className="gap-2">
+      <CardFooter className="oui:gap-2">
         <Button>View Details</Button>
         <Button variant="outline">Share Project</Button>
       </CardFooter>
@@ -90,13 +90,13 @@ export const WithHeaderAction: Story = {
 // Simple card with minimal content
 export const Simple: Story = {
   render: () => (
-    <Card className="w-[300px]">
+    <Card className="oui:w-[300px]">
       <CardHeader>
         <CardTitle>Quick Stats</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="text-2xl font-bold">1,234</div>
-        <p className="text-sm text-muted-foreground">Total users this month</p>
+        <div className="oui:text-2xl oui:font-bold">1,234</div>
+        <p className="oui:text-sm oui:text-muted-foreground">Total users this month</p>
       </CardContent>
     </Card>
   ),
@@ -105,14 +105,14 @@ export const Simple: Story = {
 // Card with rich content and multiple actions
 export const RichContent: Story = {
   render: () => (
-    <Card className="w-[450px]">
+    <Card className="oui:w-[450px]">
       <CardHeader>
         <CardTitle>Team Collaboration</CardTitle>
         <CardDescription>Streamline your team's workflow and communication</CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
-        <div className="flex items-center space-x-4">
-          <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+      <CardContent className="oui:space-y-4">
+        <div className="oui:flex oui:items-center oui:space-x-4">
+          <div className="oui:w-12 oui:h-12 oui:bg-primary/10 oui:rounded-full oui:flex oui:items-center oui:justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -131,12 +131,12 @@ export const RichContent: Story = {
             </svg>
           </div>
           <div>
-            <h4 className="font-semibold">Enhanced Collaboration</h4>
-            <p className="text-sm text-muted-foreground">Real-time editing and commenting</p>
+            <h4 className="oui:font-semibold">Enhanced Collaboration</h4>
+            <p className="oui:text-sm oui:text-muted-foreground">Real-time editing and commenting</p>
           </div>
         </div>
-        <div className="flex items-center space-x-4">
-          <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+        <div className="oui:flex oui:items-center oui:space-x-4">
+          <div className="oui:w-12 oui:h-12 oui:bg-primary/10 oui:rounded-full oui:flex oui:items-center oui:justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -152,12 +152,12 @@ export const RichContent: Story = {
             </svg>
           </div>
           <div>
-            <h4 className="font-semibold">Advanced Analytics</h4>
-            <p className="text-sm text-muted-foreground">Track performance and insights</p>
+            <h4 className="oui:font-semibold">Advanced Analytics</h4>
+            <p className="oui:text-sm oui:text-muted-foreground">Track performance and insights</p>
           </div>
         </div>
       </CardContent>
-      <CardFooter className="gap-2">
+      <CardFooter className="oui:gap-2">
         <Button>Get Started</Button>
         <Button variant="outline">Learn More</Button>
       </CardFooter>
@@ -168,33 +168,33 @@ export const RichContent: Story = {
 // Card with form-like content
 export const FormCard: Story = {
   render: () => (
-    <Card className="w-[400px]">
+    <Card className="oui:w-[400px]">
       <CardHeader>
         <CardTitle>Account Settings</CardTitle>
         <CardDescription>Update your account information and preferences</CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Email Address</label>
-          <div className="p-2 border rounded-md bg-muted/50">
+      <CardContent className="oui:space-y-4">
+        <div className="oui:space-y-2">
+          <label className="oui:text-sm oui:font-medium">Email Address</label>
+          <div className="oui:p-2 oui:border oui:rounded-md oui:bg-muted/50">
             john.doe@company.com
           </div>
         </div>
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Notification Preferences</label>
-          <div className="space-y-2">
-            <div className="flex items-center space-x-2">
+        <div className="oui:space-y-2">
+          <label className="oui:text-sm oui:font-medium">Notification Preferences</label>
+          <div className="oui:space-y-2">
+            <div className="oui:flex oui:items-center oui:space-x-2">
               <input type="checkbox" id="email-notifications" defaultChecked />
-              <label htmlFor="email-notifications" className="text-sm">Email notifications</label>
+              <label htmlFor="email-notifications" className="oui:text-sm">Email notifications</label>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="oui:flex oui:items-center oui:space-x-2">
               <input type="checkbox" id="push-notifications" />
-              <label htmlFor="push-notifications" className="text-sm">Push notifications</label>
+              <label htmlFor="push-notifications" className="oui:text-sm">Push notifications</label>
             </div>
           </div>
         </div>
       </CardContent>
-      <CardFooter className="gap-2">
+      <CardFooter className="oui:gap-2">
         <Button>Save Changes</Button>
         <Button variant="outline">Cancel</Button>
       </CardFooter>
@@ -205,28 +205,28 @@ export const FormCard: Story = {
 // Card with bordered sections
 export const WithBorders: Story = {
   render: () => (
-    <Card className="w-[350px]">
-      <CardHeader className="border-b">
+    <Card className="oui:w-[350px]">
+      <CardHeader className="oui:border-b">
         <CardTitle>System Status</CardTitle>
         <CardDescription>Current system health and performance</CardDescription>
       </CardHeader>
-      <CardContent className="space-y-3">
-        <div className="flex justify-between items-center">
+      <CardContent className="oui:space-y-3">
+        <div className="oui:flex oui:justify-between oui:items-center">
           <span>API Status</span>
-          <span className="text-green-600 font-medium">Operational</span>
+          <span className="oui:text-green-600 oui:font-medium">Operational</span>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="oui:flex oui:justify-between oui:items-center">
           <span>Database</span>
-          <span className="text-green-600 font-medium">Healthy</span>
+          <span className="oui:text-green-600 oui:font-medium">Healthy</span>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="oui:flex oui:justify-between oui:items-center">
           <span>Response Time</span>
-          <span className="font-medium">142ms</span>
+          <span className="oui:font-medium">142ms</span>
         </div>
       </CardContent>
-      <CardFooter className="border-t gap-2">
-        <Button variant="outline" className="flex-1">View Details</Button>
-        <Button variant="outline" className="flex-1">Refresh</Button>
+      <CardFooter className="oui:border-t oui:gap-2">
+        <Button variant="outline" className="oui:flex-1">View Details</Button>
+        <Button variant="outline" className="oui:flex-1">Refresh</Button>
       </CardFooter>
     </Card>
   ),
@@ -235,7 +235,7 @@ export const WithBorders: Story = {
 // Showcase story displaying different card layouts
 export const AllLayouts: Story = {
   render: () => (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
+    <div className="oui:grid oui:grid-cols-1 oui:md:grid-cols-2 oui:lg:grid-cols-3 oui:gap-6 oui:max-w-6xl">
       {/* Simple card */}
       <Card>
         <CardHeader>
@@ -276,13 +276,13 @@ export const AllLayouts: Story = {
 
       {/* Card with borders */}
       <Card>
-        <CardHeader className="border-b">
+        <CardHeader className="oui:border-b">
           <CardTitle>With Borders</CardTitle>
         </CardHeader>
         <CardContent>
           <p>Sections separated by borders.</p>
         </CardContent>
-        <CardFooter className="border-t">
+        <CardFooter className="oui:border-t">
           <Button variant="outline" size="sm">View</Button>
         </CardFooter>
       </Card>
@@ -294,15 +294,15 @@ export const AllLayouts: Story = {
           <CardDescription>Complex layout example</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-primary/10 rounded-full"></div>
+          <div className="oui:flex oui:items-center oui:gap-3">
+            <div className="oui:w-8 oui:h-8 oui:bg-primary/10 oui:rounded-full"></div>
             <div>
-              <p className="font-medium">Feature</p>
-              <p className="text-sm text-muted-foreground">Description</p>
+              <p className="oui:font-medium">Feature</p>
+              <p className="oui:text-sm oui:text-muted-foreground">Description</p>
             </div>
           </div>
         </CardContent>
-        <CardFooter className="gap-2">
+        <CardFooter className="oui:gap-2">
           <Button size="sm">Primary</Button>
           <Button variant="outline" size="sm">Secondary</Button>
         </CardFooter>
@@ -314,8 +314,8 @@ export const AllLayouts: Story = {
           <CardTitle>Statistics</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-3xl font-bold">2,847</div>
-          <p className="text-sm text-muted-foreground">Active users</p>
+          <div className="oui:text-3xl oui:font-bold">2,847</div>
+          <p className="oui:text-sm oui:text-muted-foreground">Active users</p>
         </CardContent>
       </Card>
 
@@ -324,9 +324,9 @@ export const AllLayouts: Story = {
         <CardHeader>
           <CardTitle>Server Monitor</CardTitle>
         </CardHeader>
-        <CardContent className="p-0">
-          <div className="aspect-video w-full bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
-            <div className="text-white text-center">
+        <CardContent className="oui:p-0">
+          <div className="oui:aspect-video oui:w-full oui:bg-gradient-to-br oui:from-green-500 oui:to-blue-600 oui:flex oui:items-center oui:justify-center">
+            <div className="oui:text-white oui:text-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -337,17 +337,17 @@ export const AllLayouts: Story = {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="mx-auto mb-1"
+                className="oui:mx-auto oui:mb-1"
               >
                 <path d="M3 3v18h18" />
                 <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" />
               </svg>
-              <p className="text-xs opacity-90">Chart</p>
+              <p className="oui:text-xs oui:opacity-90">Chart</p>
             </div>
           </div>
         </CardContent>
         <CardContent>
-          <p className="text-sm">Performance monitoring with charts.</p>
+          <p className="oui:text-sm">Performance monitoring with charts.</p>
         </CardContent>
         <CardFooter>
           <Button size="sm">View</Button>
@@ -370,7 +370,7 @@ export const Interactive: Story = {
     const [isExpanded, setIsExpanded] = React.useState(false);
     
     return (
-      <Card className="w-[400px]">
+      <Card className="oui:w-[400px]">
         <CardHeader>
           <CardTitle>Expandable Content</CardTitle>
           <CardDescription>Click to expand and see more details</CardDescription>
@@ -387,9 +387,9 @@ export const Interactive: Story = {
         <CardContent>
           <p>This card demonstrates interactive behavior.</p>
           {isExpanded && (
-            <div className="mt-4 p-3 bg-muted/50 rounded-md">
-              <h4 className="font-medium mb-2">Additional Details</h4>
-              <p className="text-sm text-muted-foreground">
+            <div className="oui:mt-4 oui:p-3 oui:bg-muted/50 oui:rounded-md">
+              <h4 className="oui:font-medium oui:mb-2">Additional Details</h4>
+              <p className="oui:text-sm oui:text-muted-foreground">
                 This expanded section shows how cards can contain dynamic content 
                 that responds to user interactions. You can include forms, lists, 
                 or any other content that enhances the user experience.
@@ -417,14 +417,14 @@ export const Interactive: Story = {
 // Card with image content
 export const WithImage: Story = {
   render: () => (
-    <Card className="w-[350px]">
+    <Card className="oui:w-[350px]">
       <CardHeader>
         <CardTitle>Server Performance</CardTitle>
         <CardDescription>Real-time monitoring dashboard for production servers</CardDescription>
       </CardHeader>
-      <CardContent className="p-0">
-        <div className="aspect-video w-full bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
-          <div className="text-white text-center">
+      <CardContent className="oui:p-0">
+        <div className="oui:aspect-video oui:w-full oui:bg-gradient-to-br oui:from-green-500 oui:to-blue-600 oui:flex oui:items-center oui:justify-center">
+          <div className="oui:text-white oui:text-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="48"
@@ -435,41 +435,41 @@ export const WithImage: Story = {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="mx-auto mb-2"
+              className="oui:mx-auto oui:mb-2"
             >
               <path d="M3 3v18h18" />
               <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" />
             </svg>
-            <p className="text-sm opacity-90">Performance Chart</p>
+            <p className="oui:text-sm oui:opacity-90">Performance Chart</p>
           </div>
         </div>
       </CardContent>
       <CardContent>
-        <div className="space-y-3">
-          <div className="flex justify-between items-center">
+        <div className="oui:space-y-3">
+          <div className="oui:flex oui:justify-between oui:items-center">
             <span>CPU Usage</span>
-            <span className="font-medium text-green-600">23%</span>
+            <span className="oui:font-medium oui:text-green-600">23%</span>
           </div>
-          <div className="flex justify-between items-center">
+          <div className="oui:flex oui:justify-between oui:items-center">
             <span>Memory</span>
-            <span className="font-medium text-yellow-600">67%</span>
+            <span className="oui:font-medium oui:text-yellow-600">67%</span>
           </div>
-          <div className="flex justify-between items-center">
+          <div className="oui:flex oui:justify-between oui:items-center">
             <span>Disk I/O</span>
-            <span className="font-medium text-green-600">12%</span>
+            <span className="oui:font-medium oui:text-green-600">12%</span>
           </div>
-          <div className="flex justify-between items-center">
+          <div className="oui:flex oui:justify-between oui:items-center">
             <span>Network</span>
-            <span className="font-medium text-green-600">8.2 MB/s</span>
+            <span className="oui:font-medium oui:text-green-600">8.2 MB/s</span>
           </div>
-          <div className="flex items-center gap-2 pt-2">
-            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-            <span className="text-sm text-muted-foreground">All systems operational</span>
+          <div className="oui:flex oui:items-center oui:gap-2 oui:pt-2">
+            <div className="oui:w-2 oui:h-2 oui:bg-green-500 oui:rounded-full"></div>
+            <span className="oui:text-sm oui:text-muted-foreground">All systems operational</span>
           </div>
         </div>
       </CardContent>
-      <CardFooter className="gap-2">
-        <Button className="flex-1">View Details</Button>
+      <CardFooter className="oui:gap-2">
+        <Button className="oui:flex-1">View Details</Button>
         <Button variant="outline" size="icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"

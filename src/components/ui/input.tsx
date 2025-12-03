@@ -8,9 +8,9 @@ function Input({ className, type, ...props }: React.ComponentProps<"input">) {
       type={type}
       data-slot="input"
       className={cn(
-        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-        "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+        "oui:file:text-foreground oui:placeholder:text-muted-foreground oui:selection:bg-primary oui:selection:text-primary-foreground oui:dark:bg-input/30 oui:border-input oui:h-9 oui:w-full oui:min-w-0 oui:rounded-md oui:border oui:bg-transparent oui:px-3 oui:py-1 oui:text-base oui:shadow-xs oui:transition-[color,box-shadow] oui:outline-none oui:file:inline-flex oui:file:h-7 oui:file:border-0 oui:file:bg-transparent oui:file:text-sm oui:file:font-medium oui:disabled:pointer-events-none oui:disabled:cursor-not-allowed oui:disabled:opacity-50 oui:md:text-sm",
+        "oui:focus-visible:border-ring oui:focus-visible:ring-ring/50 oui:focus-visible:ring-[3px]",
+        "oui:aria-invalid:ring-destructive/20 oui:dark:aria-invalid:ring-destructive/40 oui:aria-invalid:border-destructive",
         className
       )}
       {...props}

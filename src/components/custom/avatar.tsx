@@ -9,8 +9,8 @@ const avatarVariants = cva(
   {
     variants: {
       variant: {
-        circular: "rounded-full",
-        squared: "rounded-lg",
+        circular: "oui:rounded-full",
+        squared: "oui:rounded-lg",
       },
     },
     defaultVariants: {

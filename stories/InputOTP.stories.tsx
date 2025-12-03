@@ -43,8 +43,8 @@ export const Default: Story = {
     const [value, setValue] = useState("");
 
     return (
-      <div className="space-y-4">
-        <div className="space-y-2">
+      <div className="oui:space-y-4">
+        <div className="oui:space-y-2">
           <Label htmlFor="otp">One-Time Password</Label>
           <InputOTP
             id="otp"
@@ -63,7 +63,7 @@ export const Default: Story = {
             </InputOTPGroup>
           </InputOTP>
         </div>
-        <div className="text-center text-sm">
+        <div className="oui:text-center oui:text-sm">
           {value === "" ? (
             <>Enter your one-time password.</>
           ) : (
@@ -80,8 +80,8 @@ export const WithSeparator: Story = {
     const [value, setValue] = useState("");
 
     return (
-      <div className="space-y-4">
-        <div className="space-y-2">
+      <div className="oui:space-y-4">
+        <div className="oui:space-y-2">
           <Label htmlFor="otp-separator">Verification Code</Label>
           <InputOTP
             id="otp-separator"
@@ -103,7 +103,7 @@ export const WithSeparator: Story = {
             </InputOTPGroup>
           </InputOTP>
         </div>
-        <div className="text-center text-sm text-muted-foreground">
+        <div className="oui:text-center oui:text-sm oui:text-muted-foreground">
           Please enter the 6-digit code sent to your phone.
         </div>
       </div>
@@ -126,8 +126,8 @@ export const FourDigit: Story = {
     const [value, setValue] = useState("");
 
     return (
-      <div className="space-y-4">
-        <div className="space-y-2">
+      <div className="oui:space-y-4">
+        <div className="oui:space-y-2">
           <Label htmlFor="otp-four">PIN Code</Label>
           <InputOTP
             id="otp-four"
@@ -144,7 +144,7 @@ export const FourDigit: Story = {
             </InputOTPGroup>
           </InputOTP>
         </div>
-        <div className="text-center text-sm text-muted-foreground">
+        <div className="oui:text-center oui:text-sm oui:text-muted-foreground">
           Enter your 4-digit PIN.
         </div>
       </div>
@@ -176,17 +176,17 @@ export const TwoFactor: Story = {
     };
 
     return (
-      <div className="w-[350px] space-y-6">
-        <div className="space-y-2 text-center">
-          <h3 className="text-lg font-semibold">Two-Factor Authentication</h3>
-          <p className="text-sm text-muted-foreground">
+      <div className="oui:w-[350px] oui:space-y-6">
+        <div className="oui:space-y-2 oui:text-center">
+          <h3 className="oui:text-lg oui:font-semibold">Two-Factor Authentication</h3>
+          <p className="oui:text-sm oui:text-muted-foreground">
             We sent a verification code to your authenticator app.
           </p>
         </div>
         
-        <div className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="otp-2fa" className="sr-only">
+        <div className="oui:space-y-4">
+          <div className="oui:space-y-2">
+            <Label htmlFor="otp-2fa" className="oui:sr-only">
               Verification code
             </Label>
             <InputOTP
@@ -214,13 +214,13 @@ export const TwoFactor: Story = {
           <Button 
             onClick={handleSubmit} 
             disabled={value.length !== 6 || isSubmitting}
-            className="w-full"
+            className="oui:w-full"
           >
             {isSubmitting ? "Verifying..." : "Verify Code"}
           </Button>
           
-          <div className="text-center">
-            <Button variant="link" className="text-sm">
+          <div className="oui:text-center">
+            <Button variant="link" className="oui:text-sm">
               Didn't receive a code? Resend
             </Button>
           </div>
@@ -250,15 +250,15 @@ export const PhoneVerification: Story = {
     }, [timeLeft]);
 
     return (
-      <div className="w-[400px] space-y-6">
-        <div className="space-y-2 text-center">
-          <h3 className="text-lg font-semibold">Verify Your Phone Number</h3>
-          <p className="text-sm text-muted-foreground">
+      <div className="oui:w-[400px] oui:space-y-6">
+        <div className="oui:space-y-2 oui:text-center">
+          <h3 className="oui:text-lg oui:font-semibold">Verify Your Phone Number</h3>
+          <p className="oui:text-sm oui:text-muted-foreground">
             Enter the 6-digit code sent to +1 (555) 123-4567
           </p>
         </div>
         
-        <div className="space-y-4">
+        <div className="oui:space-y-4">
           <InputOTP
             maxLength={6}
             value={value}
@@ -275,13 +275,13 @@ export const PhoneVerification: Story = {
             </InputOTPGroup>
           </InputOTP>
           
-          <div className="flex items-center justify-between text-sm">
-            <span className="text-muted-foreground">
+          <div className="oui:flex oui:items-center oui:justify-between oui:text-sm">
+            <span className="oui:text-muted-foreground">
               {timeLeft > 0 ? `Resend code in ${timeLeft}s` : "Code expired"}
             </span>
             <Button 
               variant="link" 
-              className="p-0 h-auto text-sm"
+              className="oui:p-0 oui:h-auto oui:text-sm"
               disabled={timeLeft > 0}
               onClick={() => setTimeLeft(60)}
             >
@@ -291,7 +291,7 @@ export const PhoneVerification: Story = {
           
           <Button 
             disabled={value.length !== 6}
-            className="w-full"
+            className="oui:w-full"
           >
             Verify Phone Number
           </Button>
@@ -315,12 +315,12 @@ export const Showcase: Story = {
     const [value3, setValue3] = useState("");
 
     return (
-      <div className="space-y-8">
+      <div className="oui:space-y-8">
         <div>
-          <h3 className="text-lg font-semibold mb-4">OTP Input Examples</h3>
-          <div className="space-y-6">
+          <h3 className="oui:text-lg oui:font-semibold oui:mb-4">OTP Input Examples</h3>
+          <div className="oui:space-y-6">
             <div>
-              <p className="text-sm font-medium mb-2">Basic 6-digit OTP</p>
+              <p className="oui:text-sm oui:font-medium oui:mb-2">Basic 6-digit OTP</p>
               <InputOTP maxLength={6} value={value1} onChange={setValue1}>
                 <InputOTPGroup>
                   <InputOTPSlot index={0} />
@@ -334,7 +334,7 @@ export const Showcase: Story = {
             </div>
             
             <div>
-              <p className="text-sm font-medium mb-2">With Separator</p>
+              <p className="oui:text-sm oui:font-medium oui:mb-2">With Separator</p>
               <InputOTP maxLength={6} value={value2} onChange={setValue2}>
                 <InputOTPGroup>
                   <InputOTPSlot index={0} />
@@ -351,7 +351,7 @@ export const Showcase: Story = {
             </div>
             
             <div>
-              <p className="text-sm font-medium mb-2">4-digit PIN</p>
+              <p className="oui:text-sm oui:font-medium oui:mb-2">4-digit PIN</p>
               <InputOTP maxLength={4} value={value3} onChange={setValue3}>
                 <InputOTPGroup>
                   <InputOTPSlot index={0} />

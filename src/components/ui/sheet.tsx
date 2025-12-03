@@ -34,7 +34,7 @@ function SheetOverlay({
     <SheetPrimitive.Overlay
       data-slot="sheet-overlay"
       className={cn(
-        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50",
+        "oui:data-[state=open]:animate-in oui:data-[state=closed]:animate-out oui:data-[state=closed]:fade-out-0 oui:data-[state=open]:fade-in-0 oui:fixed oui:inset-0 oui:z-50 oui:bg-black/50",
         className
       )}
       {...props}
@@ -56,23 +56,23 @@ function SheetContent({
       <SheetPrimitive.Content
         data-slot="sheet-content"
         className={cn(
-          "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out fixed z-50 flex flex-col gap-4 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
+          "oui:bg-background oui:data-[state=open]:animate-in oui:data-[state=closed]:animate-out oui:fixed oui:z-50 oui:flex oui:flex-col oui:gap-4 oui:shadow-lg oui:transition oui:ease-in-out oui:data-[state=closed]:duration-300 oui:data-[state=open]:duration-500",
           side === "right" &&
-            "data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right inset-y-0 right-0 h-full w-3/4 border-l sm:max-w-sm",
+            "oui:data-[state=closed]:slide-out-to-right oui:data-[state=open]:slide-in-from-right oui:inset-y-0 oui:right-0 oui:h-full oui:w-3/4 oui:border-l oui:sm:max-w-sm",
           side === "left" &&
-            "data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left inset-y-0 left-0 h-full w-3/4 border-r sm:max-w-sm",
+            "oui:data-[state=closed]:slide-out-to-left oui:data-[state=open]:slide-in-from-left oui:inset-y-0 oui:left-0 oui:h-full oui:w-3/4 oui:border-r oui:sm:max-w-sm",
           side === "top" &&
-            "data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top inset-x-0 top-0 h-auto border-b",
+            "oui:data-[state=closed]:slide-out-to-top oui:data-[state=open]:slide-in-from-top oui:inset-x-0 oui:top-0 oui:h-auto oui:border-b",
           side === "bottom" &&
-            "data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom inset-x-0 bottom-0 h-auto border-t",
+            "oui:data-[state=closed]:slide-out-to-bottom oui:data-[state=open]:slide-in-from-bottom oui:inset-x-0 oui:bottom-0 oui:h-auto oui:border-t",
           className
         )}
         {...props}
       >
         {children}
-        <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none">
-          <XIcon className="size-4" />
-          <span className="sr-only">Close</span>
+        <SheetPrimitive.Close className="oui:ring-offset-background oui:focus:ring-ring oui:data-[state=open]:bg-secondary oui:absolute oui:top-4 oui:right-4 oui:rounded-xs oui:opacity-70 oui:transition-opacity oui:hover:opacity-100 oui:focus:ring-2 oui:focus:ring-offset-2 oui:focus:outline-hidden oui:disabled:pointer-events-none">
+          <XIcon className="oui:size-4" />
+          <span className="oui:sr-only">Close</span>
         </SheetPrimitive.Close>
       </SheetPrimitive.Content>
     </SheetPortal>
@@ -83,7 +83,7 @@ function SheetHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="sheet-header"
-      className={cn("flex flex-col gap-1.5 p-4", className)}
+      className={cn("oui:flex oui:flex-col oui:gap-1.5 oui:p-4", className)}
       {...props}
     />
   )
@@ -93,7 +93,7 @@ function SheetFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="sheet-footer"
-      className={cn("mt-auto flex flex-col gap-2 p-4", className)}
+      className={cn("oui:mt-auto oui:flex oui:flex-col oui:gap-2 oui:p-4", className)}
       {...props}
     />
   )
@@ -106,7 +106,7 @@ function SheetTitle({
   return (
     <SheetPrimitive.Title
       data-slot="sheet-title"
-      className={cn("text-foreground font-semibold", className)}
+      className={cn("oui:text-foreground oui:font-semibold", className)}
       {...props}
     />
   )
@@ -119,7 +119,7 @@ function SheetDescription({
   return (
     <SheetPrimitive.Description
       data-slot="sheet-description"
-      className={cn("text-muted-foreground text-sm", className)}
+      className={cn("oui:text-muted-foreground oui:text-sm", className)}
       {...props}
     />
   )

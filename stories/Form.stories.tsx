@@ -43,7 +43,7 @@ const profileFormSchema = z.object({
   urls: z
     .array(
       z.object({
-        value: z.string().url({ message: "Please enter a valid URL." }),
+        value: z.string().url({ message: "Please enter a oui:valid URL." }),
       })
     )
     .optional(),
@@ -67,9 +67,9 @@ export const Default: Story = {
     }
 
     return (
-      <div className="w-[400px]">
+      <div className="oui:w-[400px]">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="oui:space-y-8">
             <FormField
               control={form.control}
               name="username"
@@ -111,7 +111,7 @@ export const Default: Story = {
                   <FormControl>
                     <Textarea
                       placeholder="Tell us a little bit about yourself"
-                      className="resize-none"
+                      className="oui:resize-none"
                       {...field}
                     />
                   </FormControl>
@@ -158,9 +158,9 @@ export const WithSelectAndCheckbox: Story = {
     }
 
     return (
-      <div className="w-[400px]">
+      <div className="oui:w-[400px]">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="oui:space-y-8">
             <FormField
               control={form.control}
               name="theme"
@@ -190,14 +190,14 @@ export const WithSelectAndCheckbox: Story = {
               control={form.control}
               name="notifications"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                <FormItem className="oui:flex oui:flex-row oui:items-start oui:space-x-3 oui:space-y-0">
                   <FormControl>
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
                     />
                   </FormControl>
-                  <div className="space-y-1 leading-none">
+                  <div className="oui:space-y-1 oui:leading-none">
                     <FormLabel>
                       Push notifications
                     </FormLabel>
@@ -212,14 +212,14 @@ export const WithSelectAndCheckbox: Story = {
               control={form.control}
               name="marketing_emails"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                <FormItem className="oui:flex oui:flex-row oui:items-start oui:space-x-3 oui:space-y-0">
                   <FormControl>
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
                     />
                   </FormControl>
-                  <div className="space-y-1 leading-none">
+                  <div className="oui:space-y-1 oui:leading-none">
                     <FormLabel>
                       Marketing emails
                     </FormLabel>
@@ -234,14 +234,14 @@ export const WithSelectAndCheckbox: Story = {
               control={form.control}
               name="security_emails"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                <FormItem className="oui:flex oui:flex-row oui:items-start oui:space-x-3 oui:space-y-0">
                   <FormControl>
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
                     />
                   </FormControl>
-                  <div className="space-y-1 leading-none">
+                  <div className="oui:space-y-1 oui:leading-none">
                     <FormLabel>
                       Security emails
                     </FormLabel>
@@ -295,10 +295,10 @@ export const WithRadioGroup: Story = {
     }
 
     return (
-      <div className="w-[500px]">
+      <div className="oui:w-[500px]">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <div className="grid grid-cols-2 gap-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="oui:space-y-6">
+            <div className="oui:grid oui:grid-cols-2 oui:gap-4">
               <FormField
                 control={form.control}
                 name="name"
@@ -343,35 +343,35 @@ export const WithRadioGroup: Story = {
               control={form.control}
               name="priority"
               render={({ field }) => (
-                <FormItem className="space-y-3">
+                <FormItem className="oui:space-y-3">
                   <FormLabel>Priority</FormLabel>
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
                       defaultValue={field.value}
-                      className="flex flex-col space-y-1"
+                      className="oui:flex oui:flex-col oui:space-y-1"
                     >
-                      <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormItem className="oui:flex oui:items-center oui:space-x-3 oui:space-y-0">
                         <FormControl>
                           <RadioGroupItem value="low" />
                         </FormControl>
-                        <FormLabel className="font-normal">
+                        <FormLabel className="oui:font-normal">
                           Low - General inquiry
                         </FormLabel>
                       </FormItem>
-                      <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormItem className="oui:flex oui:items-center oui:space-x-3 oui:space-y-0">
                         <FormControl>
                           <RadioGroupItem value="medium" />
                         </FormControl>
-                        <FormLabel className="font-normal">
+                        <FormLabel className="oui:font-normal">
                           Medium - Need assistance
                         </FormLabel>
                       </FormItem>
-                      <FormItem className="flex items-center space-x-3 space-y-0">
+                      <FormItem className="oui:flex oui:items-center oui:space-x-3 oui:space-y-0">
                         <FormControl>
                           <RadioGroupItem value="high" />
                         </FormControl>
-                        <FormLabel className="font-normal">
+                        <FormLabel className="oui:font-normal">
                           High - Urgent issue
                         </FormLabel>
                       </FormItem>
@@ -390,7 +390,7 @@ export const WithRadioGroup: Story = {
                   <FormControl>
                     <Textarea
                       placeholder="Tell us more about your inquiry..."
-                      className="resize-none"
+                      className="oui:resize-none"
                       {...field}
                     />
                   </FormControl>
@@ -401,7 +401,7 @@ export const WithRadioGroup: Story = {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full">Send Message</Button>
+            <Button type="submit" className="oui:w-full">Send Message</Button>
           </form>
         </Form>
       </div>
@@ -427,12 +427,12 @@ export const Showcase: Story = {
     });
 
     return (
-      <div className="space-y-8">
+      <div className="oui:space-y-8">
         <div>
-          <h3 className="text-lg font-semibold mb-4">Form Examples</h3>
-          <div className="w-[400px]">
+          <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Form Examples</h3>
+          <div className="oui:w-[400px]">
             <Form {...form}>
-              <form className="space-y-6">
+              <form className="oui:space-y-6">
                 <FormField
                   name="username"
                   render={({ field }) => (
@@ -463,14 +463,14 @@ export const Showcase: Story = {
                 <FormField
                   name="notifications"
                   render={({ field }) => (
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                    <FormItem className="oui:flex oui:flex-row oui:items-start oui:space-x-3 oui:space-y-0">
                       <FormControl>
                         <Checkbox
                           checked={field.value}
                           onCheckedChange={field.onChange}
                         />
                       </FormControl>
-                      <div className="space-y-1 leading-none">
+                      <div className="oui:space-y-1 oui:leading-none">
                         <FormLabel>Email notifications</FormLabel>
                         <FormDescription>
                           Receive email updates and notifications.

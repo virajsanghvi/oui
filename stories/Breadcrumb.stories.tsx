@@ -122,9 +122,9 @@ export const WithDropdown: Story = {
         <BreadcrumbSeparator />
         <BreadcrumbItem>
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 hover:text-foreground transition-colors">
+            <DropdownMenuTrigger className="oui:flex oui:items-center oui:gap-1 oui:hover:text-foreground oui:transition-colors">
               Components
-              <ChevronDown className="h-4 w-4" />
+              <ChevronDown className="oui:h-4 oui:w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
               <DropdownMenuItem>

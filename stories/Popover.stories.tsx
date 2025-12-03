@@ -45,45 +45,45 @@ export const Default: Story = {
       <PopoverTrigger asChild>
         <Button variant="outline">Open popover</Button>
       </PopoverTrigger>
-      <PopoverContent className="w-80">
-        <div className="grid gap-4">
-          <div className="space-y-2">
-            <h4 className="font-medium leading-none">Dimensions</h4>
-            <p className="text-sm text-muted-foreground">
+      <PopoverContent className="oui:w-80">
+        <div className="oui:grid oui:gap-4">
+          <div className="oui:space-y-2">
+            <h4 className="oui:font-medium oui:leading-none">Dimensions</h4>
+            <p className="oui:text-sm oui:text-muted-foreground">
               Set the dimensions for the layer.
             </p>
           </div>
-          <div className="grid gap-2">
-            <div className="grid grid-cols-3 items-center gap-4">
+          <div className="oui:grid oui:gap-2">
+            <div className="oui:grid oui:grid-cols-3 oui:items-center oui:gap-4">
               <Label htmlFor="width">Width</Label>
               <Input
                 id="width"
                 defaultValue="100%"
-                className="col-span-2 h-8"
+                className="oui:col-span-2 oui:h-8"
               />
             </div>
-            <div className="grid grid-cols-3 items-center gap-4">
+            <div className="oui:grid oui:grid-cols-3 oui:items-center oui:gap-4">
               <Label htmlFor="maxWidth">Max. width</Label>
               <Input
                 id="maxWidth"
                 defaultValue="300px"
-                className="col-span-2 h-8"
+                className="oui:col-span-2 oui:h-8"
               />
             </div>
-            <div className="grid grid-cols-3 items-center gap-4">
+            <div className="oui:grid oui:grid-cols-3 oui:items-center oui:gap-4">
               <Label htmlFor="height">Height</Label>
               <Input
                 id="height"
                 defaultValue="25px"
-                className="col-span-2 h-8"
+                className="oui:col-span-2 oui:h-8"
               />
             </div>
-            <div className="grid grid-cols-3 items-center gap-4">
+            <div className="oui:grid oui:grid-cols-3 oui:items-center oui:gap-4">
               <Label htmlFor="maxHeight">Max. height</Label>
               <Input
                 id="maxHeight"
                 defaultValue="none"
-                className="col-span-2 h-8"
+                className="oui:col-span-2 oui:h-8"
               />
             </div>
           </div>
@@ -97,44 +97,44 @@ export const UserMenu: Story = {
   render: (args) => (
     <Popover {...args}>
       <PopoverTrigger asChild>
-        <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-          <Avatar className="h-8 w-8">
+        <Button variant="ghost" className="oui:relative oui:h-8 oui:w-8 oui:rounded-full">
+          <Avatar className="oui:h-8 oui:w-8">
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
             <AvatarFallback>SC</AvatarFallback>
           </Avatar>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-56" align="end">
-        <div className="flex items-center space-x-2">
-          <Avatar className="h-8 w-8">
+      <PopoverContent className="oui:w-56" align="end">
+        <div className="oui:flex oui:items-center oui:space-x-2">
+          <Avatar className="oui:h-8 oui:w-8">
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
             <AvatarFallback>SC</AvatarFallback>
           </Avatar>
-          <div className="space-y-1">
-            <p className="text-sm font-medium leading-none">shadcn</p>
-            <p className="text-xs leading-none text-muted-foreground">
+          <div className="oui:space-y-1">
+            <p className="oui:text-sm oui:font-medium oui:leading-none">shadcn</p>
+            <p className="oui:text-xs oui:leading-none oui:text-muted-foreground">
               m@example.com
             </p>
           </div>
         </div>
-        <Separator className="my-2" />
-        <div className="space-y-1">
-          <Button variant="ghost" className="w-full justify-start" size="sm">
-            <User className="mr-2 h-4 w-4" />
+        <Separator className="oui:my-2" />
+        <div className="oui:space-y-1">
+          <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
+            <User className="oui:mr-2 oui:h-4 oui:w-4" />
             Profile
           </Button>
-          <Button variant="ghost" className="w-full justify-start" size="sm">
-            <CreditCard className="mr-2 h-4 w-4" />
+          <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
+            <CreditCard className="oui:mr-2 oui:h-4 oui:w-4" />
             Billing
           </Button>
-          <Button variant="ghost" className="w-full justify-start" size="sm">
-            <Settings className="mr-2 h-4 w-4" />
+          <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
+            <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
             Settings
           </Button>
         </div>
-        <Separator className="my-2" />
-        <Button variant="ghost" className="w-full justify-start" size="sm">
-          <LogOut className="mr-2 h-4 w-4" />
+        <Separator className="oui:my-2" />
+        <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
+          <LogOut className="oui:mr-2 oui:h-4 oui:w-4" />
           Log out
         </Button>
       </PopoverContent>
@@ -158,25 +158,25 @@ export const DatePicker: Story = {
         <PopoverTrigger asChild>
           <Button
             variant="outline"
-            className="w-[280px] justify-start text-left font-normal"
+            className="oui:w-[280px] oui:justify-start oui:text-left oui:font-normal"
           >
             {date ? date.toDateString() : "Pick a date"}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-auto p-0">
-          <div className="p-4">
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <h4 className="font-medium leading-none">Select Date</h4>
-                <p className="text-sm text-muted-foreground">
+        <PopoverContent className="oui:w-auto oui:p-0">
+          <div className="oui:p-4">
+            <div className="oui:space-y-4">
+              <div className="oui:space-y-2">
+                <h4 className="oui:font-medium oui:leading-none">Select Date</h4>
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Choose a date from the options below.
                 </p>
               </div>
-              <div className="grid gap-2">
+              <div className="oui:grid oui:gap-2">
                 <Button
                   variant="outline"
                   onClick={() => setDate(new Date())}
-                  className="justify-start"
+                  className="oui:justify-start"
                 >
                   Today
                 </Button>
@@ -187,7 +187,7 @@ export const DatePicker: Story = {
                     tomorrow.setDate(tomorrow.getDate() + 1);
                     setDate(tomorrow);
                   }}
-                  className="justify-start"
+                  className="oui:justify-start"
                 >
                   Tomorrow
                 </Button>
@@ -198,7 +198,7 @@ export const DatePicker: Story = {
                     nextWeek.setDate(nextWeek.getDate() + 7);
                     setDate(nextWeek);
                   }}
-                  className="justify-start"
+                  className="oui:justify-start"
                 >
                   Next Week
                 </Button>
@@ -233,12 +233,12 @@ export const AddItem: Story = {
     };
 
     return (
-      <div className="space-y-4">
-        <div className="space-y-2">
-          <h4 className="text-sm font-medium">Items</h4>
-          <div className="space-y-1">
+      <div className="oui:space-y-4">
+        <div className="oui:space-y-2">
+          <h4 className="oui:text-sm oui:font-medium">Items</h4>
+          <div className="oui:space-y-1">
             {items.map((item, index) => (
-              <div key={index} className="text-sm p-2 bg-muted rounded">
+              <div key={index} className="oui:text-sm oui:p-2 oui:bg-muted oui:rounded">
                 {item}
               </div>
             ))}
@@ -248,19 +248,19 @@ export const AddItem: Story = {
         <Popover open={open} onOpenChange={setOpen} {...args}>
           <PopoverTrigger asChild>
             <Button variant="outline" size="sm">
-              <Plus className="mr-2 h-4 w-4" />
+              <Plus className="oui:mr-2 oui:h-4 oui:w-4" />
               Add Item
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-80">
-            <div className="grid gap-4">
-              <div className="space-y-2">
-                <h4 className="font-medium leading-none">Add New Item</h4>
-                <p className="text-sm text-muted-foreground">
+          <PopoverContent className="oui:w-80">
+            <div className="oui:grid oui:gap-4">
+              <div className="oui:space-y-2">
+                <h4 className="oui:font-medium oui:leading-none">Add New Item</h4>
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Enter the name for your new item.
                 </p>
               </div>
-              <div className="grid gap-2">
+              <div className="oui:grid oui:gap-2">
                 <Label htmlFor="item-name">Item Name</Label>
                 <Input
                   id="item-name"
@@ -273,8 +273,8 @@ export const AddItem: Story = {
                     }
                   }}
                 />
-                <div className="flex gap-2">
-                  <Button onClick={addItem} size="sm" className="flex-1">
+                <div className="oui:flex oui:gap-2">
+                  <Button onClick={addItem} size="sm" className="oui:flex-1">
                     Add Item
                   </Button>
                   <Button 
@@ -303,18 +303,18 @@ export const AddItem: Story = {
 
 export const Showcase: Story = {
   render: () => (
-    <div className="space-y-8">
+    <div className="oui:space-y-8">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Popover Examples</h3>
-        <div className="flex flex-wrap gap-4">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Popover Examples</h3>
+        <div className="oui:flex oui:flex-wrap oui:gap-4">
           <Popover>
             <PopoverTrigger asChild>
               <Button variant="outline">Basic Popover</Button>
             </PopoverTrigger>
             <PopoverContent>
-              <div className="space-y-2">
-                <h4 className="font-medium">Basic Popover</h4>
-                <p className="text-sm text-muted-foreground">
+              <div className="oui:space-y-2">
+                <h4 className="oui:font-medium">Basic Popover</h4>
+                <p className="oui:text-sm oui:text-muted-foreground">
                   This is a simple popover with some content.
                 </p>
               </div>
@@ -325,22 +325,22 @@ export const Showcase: Story = {
             <PopoverTrigger asChild>
               <Button variant="outline">Settings</Button>
             </PopoverTrigger>
-            <PopoverContent className="w-80">
-              <div className="grid gap-4">
-                <div className="space-y-2">
-                  <h4 className="font-medium leading-none">Settings</h4>
-                  <p className="text-sm text-muted-foreground">
+            <PopoverContent className="oui:w-80">
+              <div className="oui:grid oui:gap-4">
+                <div className="oui:space-y-2">
+                  <h4 className="oui:font-medium oui:leading-none">Settings</h4>
+                  <p className="oui:text-sm oui:text-muted-foreground">
                     Configure your preferences.
                   </p>
                 </div>
-                <div className="grid gap-2">
-                  <div className="grid grid-cols-3 items-center gap-4">
+                <div className="oui:grid oui:gap-2">
+                  <div className="oui:grid oui:grid-cols-3 oui:items-center oui:gap-4">
                     <Label htmlFor="name">Name</Label>
-                    <Input id="name" defaultValue="Pedro Duarte" className="col-span-2 h-8" />
+                    <Input id="name" defaultValue="Pedro Duarte" className="oui:col-span-2 oui:h-8" />
                   </div>
-                  <div className="grid grid-cols-3 items-center gap-4">
+                  <div className="oui:grid oui:grid-cols-3 oui:items-center oui:gap-4">
                     <Label htmlFor="username">Username</Label>
-                    <Input id="username" defaultValue="@peduarte" className="col-span-2 h-8" />
+                    <Input id="username" defaultValue="@peduarte" className="oui:col-span-2 oui:h-8" />
                   </div>
                 </div>
               </div>
@@ -351,19 +351,19 @@ export const Showcase: Story = {
             <PopoverTrigger asChild>
               <Button variant="outline">User Menu</Button>
             </PopoverTrigger>
-            <PopoverContent className="w-56">
-              <div className="space-y-1">
-                <Button variant="ghost" className="w-full justify-start" size="sm">
-                  <User className="mr-2 h-4 w-4" />
+            <PopoverContent className="oui:w-56">
+              <div className="oui:space-y-1">
+                <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
+                  <User className="oui:mr-2 oui:h-4 oui:w-4" />
                   Profile
                 </Button>
-                <Button variant="ghost" className="w-full justify-start" size="sm">
-                  <Settings className="mr-2 h-4 w-4" />
+                <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
+                  <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
                   Settings
                 </Button>
-                <Separator className="my-1" />
-                <Button variant="ghost" className="w-full justify-start" size="sm">
-                  <LogOut className="mr-2 h-4 w-4" />
+                <Separator className="oui:my-1" />
+                <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
+                  <LogOut className="oui:mr-2 oui:h-4 oui:w-4" />
                   Log out
                 </Button>
               </div>

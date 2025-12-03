@@ -45,15 +45,15 @@ export const Default: Story = {
   },
   render: (args) => (
     <RadioGroup {...args}>
-      <div className="flex items-center space-x-2">
+      <div className="oui:flex oui:items-center oui:space-x-2">
         <RadioGroupItem value="option1" id="option1" />
         <Label htmlFor="option1">Default option</Label>
       </div>
-      <div className="flex items-center space-x-2">
+      <div className="oui:flex oui:items-center oui:space-x-2">
         <RadioGroupItem value="option2" id="option2" />
         <Label htmlFor="option2">Alternative option</Label>
       </div>
-      <div className="flex items-center space-x-2">
+      <div className="oui:flex oui:items-center oui:space-x-2">
         <RadioGroupItem value="option3" id="option3" />
         <Label htmlFor="option3">Third option</Label>
       </div>
@@ -67,24 +67,24 @@ export const BoxVariant: Story = {
     defaultValue: 'premium',
   },
   render: (args) => (
-    <div className="w-80">
+    <div className="oui:w-80">
       <RadioGroup {...args}>
         <RadioGroupItem value="basic" id="basic" variant="box">
           <div>
-            <div className="font-medium text-sm text-foreground">Basic Plan</div>
-            <div className="text-sm text-muted-foreground">Perfect for individuals getting started</div>
+            <div className="oui:font-medium oui:text-sm oui:text-foreground">Basic Plan</div>
+            <div className="oui:text-sm oui:text-muted-foreground">Perfect for individuals getting started</div>
           </div>
         </RadioGroupItem>
         <RadioGroupItem value="premium" id="premium" variant="box">
           <div>
-            <div className="font-medium text-sm text-foreground">Premium Plan</div>
-            <div className="text-sm text-muted-foreground">Best for growing teams and businesses</div>
+            <div className="oui:font-medium oui:text-sm oui:text-foreground">Premium Plan</div>
+            <div className="oui:text-sm oui:text-muted-foreground">Best for growing teams and businesses</div>
           </div>
         </RadioGroupItem>
         <RadioGroupItem value="enterprise" id="enterprise" variant="box">
           <div>
-            <div className="font-medium text-sm text-foreground">Enterprise Plan</div>
-            <div className="text-sm text-muted-foreground">Advanced features for large organizations</div>
+            <div className="oui:font-medium oui:text-sm oui:text-foreground">Enterprise Plan</div>
+            <div className="oui:text-sm oui:text-muted-foreground">Advanced features for large organizations</div>
           </div>
         </RadioGroupItem>
       </RadioGroup>
@@ -98,24 +98,24 @@ export const PaymentMethods: Story = {
     defaultValue: 'card',
   },
   render: (args) => (
-    <div className="w-96">
+    <div className="oui:w-96">
       <RadioGroup {...args}>
         <RadioGroupItem value="card" id="card" variant="box">
           <div>
-            <div className="font-medium text-sm text-foreground">Credit Card</div>
-            <div className="text-sm text-muted-foreground">Pay with Visa, Mastercard, or American Express</div>
+            <div className="oui:font-medium oui:text-sm oui:text-foreground">Credit Card</div>
+            <div className="oui:text-sm oui:text-muted-foreground">Pay with Visa, Mastercard, or American Express</div>
           </div>
         </RadioGroupItem>
         <RadioGroupItem value="paypal" id="paypal" variant="box">
           <div>
-            <div className="font-medium text-sm text-foreground">PayPal</div>
-            <div className="text-sm text-muted-foreground">Secure payment through your PayPal account</div>
+            <div className="oui:font-medium oui:text-sm oui:text-foreground">PayPal</div>
+            <div className="oui:text-sm oui:text-muted-foreground">Secure payment through your PayPal account</div>
           </div>
         </RadioGroupItem>
         <RadioGroupItem value="bank" id="bank" variant="box">
           <div>
-            <div className="font-medium text-sm text-foreground">Bank Transfer</div>
-            <div className="text-sm text-muted-foreground">Direct transfer from your bank account</div>
+            <div className="oui:font-medium oui:text-sm oui:text-foreground">Bank Transfer</div>
+            <div className="oui:text-sm oui:text-muted-foreground">Direct transfer from your bank account</div>
           </div>
         </RadioGroupItem>
       </RadioGroup>
@@ -129,15 +129,15 @@ export const NotificationSettings: Story = {
   },
   render: (args) => (
     <RadioGroup {...args}>
-      <div className="flex items-center space-x-2">
+      <div className="oui:flex oui:items-center oui:space-x-2">
         <RadioGroupItem value="all" id="all" />
         <Label htmlFor="all">All notifications</Label>
       </div>
-      <div className="flex items-center space-x-2">
+      <div className="oui:flex oui:items-center oui:space-x-2">
         <RadioGroupItem value="important" id="important" />
         <Label htmlFor="important">Important notifications only</Label>
       </div>
-      <div className="flex items-center space-x-2">
+      <div className="oui:flex oui:items-center oui:space-x-2">
         <RadioGroupItem value="none" id="none" />
         <Label htmlFor="none">No notifications</Label>
       </div>
@@ -149,19 +149,19 @@ export const Horizontal: Story = {
   args: {
     orientation: 'horizontal',
     defaultValue: 'medium',
-    className: 'flex flex-row gap-6',
+    className: 'oui:flex oui:flex-row oui:gap-6',
   },
   render: (args) => (
     <RadioGroup {...args}>
-      <div className="flex items-center space-x-2">
+      <div className="oui:flex oui:items-center oui:space-x-2">
         <RadioGroupItem value="small" id="small" />
         <Label htmlFor="small">Small</Label>
       </div>
-      <div className="flex items-center space-x-2">
+      <div className="oui:flex oui:items-center oui:space-x-2">
         <RadioGroupItem value="medium" id="medium" />
         <Label htmlFor="medium">Medium</Label>
       </div>
-      <div className="flex items-center space-x-2">
+      <div className="oui:flex oui:items-center oui:space-x-2">
         <RadioGroupItem value="large" id="large" />
         <Label htmlFor="large">Large</Label>
       </div>
@@ -176,15 +176,15 @@ export const Disabled: Story = {
   },
   render: (args) => (
     <RadioGroup {...args}>
-      <div className="flex items-center space-x-2">
+      <div className="oui:flex oui:items-center oui:space-x-2">
         <RadioGroupItem value="option1" id="disabled1" />
         <Label htmlFor="disabled1">Unavailable option</Label>
       </div>
-      <div className="flex items-center space-x-2">
+      <div className="oui:flex oui:items-center oui:space-x-2">
         <RadioGroupItem value="option2" id="disabled2" />
         <Label htmlFor="disabled2">Selected but disabled</Label>
       </div>
-      <div className="flex items-center space-x-2">
+      <div className="oui:flex oui:items-center oui:space-x-2">
         <RadioGroupItem value="option3" id="disabled3" />
         <Label htmlFor="disabled3">Another disabled option</Label>
       </div>
@@ -199,18 +199,18 @@ export const DisabledBoxVariant: Story = {
     defaultValue: 'premium',
   },
   render: (args) => (
-    <div className="w-80">
+    <div className="oui:w-80">
       <RadioGroup {...args}>
         <RadioGroupItem value="basic" id="disabled-basic" variant="box">
           <div>
-            <div className="font-medium text-sm text-foreground">Basic Plan</div>
-            <div className="text-sm text-muted-foreground">Currently unavailable</div>
+            <div className="oui:font-medium oui:text-sm oui:text-foreground">Basic Plan</div>
+            <div className="oui:text-sm oui:text-muted-foreground">Currently unavailable</div>
           </div>
         </RadioGroupItem>
         <RadioGroupItem value="premium" id="disabled-premium" variant="box">
           <div>
-            <div className="font-medium text-sm text-foreground">Premium Plan</div>
-            <div className="text-sm text-muted-foreground">Selected but disabled</div>
+            <div className="oui:font-medium oui:text-sm oui:text-foreground">Premium Plan</div>
+            <div className="oui:text-sm oui:text-muted-foreground">Selected but disabled</div>
           </div>
         </RadioGroupItem>
       </RadioGroup>
@@ -220,15 +220,15 @@ export const DisabledBoxVariant: Story = {
 
 export const AllVariants: Story = {
   render: () => (
-    <div className="space-y-8">
+    <div className="oui:space-y-8">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Default Variant</h3>
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Default Variant</h3>
         <RadioGroup defaultValue="option1">
-          <div className="flex items-center space-x-2">
+          <div className="oui:flex oui:items-center oui:space-x-2">
             <RadioGroupItem value="option1" id="showcase1" />
             <Label htmlFor="showcase1">First option</Label>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="oui:flex oui:items-center oui:space-x-2">
             <RadioGroupItem value="option2" id="showcase2" />
             <Label htmlFor="showcase2">Second option</Label>
           </div>
@@ -236,19 +236,19 @@ export const AllVariants: Story = {
       </div>
       
       <div>
-        <h3 className="text-lg font-semibold mb-4">Box Variant</h3>
-        <div className="w-80">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Box Variant</h3>
+        <div className="oui:w-80">
           <RadioGroup variant="box" defaultValue="plan1">
             <RadioGroupItem value="plan1" id="showcase-plan1" variant="box">
               <div>
-                <div className="font-medium text-sm text-foreground">Starter Plan</div>
-                <div className="text-sm text-muted-foreground">Great for getting started</div>
+                <div className="oui:font-medium oui:text-sm oui:text-foreground">Starter Plan</div>
+                <div className="oui:text-sm oui:text-muted-foreground">Great for getting started</div>
               </div>
             </RadioGroupItem>
             <RadioGroupItem value="plan2" id="showcase-plan2" variant="box">
               <div>
-                <div className="font-medium text-sm text-foreground">Pro Plan</div>
-                <div className="text-sm text-muted-foreground">Perfect for professionals</div>
+                <div className="oui:font-medium oui:text-sm oui:text-foreground">Pro Plan</div>
+                <div className="oui:text-sm oui:text-muted-foreground">Perfect for professionals</div>
               </div>
             </RadioGroupItem>
           </RadioGroup>

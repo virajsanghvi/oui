@@ -33,7 +33,7 @@ const meta: Meta<typeof Combobox> = {
     },
     disabled: {
       control: { type: 'boolean' },
-      description: 'Whether the combobox is disabled',
+      description: 'Whether the combobox is oui:disabled',
     },
     size: {
       control: { type: 'select' },
@@ -114,7 +114,7 @@ export const Default: Story = {
         value={value}
         onValueChange={setValue}
         placeholder="Select framework..."
-        className="w-[200px]"
+        className="oui:w-[200px]"
       />
     );
   },
@@ -132,7 +132,7 @@ export const WithDefaultValue: Story = {
         value={value}
         onValueChange={setValue}
         placeholder="Select framework..."
-        className="w-[200px]"
+        className="oui:w-[200px]"
       />
     );
   },
@@ -151,7 +151,7 @@ export const Small: Story = {
         onValueChange={setValue}
         placeholder="Select department..."
         size="sm"
-        className="w-[180px]"
+        className="oui:w-[180px]"
       />
     );
   },
@@ -170,7 +170,7 @@ export const Large: Story = {
         onValueChange={setValue}
         placeholder="Select country..."
         size="lg"
-        className="w-[220px]"
+        className="oui:w-[220px]"
       />
     );
   },
@@ -189,7 +189,7 @@ export const Disabled: Story = {
         onValueChange={setValue}
         placeholder="Select framework..."
         disabled
-        className="w-[200px]"
+        className="oui:w-[200px]"
       />
     );
   },
@@ -209,7 +209,7 @@ export const CustomText: Story = {
         placeholder="Choose your skill..."
         searchPlaceholder="Search programming languages..."
         emptyText="No programming language found."
-        className="w-[250px]"
+        className="oui:w-[250px]"
       />
     );
   },
@@ -238,7 +238,7 @@ export const WithDisabledOptions: Story = {
         value={value}
         onValueChange={setValue}
         placeholder="Select role..."
-        className="w-[200px]"
+        className="oui:w-[200px]"
       />
     );
   },
@@ -251,9 +251,9 @@ export const FormIntegration: Story = {
     const [department, setDepartment] = useState<string>('');
     
     return (
-      <div className="w-[300px] space-y-6">
-        <div className="space-y-2">
-          <label htmlFor="country-combobox" className="text-sm font-medium">
+      <div className="oui:w-[300px] oui:space-y-6">
+        <div className="oui:space-y-2">
+          <label htmlFor="country-combobox" className="oui:text-sm oui:font-medium">
             Country *
           </label>
           <Combobox
@@ -263,15 +263,15 @@ export const FormIntegration: Story = {
             onValueChange={setCountry}
             placeholder="Select your country..."
             searchPlaceholder="Search countries..."
-            className="w-full"
+            className="oui:w-full"
           />
-          <p className="text-sm text-muted-foreground">
+          <p className="oui:text-sm oui:text-muted-foreground">
             Select your country for shipping and tax calculations
           </p>
         </div>
         
-        <div className="space-y-2">
-          <label htmlFor="department-combobox" className="text-sm font-medium">
+        <div className="oui:space-y-2">
+          <label htmlFor="department-combobox" className="oui:text-sm oui:font-medium">
             Department
           </label>
           <Combobox
@@ -281,9 +281,9 @@ export const FormIntegration: Story = {
             onValueChange={setDepartment}
             placeholder="Select department..."
             searchPlaceholder="Search departments..."
-            className="w-full"
+            className="oui:w-full"
           />
-          <p className="text-sm text-muted-foreground">
+          <p className="oui:text-sm oui:text-muted-foreground">
             Choose the department you work in
           </p>
         </div>
@@ -337,7 +337,7 @@ export const LongList: Story = {
         placeholder="Select city..."
         searchPlaceholder="Search cities..."
         emptyText="No city found."
-        className="w-[200px]"
+        className="oui:w-[200px]"
       />
     );
   },
@@ -351,38 +351,38 @@ export const AllSizes: Story = {
     const [largeValue, setLargeValue] = useState<string>('');
     
     return (
-      <div className="flex items-end gap-4">
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Small</label>
+      <div className="oui:flex oui:items-end oui:gap-4">
+        <div className="oui:space-y-2">
+          <label className="oui:text-sm oui:font-medium">Small</label>
           <Combobox
             options={frameworkOptions}
             value={smallValue}
             onValueChange={setSmallValue}
             placeholder="Select..."
             size="sm"
-            className="w-[140px]"
+            className="oui:w-[140px]"
           />
         </div>
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Default</label>
+        <div className="oui:space-y-2">
+          <label className="oui:text-sm oui:font-medium">Default</label>
           <Combobox
             options={frameworkOptions}
             value={defaultValue}
             onValueChange={setDefaultValue}
             placeholder="Select..."
             size="default"
-            className="w-[160px]"
+            className="oui:w-[160px]"
           />
         </div>
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Large</label>
+        <div className="oui:space-y-2">
+          <label className="oui:text-sm oui:font-medium">Large</label>
           <Combobox
             options={frameworkOptions}
             value={largeValue}
             onValueChange={setLargeValue}
             placeholder="Select..."
             size="lg"
-            className="w-[180px]"
+            className="oui:w-[180px]"
           />
         </div>
       </div>
@@ -406,36 +406,36 @@ export const AllStates: Story = {
     const [disabledValue, setDisabledValue] = useState<string>('vue');
     
     return (
-      <div className="flex flex-wrap gap-6">
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Empty</label>
+      <div className="oui:flex oui:flex-wrap oui:gap-6">
+        <div className="oui:space-y-2">
+          <label className="oui:text-sm oui:font-medium">Empty</label>
           <Combobox
             options={frameworkOptions}
             value={emptyValue}
             onValueChange={setEmptyValue}
             placeholder="Select framework..."
-            className="w-[180px]"
+            className="oui:w-[180px]"
           />
         </div>
-        <div className="space-y-2">
-          <label className="text-sm font-medium">With Selection</label>
+        <div className="oui:space-y-2">
+          <label className="oui:text-sm oui:font-medium">With Selection</label>
           <Combobox
             options={frameworkOptions}
             value={selectedValue}
             onValueChange={setSelectedValue}
             placeholder="Select framework..."
-            className="w-[180px]"
+            className="oui:w-[180px]"
           />
         </div>
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Disabled</label>
+        <div className="oui:space-y-2">
+          <label className="oui:text-sm oui:font-medium">Disabled</label>
           <Combobox
             options={frameworkOptions}
             value={disabledValue}
             onValueChange={setDisabledValue}
             placeholder="Select framework..."
             disabled
-            className="w-[180px]"
+            className="oui:w-[180px]"
           />
         </div>
       </div>
@@ -460,60 +460,60 @@ export const UseCases: Story = {
     const [department, setDepartment] = useState<string>('');
     
     return (
-      <div className="grid grid-cols-2 gap-6 w-[500px]">
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <Code className="h-4 w-4 text-muted-foreground" />
-            <label className="text-sm font-medium">Framework</label>
+      <div className="oui:grid oui:grid-cols-2 oui:gap-6 oui:w-[500px]">
+        <div className="oui:space-y-2">
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <Code className="oui:h-4 oui:w-4 oui:text-muted-foreground" />
+            <label className="oui:text-sm oui:font-medium">Framework</label>
           </div>
           <Combobox
             options={frameworkOptions}
             value={framework}
             onValueChange={setFramework}
             placeholder="Choose framework..."
-            className="w-full"
+            className="oui:w-full"
           />
         </div>
         
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <Globe className="h-4 w-4 text-muted-foreground" />
-            <label className="text-sm font-medium">Country</label>
+        <div className="oui:space-y-2">
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <Globe className="oui:h-4 oui:w-4 oui:text-muted-foreground" />
+            <label className="oui:text-sm oui:font-medium">Country</label>
           </div>
           <Combobox
             options={countryOptions}
             value={country}
             onValueChange={setCountry}
             placeholder="Select country..."
-            className="w-full"
+            className="oui:w-full"
           />
         </div>
         
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <GraduationCap className="h-4 w-4 text-muted-foreground" />
-            <label className="text-sm font-medium">Skill</label>
+        <div className="oui:space-y-2">
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <GraduationCap className="oui:h-4 oui:w-4 oui:text-muted-foreground" />
+            <label className="oui:text-sm oui:font-medium">Skill</label>
           </div>
           <Combobox
             options={skillOptions}
             value={skill}
             onValueChange={setSkill}
             placeholder="Choose skill..."
-            className="w-full"
+            className="oui:w-full"
           />
         </div>
         
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <Building2 className="h-4 w-4 text-muted-foreground" />
-            <label className="text-sm font-medium">Department</label>
+        <div className="oui:space-y-2">
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <Building2 className="oui:h-4 oui:w-4 oui:text-muted-foreground" />
+            <label className="oui:text-sm oui:font-medium">Department</label>
           </div>
           <Combobox
             options={departmentOptions}
             value={department}
             onValueChange={setDepartment}
             placeholder="Select department..."
-            className="w-full"
+            className="oui:w-full"
           />
         </div>
       </div>
@@ -538,8 +538,8 @@ export const UserSelection: StoryObj = {
         value: 'shadcn',
         label: 'shadcn',
         content: (
-          <div className="flex items-center gap-2">
-            <Avatar className="h-6 w-6">
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <Avatar className="oui:h-6 oui:w-6">
               <AvatarImage src="https://github.com/shadcn.png" alt="shadcn" />
               <AvatarFallback>SC</AvatarFallback>
             </Avatar>
@@ -551,8 +551,8 @@ export const UserSelection: StoryObj = {
         value: 'leerob',
         label: 'leerob',
         content: (
-          <div className="flex items-center gap-2">
-            <Avatar className="h-6 w-6">
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <Avatar className="oui:h-6 oui:w-6">
               <AvatarImage src="https://github.com/leerob.png" alt="leerob" />
               <AvatarFallback>LR</AvatarFallback>
             </Avatar>
@@ -564,8 +564,8 @@ export const UserSelection: StoryObj = {
         value: 'evilrabbit',
         label: 'evilrabbit',
         content: (
-          <div className="flex items-center gap-2">
-            <Avatar className="h-6 w-6">
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <Avatar className="oui:h-6 oui:w-6">
               <AvatarImage src="https://github.com/evilrabbit.png" alt="evilrabbit" />
               <AvatarFallback>ER</AvatarFallback>
             </Avatar>
@@ -578,9 +578,9 @@ export const UserSelection: StoryObj = {
         label: 'Create user',
         isAction: true,
         content: (
-          <div className="flex items-center gap-2">
-            <div className="flex h-6 w-6 items-center justify-center rounded-full border border-dashed border-muted-foreground">
-              <Plus className="h-3 w-3" />
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <div className="oui:flex oui:h-6 oui:w-6 oui:items-center oui:justify-center oui:rounded-full oui:border oui:border-dashed oui:border-muted-foreground">
+              <Plus className="oui:h-3 oui:w-3" />
             </div>
             <span>Create user</span>
           </div>
@@ -601,7 +601,7 @@ export const UserSelection: StoryObj = {
     const selectedOption = userOptions.find(user => user.value === selectedUser && !user.isAction);
 
     return (
-      <div className="w-[240px]">
+      <div className="oui:w-[240px]">
         <Combobox
           options={userOptions}
           value={selectedUser}
@@ -610,18 +610,18 @@ export const UserSelection: StoryObj = {
           placeholder="Search user..."
           searchPlaceholder="Search user..."
           emptyText="No user found."
-          className="w-full"
-          popoverClassName="w-[240px]"
+          className="oui:w-full"
+          popoverClassName="oui:w-[240px]"
           renderTrigger={(selectedOptions) => {
             const selectedOption = Array.isArray(selectedOptions) ? selectedOptions[0] : selectedOptions;
             return (
-              <button className="flex w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+              <button className="oui:flex oui:w-full oui:items-center oui:justify-between oui:rounded-md oui:border oui:border-input oui:bg-background oui:px-3 oui:py-2 oui:text-sm oui:ring-offset-background oui:placeholder:text-muted-foreground oui:focus:outline-none oui:focus:ring-2 oui:focus:ring-ring oui:focus:ring-offset-2 oui:disabled:cursor-not-allowed oui:disabled:opacity-50">
                 {selectedOption ? (
                   selectedOption.content
                 ) : (
-                  <span className="text-muted-foreground">Search user...</span>
+                  <span className="oui:text-muted-foreground">Search user...</span>
                 )}
-                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                <ChevronsUpDown className="oui:ml-2 oui:h-4 oui:w-4 oui:shrink-0 oui:opacity-50" />
               </button>
             );
           }}
@@ -658,7 +658,7 @@ export const MultiSelection: StoryObj = {
     ];
 
     return (
-      <div className="w-[350px]">
+      <div className="oui:w-[350px]">
         <Combobox
           multiple
           options={techOptions}
@@ -667,8 +667,8 @@ export const MultiSelection: StoryObj = {
           placeholder="Select technologies..."
           searchPlaceholder="Search technologies..."
           emptyText="No technology found."
-          className="w-full"
-          popoverClassName="w-[350px]"
+          className="oui:w-full"
+          popoverClassName="oui:w-[350px]"
         />
       </div>
     );
@@ -704,8 +704,8 @@ export const MultiSelectionWithCategories: StoryObj = {
     ];
 
     return (
-      <div className="w-[350px] space-y-2">
-        <label className="text-sm font-medium">Technical Skills</label>
+      <div className="oui:w-[350px] oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Technical Skills</label>
         <Combobox
           multiple
           options={skillOptions}
@@ -714,10 +714,10 @@ export const MultiSelectionWithCategories: StoryObj = {
           placeholder="Select your skills..."
           searchPlaceholder="Search skills..."
           emptyText="No skill found."
-          className="w-full"
-          popoverClassName="w-[350px]"
+          className="oui:w-full"
+          popoverClassName="oui:w-[350px]"
         />
-        <p className="text-sm text-muted-foreground">
+        <p className="oui:text-sm oui:text-muted-foreground">
           Select multiple technologies you're proficient in
         </p>
       </div>
@@ -739,7 +739,7 @@ export const EmptyMultiSelection: StoryObj = {
     const [selectedItems, setSelectedItems] = useState<string[]>([]);
     
     return (
-      <div className="w-[250px]">
+      <div className="oui:w-[250px]">
         <Combobox
           multiple
           options={frameworkOptions}
@@ -747,7 +747,7 @@ export const EmptyMultiSelection: StoryObj = {
           onValuesChange={setSelectedItems}
           placeholder="Choose frameworks..."
           searchPlaceholder="Search frameworks..."
-          className="w-full"
+          className="oui:w-full"
         />
       </div>
     );
@@ -781,9 +781,9 @@ export const MultiSelectionWithOverflow: StoryObj = {
     ];
 
     return (
-      <div className="w-[400px] space-y-4">
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Technologies (max 2 visible)</label>
+      <div className="oui:w-[400px] oui:space-y-4">
+        <div className="oui:space-y-2">
+          <label className="oui:text-sm oui:font-medium">Technologies (max 2 visible)</label>
           <Combobox
             multiple
             options={techOptions}
@@ -793,16 +793,16 @@ export const MultiSelectionWithOverflow: StoryObj = {
             placeholder="Select technologies..."
             searchPlaceholder="Search technologies..."
             emptyText="No technology found."
-            className="w-full"
-            popoverClassName="w-[400px]"
+            className="oui:w-full"
+            popoverClassName="oui:w-[400px]"
           />
-          <p className="text-sm text-muted-foreground">
+          <p className="oui:text-sm oui:text-muted-foreground">
             Shows first 2 items, then "+X more" for overflow
           </p>
         </div>
         
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Technologies (max 3 visible)</label>
+        <div className="oui:space-y-2">
+          <label className="oui:text-sm oui:font-medium">Technologies (max 3 visible)</label>
           <Combobox
             multiple
             options={techOptions}
@@ -812,10 +812,10 @@ export const MultiSelectionWithOverflow: StoryObj = {
             placeholder="Select technologies..."
             searchPlaceholder="Search technologies..."
             emptyText="No technology found."
-            className="w-full"
-            popoverClassName="w-[400px]"
+            className="oui:w-full"
+            popoverClassName="oui:w-[400px]"
           />
-          <p className="text-sm text-muted-foreground">
+          <p className="oui:text-sm oui:text-muted-foreground">
             Shows first 3 items, then "+X more" for overflow
           </p>
         </div>

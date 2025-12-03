@@ -25,7 +25,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: (
-      <Accordion type="single" collapsible className="w-96">
+      <Accordion type="single" collapsible className="oui:w-96">
         <AccordionItem value="item-1">
           <AccordionTrigger>Is it accessible?</AccordionTrigger>
           <AccordionContent>
@@ -46,14 +46,14 @@ export const Default: Story = {
         </AccordionItem>
       </Accordion>
     ),
-    className: "flex justify-center",
+    className: "oui:flex oui:justify-center",
   },
 };
 
 export const Multiple: Story = {
   args: {
     children: (
-      <Accordion type="multiple" className="w-96">
+      <Accordion type="multiple" className="oui:w-96">
         <AccordionItem value="item-1">
           <AccordionTrigger>Can I open multiple items?</AccordionTrigger>
           <AccordionContent>
@@ -74,14 +74,14 @@ export const Multiple: Story = {
         </AccordionItem>
       </Accordion>
     ),
-    className: "flex justify-center",
+    className: "oui:flex oui:justify-center",
   },
 };
 
 export const SingleItem: Story = {
   args: {
     children: (
-      <Accordion type="single" collapsible className="w-96">
+      <Accordion type="single" collapsible className="oui:w-96">
         <AccordionItem value="item-1">
           <AccordionTrigger>What is OUI?</AccordionTrigger>
           <AccordionContent>
@@ -91,6 +91,6 @@ export const SingleItem: Story = {
         </AccordionItem>
       </Accordion>
     ),
-    className: "flex justify-center",
+    className: "oui:flex oui:justify-center",
   },
 };

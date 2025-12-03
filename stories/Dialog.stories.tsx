@@ -120,8 +120,8 @@ export const FormDialog: Story = {
                             This is a dialog description.
                         </DialogDescription>
                     </DialogHeader>
-                    <div className="grid gap-4 py-4">
-                        <div className="grid gap-2">
+                    <div className="oui:grid oui:gap-4 oui:py-4">
+                        <div className="oui:grid oui:gap-2">
                             <Label htmlFor="name">Name</Label>
                             <Input
                                 id="name"
@@ -130,7 +130,7 @@ export const FormDialog: Story = {
                                 onChange={(e) => setName(e.target.value)}
                             />
                         </div>
-                        <div className="grid gap-2">
+                        <div className="oui:grid oui:gap-2">
                             <Label htmlFor="username">Username</Label>
                             <Input
                                 id="username"
@@ -163,16 +163,16 @@ export const SmallDialog: Story = {
             <DialogTrigger asChild>
                 <Button variant="outline">Small Dialog</Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-md">
+            <DialogContent className="oui:sm:max-w-md">
                 <DialogHeader>
                     <DialogTitle>Share Link</DialogTitle>
                     <DialogDescription>
                         Anyone with this link will be able to view the document.
                     </DialogDescription>
                 </DialogHeader>
-                <div className="flex items-center space-x-2">
-                    <div className="grid flex-1 gap-2">
-                        <Label htmlFor="link" className="sr-only">
+                <div className="oui:flex oui:items-center oui:space-x-2">
+                    <div className="oui:grid oui:flex-1 oui:gap-2">
+                        <Label htmlFor="link" className="oui:sr-only">
                             Link
                         </Label>
                         <Input
@@ -181,7 +181,7 @@ export const SmallDialog: Story = {
                             readOnly
                         />
                     </div>
-                    <Button size="sm" className="px-3">
+                    <Button size="sm" className="oui:px-3">
                         Copy
                     </Button>
                 </div>
@@ -213,19 +213,19 @@ export const TextContentDialog: Story = {
                         This is a dialog description.
                     </DialogDescription>
                 </DialogHeader>
-                <div className="space-y-4 py-4">
-                    <h3 className="text-lg font-medium leading-7">Lorem ipsum</h3>
-                    <p className="text-base leading-6">
+                <div className="oui:space-y-4 oui:py-4">
+                    <h3 className="oui:text-lg oui:font-medium oui:leading-7">Lorem ipsum</h3>
+                    <p className="oui:text-base oui:leading-6">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus interdum hendrerit ex vitae sodales.
                         Donec id leo ipsum. Phasellus volutpat aliquet mauris, et blandit nulla laoreet vitae. Quisque ante dui,
                         porta eu felis nec, scelerisque pharetra turpis.
                     </p>
-                    <p className="text-base leading-6">
+                    <p className="oui:text-base oui:leading-6">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus interdum hendrerit ex vitae sodales.
                         Donec id leo ipsum. Phasellus volutpat aliquet mauris, et blandit nulla laoreet vitae. Quisque ante dui,
                         porta eu felis nec, scelerisque pharetra turpis.
                     </p>
-                    <p className="text-base leading-6">
+                    <p className="oui:text-base oui:leading-6">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus interdum hendrerit ex vitae sodales.
                         Donec id leo ipsum. Phasellus volutpat aliquet mauris, et blandit nulla laoreet vitae. Quisque ante dui,
                         porta eu felis nec, scelerisque pharetra turpis.
@@ -252,15 +252,15 @@ export const LargeDialog: Story = {
             <DialogTrigger asChild>
                 <Button variant="outline">Large Dialog</Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-2xl">
+            <DialogContent className="oui:sm:max-w-2xl">
                 <DialogHeader>
                     <DialogTitle>Project Settings</DialogTitle>
                     <DialogDescription>
                         Configure your project settings and preferences.
                     </DialogDescription>
                 </DialogHeader>
-                <div className="grid gap-6 py-4">
-                    <div className="grid gap-2">
+                <div className="oui:grid oui:gap-6 oui:py-4">
+                    <div className="oui:grid oui:gap-2">
                         <Label htmlFor="project-name">Project Name</Label>
                         <Input
                             id="project-name"
@@ -268,17 +268,17 @@ export const LargeDialog: Story = {
                             defaultValue="My Awesome Project"
                         />
                     </div>
-                    <div className="grid gap-2">
+                    <div className="oui:grid oui:gap-2">
                         <Label htmlFor="description">Description</Label>
                         <textarea
                             id="description"
-                            className="min-h-[100px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-xs placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+                            className="oui:min-h-[100px] oui:w-full oui:rounded-md oui:border oui:border-input oui:bg-transparent oui:px-3 oui:py-2 oui:text-sm oui:shadow-xs oui:placeholder:text-muted-foreground oui:focus-visible:outline-none oui:focus-visible:ring-1 oui:focus-visible:ring-ring oui:disabled:cursor-not-allowed oui:disabled:opacity-50"
                             placeholder="Enter project description"
                             defaultValue="A comprehensive project management solution built with modern technologies."
                         />
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="grid gap-2">
+                    <div className="oui:grid oui:grid-cols-2 oui:gap-4">
+                        <div className="oui:grid oui:gap-2">
                             <Label htmlFor="start-date">Start Date</Label>
                             <Input
                                 id="start-date"
@@ -286,7 +286,7 @@ export const LargeDialog: Story = {
                                 defaultValue="2024-01-15"
                             />
                         </div>
-                        <div className="grid gap-2">
+                        <div className="oui:grid oui:gap-2">
                             <Label htmlFor="end-date">End Date</Label>
                             <Input
                                 id="end-date"
@@ -372,7 +372,7 @@ export const NoCloseButton: Story = {
 
 export const Showcase: Story = {
     render: () => (
-        <div className="flex flex-wrap gap-4">
+        <div className="oui:flex oui:flex-wrap oui:gap-4">
             <Dialog>
                 <DialogTrigger asChild>
                     <Button variant="outline">Basic</Button>
@@ -419,12 +419,12 @@ export const Showcase: Story = {
                             This is a dialog description.
                         </DialogDescription>
                     </DialogHeader>
-                    <div className="grid gap-4 py-4">
-                        <div className="grid gap-2">
+                    <div className="oui:grid oui:gap-4 oui:py-4">
+                        <div className="oui:grid oui:gap-2">
                             <Label htmlFor="showcase-name">Name</Label>
                             <Input id="showcase-name" placeholder="Placeholder" />
                         </div>
-                        <div className="grid gap-2">
+                        <div className="oui:grid oui:gap-2">
                             <Label htmlFor="showcase-username">Username</Label>
                             <Input id="showcase-username" placeholder="Placeholder" />
                         </div>
@@ -447,9 +447,9 @@ export const Showcase: Story = {
                             This is a dialog description.
                         </DialogDescription>
                     </DialogHeader>
-                    <div className="space-y-4 py-4">
-                        <h3 className="text-lg font-medium leading-7">Lorem ipsum</h3>
-                        <p className="text-base leading-6">
+                    <div className="oui:space-y-4 oui:py-4">
+                        <h3 className="oui:text-lg oui:font-medium oui:leading-7">Lorem ipsum</h3>
+                        <p className="oui:text-base oui:leading-6">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus interdum hendrerit ex vitae sodales.
                         </p>
                     </div>

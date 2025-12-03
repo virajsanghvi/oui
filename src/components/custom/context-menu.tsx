@@ -28,7 +28,7 @@ function ContextMenuSubTrigger({
   return (
     <BaseContextMenuSubTrigger
       className={cn(
-        "[&[data-highlighted]]:bg-secondary [&[data-highlighted]]:text-secondary-foreground",
+        "oui:[&[data-highlighted]]:bg-secondary oui:[&[data-highlighted]]:text-secondary-foreground",
         className
       )}
       {...props}
@@ -43,7 +43,7 @@ function ContextMenuItem({
   return (
     <BaseContextMenuItem
       className={cn(
-        "[&[data-highlighted]]:bg-secondary [&[data-highlighted]]:text-secondary-foreground",
+        "oui:[&[data-highlighted]]:bg-secondary oui:[&[data-highlighted]]:text-secondary-foreground",
         className
       )}
       {...props}
@@ -58,7 +58,7 @@ function ContextMenuCheckboxItem({
   return (
     <BaseContextMenuCheckboxItem
       className={cn(
-        "[&[data-highlighted]]:bg-secondary [&[data-highlighted]]:text-secondary-foreground",
+        "oui:[&[data-highlighted]]:bg-secondary oui:[&[data-highlighted]]:text-secondary-foreground",
         className
       )}
       {...props}
@@ -73,7 +73,7 @@ function ContextMenuRadioItem({
   return (
     <BaseContextMenuRadioItem
       className={cn(
-        "[&[data-highlighted]]:bg-secondary [&[data-highlighted]]:text-secondary-foreground",
+        "oui:[&[data-highlighted]]:bg-secondary oui:[&[data-highlighted]]:text-secondary-foreground",
         className
       )}
       {...props}

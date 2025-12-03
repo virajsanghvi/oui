@@ -77,24 +77,24 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     render: () => (
-        <div className="flex h-[200px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
+        <div className="oui:flex oui:h-[200px] oui:w-[300px] oui:items-center oui:justify-center oui:rounded-md oui:border oui:border-dashed oui:text-sm">
             <ContextMenu>
-                <ContextMenuTrigger className="flex h-full w-full items-center justify-center">
+                <ContextMenuTrigger className="oui:flex oui:h-full oui:w-full oui:items-center oui:justify-center">
                     Right click here
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <Copy className="mr-2 h-4 w-4" />
+                        <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
                         Copy
                         <ContextMenuShortcut>⌘C</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Scissors className="mr-2 h-4 w-4" />
+                        <Scissors className="oui:mr-2 oui:h-4 oui:w-4" />
                         Cut
                         <ContextMenuShortcut>⌘X</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <ClipboardPaste className="mr-2 h-4 w-4" />
+                        <ClipboardPaste className="oui:mr-2 oui:h-4 oui:w-4" />
                         Paste
                         <ContextMenuShortcut>⌘V</ContextMenuShortcut>
                     </ContextMenuItem>
@@ -113,38 +113,38 @@ export const Default: Story = {
 
 export const WithSeparators: Story = {
     render: () => (
-        <div className="flex h-[200px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
+        <div className="oui:flex oui:h-[200px] oui:w-[300px] oui:items-center oui:justify-center oui:rounded-md oui:border oui:border-dashed oui:text-sm">
             <ContextMenu>
-                <ContextMenuTrigger className="flex h-full w-full items-center justify-center">
+                <ContextMenuTrigger className="oui:flex oui:h-full oui:w-full oui:items-center oui:justify-center">
                     Right click for file actions
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <Edit className="mr-2 h-4 w-4" />
+                        <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
                         Edit
                         <ContextMenuShortcut>⌘E</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Copy className="mr-2 h-4 w-4" />
+                        <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
                         Duplicate
                         <ContextMenuShortcut>⌘D</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Download className="mr-2 h-4 w-4" />
+                        <Download className="oui:mr-2 oui:h-4 oui:w-4" />
                         Download
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Share className="mr-2 h-4 w-4" />
+                        <Share className="oui:mr-2 oui:h-4 oui:w-4" />
                         Share
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Archive className="mr-2 h-4 w-4" />
+                        <Archive className="oui:mr-2 oui:h-4 oui:w-4" />
                         Archive
                     </ContextMenuItem>
                     <ContextMenuItem variant="destructive">
-                        <Trash2 className="mr-2 h-4 w-4" />
+                        <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
                         Delete
                         <ContextMenuShortcut>⌘⌫</ContextMenuShortcut>
                     </ContextMenuItem>
@@ -163,33 +163,33 @@ export const WithSeparators: Story = {
 
 export const WithCheckboxItems: Story = {
     render: () => (
-        <div className="flex h-[200px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
+        <div className="oui:flex oui:h-[200px] oui:w-[300px] oui:items-center oui:justify-center oui:rounded-md oui:border oui:border-dashed oui:text-sm">
             <ContextMenu>
-                <ContextMenuTrigger className="flex h-full w-full items-center justify-center">
+                <ContextMenuTrigger className="oui:flex oui:h-full oui:w-full oui:items-center oui:justify-center">
                     Right click for view options
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuLabel>View Options</ContextMenuLabel>
                     <ContextMenuSeparator />
                     <ContextMenuCheckboxItem checked>
-                        <Eye className="mr-2 h-4 w-4" />
+                        <Eye className="oui:mr-2 oui:h-4 oui:w-4" />
                         Show Preview
                     </ContextMenuCheckboxItem>
                     <ContextMenuCheckboxItem>
-                        <Grid3X3 className="mr-2 h-4 w-4" />
+                        <Grid3X3 className="oui:mr-2 oui:h-4 oui:w-4" />
                         Grid View
                     </ContextMenuCheckboxItem>
                     <ContextMenuCheckboxItem checked>
-                        <List className="mr-2 h-4 w-4" />
+                        <List className="oui:mr-2 oui:h-4 oui:w-4" />
                         List View
                     </ContextMenuCheckboxItem>
                     <ContextMenuSeparator />
                     <ContextMenuCheckboxItem>
-                        <Bookmark className="mr-2 h-4 w-4" />
+                        <Bookmark className="oui:mr-2 oui:h-4 oui:w-4" />
                         Show Bookmarks
                     </ContextMenuCheckboxItem>
                     <ContextMenuCheckboxItem checked>
-                        <Tag className="mr-2 h-4 w-4" />
+                        <Tag className="oui:mr-2 oui:h-4 oui:w-4" />
                         Show Tags
                     </ContextMenuCheckboxItem>
                 </ContextMenuContent>
@@ -207,9 +207,9 @@ export const WithCheckboxItems: Story = {
 
 export const WithRadioGroup: Story = {
     render: () => (
-        <div className="flex h-[200px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
+        <div className="oui:flex oui:h-[200px] oui:w-[300px] oui:items-center oui:justify-center oui:rounded-md oui:border oui:border-dashed oui:text-sm">
             <ContextMenu>
-                <ContextMenuTrigger className="flex h-full w-full items-center justify-center">
+                <ContextMenuTrigger className="oui:flex oui:h-full oui:w-full oui:items-center oui:justify-center">
                     Right click for sort options
                 </ContextMenuTrigger>
                 <ContextMenuContent>
@@ -217,30 +217,30 @@ export const WithRadioGroup: Story = {
                     <ContextMenuSeparator />
                     <ContextMenuRadioGroup value="name">
                         <ContextMenuRadioItem value="name">
-                            <FileText className="mr-2 h-4 w-4" />
+                            <FileText className="oui:mr-2 oui:h-4 oui:w-4" />
                             Name
                         </ContextMenuRadioItem>
                         <ContextMenuRadioItem value="date">
-                            <Calendar className="mr-2 h-4 w-4" />
+                            <Calendar className="oui:mr-2 oui:h-4 oui:w-4" />
                             Date Modified
                         </ContextMenuRadioItem>
                         <ContextMenuRadioItem value="size">
-                            <Archive className="mr-2 h-4 w-4" />
+                            <Archive className="oui:mr-2 oui:h-4 oui:w-4" />
                             File Size
                         </ContextMenuRadioItem>
                         <ContextMenuRadioItem value="type">
-                            <Filter className="mr-2 h-4 w-4" />
+                            <Filter className="oui:mr-2 oui:h-4 oui:w-4" />
                             File Type
                         </ContextMenuRadioItem>
                     </ContextMenuRadioGroup>
                     <ContextMenuSeparator />
                     <ContextMenuRadioGroup value="asc">
                         <ContextMenuRadioItem value="asc">
-                            <ArrowUpAZ className="mr-2 h-4 w-4" />
+                            <ArrowUpAZ className="oui:mr-2 oui:h-4 oui:w-4" />
                             Ascending
                         </ContextMenuRadioItem>
                         <ContextMenuRadioItem value="desc">
-                            <ArrowDownAZ className="mr-2 h-4 w-4" />
+                            <ArrowDownAZ className="oui:mr-2 oui:h-4 oui:w-4" />
                             Descending
                         </ContextMenuRadioItem>
                     </ContextMenuRadioGroup>
@@ -259,59 +259,59 @@ export const WithRadioGroup: Story = {
 
 export const WithSubmenus: Story = {
     render: () => (
-        <div className="flex h-[200px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
+        <div className="oui:flex oui:h-[200px] oui:w-[300px] oui:items-center oui:justify-center oui:rounded-md oui:border oui:border-dashed oui:text-sm">
             <ContextMenu>
-                <ContextMenuTrigger className="flex h-full w-full items-center justify-center">
+                <ContextMenuTrigger className="oui:flex oui:h-full oui:w-full oui:items-center oui:justify-center">
                     Right click for nested menus
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <Edit className="mr-2 h-4 w-4" />
+                        <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
                         Edit
                     </ContextMenuItem>
                     <ContextMenuSub>
                         <ContextMenuSubTrigger>
-                            <Share className="mr-2 h-4 w-4" />
+                            <Share className="oui:mr-2 oui:h-4 oui:w-4" />
                             Share
                         </ContextMenuSubTrigger>
                         <ContextMenuSubContent>
                             <ContextMenuItem>
-                                <Mail className="mr-2 h-4 w-4" />
+                                <Mail className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Email
                             </ContextMenuItem>
                             <ContextMenuItem>
-                                <Copy className="mr-2 h-4 w-4" />
+                                <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Copy Link
                             </ContextMenuItem>
                             <ContextMenuItem>
-                                <Download className="mr-2 h-4 w-4" />
+                                <Download className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Export
                             </ContextMenuItem>
                         </ContextMenuSubContent>
                     </ContextMenuSub>
                     <ContextMenuSub>
                         <ContextMenuSubTrigger>
-                            <MoreHorizontal className="mr-2 h-4 w-4" />
+                            <MoreHorizontal className="oui:mr-2 oui:h-4 oui:w-4" />
                             More Actions
                         </ContextMenuSubTrigger>
                         <ContextMenuSubContent>
                             <ContextMenuItem>
-                                <Star className="mr-2 h-4 w-4" />
+                                <Star className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Add to Favorites
                             </ContextMenuItem>
                             <ContextMenuItem>
-                                <Archive className="mr-2 h-4 w-4" />
+                                <Archive className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Archive
                             </ContextMenuItem>
                             <ContextMenuItem>
-                                <Settings className="mr-2 h-4 w-4" />
+                                <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Properties
                             </ContextMenuItem>
                         </ContextMenuSubContent>
                     </ContextMenuSub>
                     <ContextMenuSeparator />
                     <ContextMenuItem variant="destructive">
-                        <Trash2 className="mr-2 h-4 w-4" />
+                        <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
                         Delete
                     </ContextMenuItem>
                 </ContextMenuContent>
@@ -329,63 +329,63 @@ export const WithSubmenus: Story = {
 
 export const FileExplorer: Story = {
     render: () => (
-        <div className="flex h-[200px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
+        <div className="oui:flex oui:h-[200px] oui:w-[300px] oui:items-center oui:justify-center oui:rounded-md oui:border oui:border-dashed oui:text-sm">
             <ContextMenu>
-                <ContextMenuTrigger className="flex h-full w-full items-center justify-center">
+                <ContextMenuTrigger className="oui:flex oui:h-full oui:w-full oui:items-center oui:justify-center">
                     Right click for file operations
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <FileText className="mr-2 h-4 w-4" />
+                        <FileText className="oui:mr-2 oui:h-4 oui:w-4" />
                         Open
                         <ContextMenuShortcut>⌘O</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Edit className="mr-2 h-4 w-4" />
+                        <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
                         Open With...
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Copy className="mr-2 h-4 w-4" />
+                        <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
                         Copy
                         <ContextMenuShortcut>⌘C</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Scissors className="mr-2 h-4 w-4" />
+                        <Scissors className="oui:mr-2 oui:h-4 oui:w-4" />
                         Cut
                         <ContextMenuShortcut>⌘X</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Copy className="mr-2 h-4 w-4" />
+                        <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
                         Duplicate
                         <ContextMenuShortcut>⌘D</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Download className="mr-2 h-4 w-4" />
+                        <Download className="oui:mr-2 oui:h-4 oui:w-4" />
                         Download
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Share className="mr-2 h-4 w-4" />
+                        <Share className="oui:mr-2 oui:h-4 oui:w-4" />
                         Share
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Star className="mr-2 h-4 w-4" />
+                        <Star className="oui:mr-2 oui:h-4 oui:w-4" />
                         Add to Favorites
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Archive className="mr-2 h-4 w-4" />
+                        <Archive className="oui:mr-2 oui:h-4 oui:w-4" />
                         Move to Archive
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Settings className="mr-2 h-4 w-4" />
+                        <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
                         Properties
                         <ContextMenuShortcut>⌘I</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem variant="destructive">
-                        <Trash2 className="mr-2 h-4 w-4" />
+                        <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
                         Move to Trash
                         <ContextMenuShortcut>⌘⌫</ContextMenuShortcut>
                     </ContextMenuItem>
@@ -404,26 +404,26 @@ export const FileExplorer: Story = {
 
 export const MediaPlayer: Story = {
     render: () => (
-        <div className="flex h-[200px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
+        <div className="oui:flex oui:h-[200px] oui:w-[300px] oui:items-center oui:justify-center oui:rounded-md oui:border oui:border-dashed oui:text-sm">
             <ContextMenu>
-                <ContextMenuTrigger className="flex h-full w-full items-center justify-center">
+                <ContextMenuTrigger className="oui:flex oui:h-full oui:w-full oui:items-center oui:justify-center">
                     Right click for media controls
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <Music className="mr-2 h-4 w-4" />
+                        <Music className="oui:mr-2 oui:h-4 oui:w-4" />
                         Play
                         <ContextMenuShortcut>Space</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Clock className="mr-2 h-4 w-4" />
+                        <Clock className="oui:mr-2 oui:h-4 oui:w-4" />
                         Pause
                         <ContextMenuShortcut>Space</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuSub>
                         <ContextMenuSubTrigger>
-                            <Settings className="mr-2 h-4 w-4" />
+                            <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
                             Playback Speed
                         </ContextMenuSubTrigger>
                         <ContextMenuSubContent>
@@ -439,7 +439,7 @@ export const MediaPlayer: Story = {
                     </ContextMenuSub>
                     <ContextMenuSub>
                         <ContextMenuSubTrigger>
-                            <Video className="mr-2 h-4 w-4" />
+                            <Video className="oui:mr-2 oui:h-4 oui:w-4" />
                             Quality
                         </ContextMenuSubTrigger>
                         <ContextMenuSubContent>
@@ -453,20 +453,20 @@ export const MediaPlayer: Story = {
                     </ContextMenuSub>
                     <ContextMenuSeparator />
                     <ContextMenuCheckboxItem checked>
-                        <Eye className="mr-2 h-4 w-4" />
+                        <Eye className="oui:mr-2 oui:h-4 oui:w-4" />
                         Show Controls
                     </ContextMenuCheckboxItem>
                     <ContextMenuCheckboxItem>
-                        <EyeOff className="mr-2 h-4 w-4" />
+                        <EyeOff className="oui:mr-2 oui:h-4 oui:w-4" />
                         Picture in Picture
                     </ContextMenuCheckboxItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Download className="mr-2 h-4 w-4" />
+                        <Download className="oui:mr-2 oui:h-4 oui:w-4" />
                         Download
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Share className="mr-2 h-4 w-4" />
+                        <Share className="oui:mr-2 oui:h-4 oui:w-4" />
                         Share
                     </ContextMenuItem>
                 </ContextMenuContent>
@@ -484,49 +484,49 @@ export const MediaPlayer: Story = {
 
 export const ContactCard: Story = {
     render: () => (
-        <div className="flex h-[200px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
+        <div className="oui:flex oui:h-[200px] oui:w-[300px] oui:items-center oui:justify-center oui:rounded-md oui:border oui:border-dashed oui:text-sm">
             <ContextMenu>
-                <ContextMenuTrigger className="flex h-full w-full items-center justify-center">
+                <ContextMenuTrigger className="oui:flex oui:h-full oui:w-full oui:items-center oui:justify-center">
                     Right click for contact actions
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <User className="mr-2 h-4 w-4" />
+                        <User className="oui:mr-2 oui:h-4 oui:w-4" />
                         View Profile
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Edit className="mr-2 h-4 w-4" />
+                        <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
                         Edit Contact
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Mail className="mr-2 h-4 w-4" />
+                        <Mail className="oui:mr-2 oui:h-4 oui:w-4" />
                         Send Email
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Phone className="mr-2 h-4 w-4" />
+                        <Phone className="oui:mr-2 oui:h-4 oui:w-4" />
                         Call
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Calendar className="mr-2 h-4 w-4" />
+                        <Calendar className="oui:mr-2 oui:h-4 oui:w-4" />
                         Schedule Meeting
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Star className="mr-2 h-4 w-4" />
+                        <Star className="oui:mr-2 oui:h-4 oui:w-4" />
                         Add to Favorites
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Tag className="mr-2 h-4 w-4" />
+                        <Tag className="oui:mr-2 oui:h-4 oui:w-4" />
                         Add Tag
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Share className="mr-2 h-4 w-4" />
+                        <Share className="oui:mr-2 oui:h-4 oui:w-4" />
                         Share Contact
                     </ContextMenuItem>
                     <ContextMenuItem variant="destructive">
-                        <Trash2 className="mr-2 h-4 w-4" />
+                        <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
                         Delete Contact
                     </ContextMenuItem>
                 </ContextMenuContent>
@@ -544,39 +544,39 @@ export const ContactCard: Story = {
 
 export const DisabledItems: Story = {
     render: () => (
-        <div className="flex h-[200px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm">
+        <div className="oui:flex oui:h-[200px] oui:w-[300px] oui:items-center oui:justify-center oui:rounded-md oui:border oui:border-dashed oui:text-sm">
             <ContextMenu>
-                <ContextMenuTrigger className="flex h-full w-full items-center justify-center">
+                <ContextMenuTrigger className="oui:flex oui:h-full oui:w-full oui:items-center oui:justify-center">
                     Right click for mixed states
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <Copy className="mr-2 h-4 w-4" />
+                        <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
                         Copy
                         <ContextMenuShortcut>⌘C</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem disabled>
-                        <Scissors className="mr-2 h-4 w-4" />
+                        <Scissors className="oui:mr-2 oui:h-4 oui:w-4" />
                         Cut
                         <ContextMenuShortcut>⌘X</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem disabled>
-                        <ClipboardPaste className="mr-2 h-4 w-4" />
+                        <ClipboardPaste className="oui:mr-2 oui:h-4 oui:w-4" />
                         Paste
                         <ContextMenuShortcut>⌘V</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Edit className="mr-2 h-4 w-4" />
+                        <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
                         Edit
                     </ContextMenuItem>
                     <ContextMenuItem disabled>
-                        <Share className="mr-2 h-4 w-4" />
+                        <Share className="oui:mr-2 oui:h-4 oui:w-4" />
                         Share
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem variant="destructive" disabled>
-                        <Trash2 className="mr-2 h-4 w-4" />
+                        <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
                         Delete
                     </ContextMenuItem>
                 </ContextMenuContent>
@@ -594,103 +594,103 @@ export const DisabledItems: Story = {
 
 export const Showcase: Story = {
     render: () => (
-        <div className="grid grid-cols-2 gap-4">
-            <div className="flex h-[150px] w-[200px] items-center justify-center rounded-md border border-dashed text-sm">
+        <div className="oui:grid oui:grid-cols-2 oui:gap-4">
+            <div className="oui:flex oui:h-[150px] oui:w-[200px] oui:items-center oui:justify-center oui:rounded-md oui:border oui:border-dashed oui:text-sm">
                 <ContextMenu>
-                    <ContextMenuTrigger className="flex h-full w-full items-center justify-center">
+                    <ContextMenuTrigger className="oui:flex oui:h-full oui:w-full oui:items-center oui:justify-center">
                         Basic Menu
                     </ContextMenuTrigger>
                     <ContextMenuContent>
                         <ContextMenuItem>
-                            <Copy className="mr-2 h-4 w-4" />
+                            <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
                             Copy
                         </ContextMenuItem>
                         <ContextMenuItem>
-                            <Edit className="mr-2 h-4 w-4" />
+                            <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
                             Edit
                         </ContextMenuItem>
                         <ContextMenuItem variant="destructive">
-                            <Trash2 className="mr-2 h-4 w-4" />
+                            <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
                             Delete
                         </ContextMenuItem>
                     </ContextMenuContent>
                 </ContextMenu>
             </div>
 
-            <div className="flex h-[150px] w-[200px] items-center justify-center rounded-md border border-dashed text-sm">
+            <div className="oui:flex oui:h-[150px] oui:w-[200px] oui:items-center oui:justify-center oui:rounded-md oui:border oui:border-dashed oui:text-sm">
                 <ContextMenu>
-                    <ContextMenuTrigger className="flex h-full w-full items-center justify-center">
+                    <ContextMenuTrigger className="oui:flex oui:h-full oui:w-full oui:items-center oui:justify-center">
                         With Separators
                     </ContextMenuTrigger>
                     <ContextMenuContent>
                         <ContextMenuItem>
-                            <Edit className="mr-2 h-4 w-4" />
+                            <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
                             Edit
                         </ContextMenuItem>
                         <ContextMenuSeparator />
                         <ContextMenuItem>
-                            <Share className="mr-2 h-4 w-4" />
+                            <Share className="oui:mr-2 oui:h-4 oui:w-4" />
                             Share
                         </ContextMenuItem>
                         <ContextMenuSeparator />
                         <ContextMenuItem variant="destructive">
-                            <Trash2 className="mr-2 h-4 w-4" />
+                            <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
                             Delete
                         </ContextMenuItem>
                     </ContextMenuContent>
                 </ContextMenu>
             </div>
 
-            <div className="flex h-[150px] w-[200px] items-center justify-center rounded-md border border-dashed text-sm">
+            <div className="oui:flex oui:h-[150px] oui:w-[200px] oui:items-center oui:justify-center oui:rounded-md oui:border oui:border-dashed oui:text-sm">
                 <ContextMenu>
-                    <ContextMenuTrigger className="flex h-full w-full items-center justify-center">
+                    <ContextMenuTrigger className="oui:flex oui:h-full oui:w-full oui:items-center oui:justify-center">
                         With Checkboxes
                     </ContextMenuTrigger>
                     <ContextMenuContent>
                         <ContextMenuCheckboxItem checked>
-                            <Eye className="mr-2 h-4 w-4" />
+                            <Eye className="oui:mr-2 oui:h-4 oui:w-4" />
                             Show Preview
                         </ContextMenuCheckboxItem>
                         <ContextMenuCheckboxItem>
-                            <Grid3X3 className="mr-2 h-4 w-4" />
+                            <Grid3X3 className="oui:mr-2 oui:h-4 oui:w-4" />
                             Grid View
                         </ContextMenuCheckboxItem>
                         <ContextMenuCheckboxItem checked>
-                            <List className="mr-2 h-4 w-4" />
+                            <List className="oui:mr-2 oui:h-4 oui:w-4" />
                             List View
                         </ContextMenuCheckboxItem>
                     </ContextMenuContent>
                 </ContextMenu>
             </div>
 
-            <div className="flex h-[150px] w-[200px] items-center justify-center rounded-md border border-dashed text-sm">
+            <div className="oui:flex oui:h-[150px] oui:w-[200px] oui:items-center oui:justify-center oui:rounded-md oui:border oui:border-dashed oui:text-sm">
                 <ContextMenu>
-                    <ContextMenuTrigger className="flex h-full w-full items-center justify-center">
+                    <ContextMenuTrigger className="oui:flex oui:h-full oui:w-full oui:items-center oui:justify-center">
                         With Submenus
                     </ContextMenuTrigger>
                     <ContextMenuContent>
                         <ContextMenuItem>
-                            <Edit className="mr-2 h-4 w-4" />
+                            <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
                             Edit
                         </ContextMenuItem>
                         <ContextMenuSub>
                             <ContextMenuSubTrigger>
-                                <Share className="mr-2 h-4 w-4" />
+                                <Share className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Share
                             </ContextMenuSubTrigger>
                             <ContextMenuSubContent>
                                 <ContextMenuItem>
-                                    <Mail className="mr-2 h-4 w-4" />
+                                    <Mail className="oui:mr-2 oui:h-4 oui:w-4" />
                                     Email
                                 </ContextMenuItem>
                                 <ContextMenuItem>
-                                    <Copy className="mr-2 h-4 w-4" />
+                                    <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
                                     Copy Link
                                 </ContextMenuItem>
                             </ContextMenuSubContent>
                         </ContextMenuSub>
                         <ContextMenuItem variant="destructive">
-                            <Trash2 className="mr-2 h-4 w-4" />
+                            <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
                             Delete
                         </ContextMenuItem>
                     </ContextMenuContent>

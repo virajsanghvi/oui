@@ -1,5 +1,3 @@
-"use client"
-
 import * as React from "react"
 import * as SwitchPrimitive from "@radix-ui/react-switch"
 
@@ -13,7 +11,7 @@ function Switch({
     <SwitchPrimitive.Root
       data-slot="switch"
       className={cn(
-        "peer data-[state=checked]:bg-primary data-[state=unchecked]:bg-input focus-visible:border-ring focus-visible:ring-ring/50 dark:data-[state=unchecked]:bg-input/80 inline-flex h-[1.15rem] w-8 shrink-0 items-center rounded-full border border-transparent shadow-xs transition-all outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
+        "oui:peer oui:data-[state=checked]:bg-primary oui:data-[state=unchecked]:bg-input oui:focus-visible:border-ring oui:focus-visible:ring-ring/50 oui:dark:data-[state=unchecked]:bg-input/80 oui:inline-flex oui:h-[1.15rem] oui:w-8 oui:shrink-0 oui:items-center oui:rounded-full oui:border oui:border-transparent oui:shadow-xs oui:transition-all oui:outline-none oui:focus-visible:ring-[3px] oui:disabled:cursor-not-allowed oui:disabled:opacity-50",
         className
       )}
       {...props}
@@ -21,7 +19,7 @@ function Switch({
       <SwitchPrimitive.Thumb
         data-slot="switch-thumb"
         className={cn(
-          "bg-background dark:data-[state=unchecked]:bg-foreground dark:data-[state=checked]:bg-primary-foreground pointer-events-none block size-4 rounded-full ring-0 transition-transform data-[state=checked]:translate-x-[calc(100%-2px)] data-[state=unchecked]:translate-x-0"
+          "oui:bg-background oui:dark:data-[state=unchecked]:bg-foreground oui:dark:data-[state=checked]:bg-primary-foreground oui:pointer-events-none oui:block oui:size-4 oui:rounded-full oui:ring-0 oui:transition-transform oui:data-[state=checked]:translate-x-[calc(100%-2px)] oui:data-[state=unchecked]:translate-x-0"
         )}
       />
     </SwitchPrimitive.Root>

@@ -21,7 +21,7 @@ function SelectTrigger({
   return (
     <BaseSelectTrigger
       className={cn(
-        "rounded-full bg-white",
+        "oui:rounded-full oui:bg-white",
         className
       )}
       {...props}

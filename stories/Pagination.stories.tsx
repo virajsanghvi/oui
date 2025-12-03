@@ -148,7 +148,7 @@ export const FirstPage: Story = {
     <Pagination>
       <PaginationContent>
         <PaginationItem>
-          <PaginationPrevious href="#" className="pointer-events-none opacity-50" size="default" />
+          <PaginationPrevious href="#" className="oui:pointer-events-none oui:opacity-50" size="default" />
         </PaginationItem>
         <PaginationItem>
           <PaginationLink href="#" isActive size="icon">
@@ -208,7 +208,7 @@ export const LastPage: Story = {
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
-          <PaginationNext href="#" className="pointer-events-none opacity-50" size="default" />
+          <PaginationNext href="#" className="oui:pointer-events-none oui:opacity-50" size="default" />
         </PaginationItem>
       </PaginationContent>
     </Pagination>
@@ -305,7 +305,7 @@ export const SinglePage: Story = {
     <Pagination>
       <PaginationContent>
         <PaginationItem>
-          <PaginationPrevious href="#" className="pointer-events-none opacity-50" size="default" />
+          <PaginationPrevious href="#" className="oui:pointer-events-none oui:opacity-50" size="default" />
         </PaginationItem>
         <PaginationItem>
           <PaginationLink href="#" isActive size="icon">
@@ -313,7 +313,7 @@ export const SinglePage: Story = {
           </PaginationLink>
         </PaginationItem>
         <PaginationItem>
-          <PaginationNext href="#" className="pointer-events-none opacity-50" size="default" />
+          <PaginationNext href="#" className="oui:pointer-events-none oui:opacity-50" size="default" />
         </PaginationItem>
       </PaginationContent>
     </Pagination>
@@ -330,9 +330,9 @@ export const SinglePage: Story = {
 // Showcase all variants
 export const AllVariants: Story = {
   render: () => (
-    <div className="space-y-8">
-      <div className="space-y-2">
-        <h4 className="text-sm font-medium">Simple Pagination</h4>
+    <div className="oui:space-y-8">
+      <div className="oui:space-y-2">
+        <h4 className="oui:text-sm oui:font-medium">Simple Pagination</h4>
         <Pagination>
           <PaginationContent>
             <PaginationItem>
@@ -356,8 +356,8 @@ export const AllVariants: Story = {
         </Pagination>
       </div>
 
-      <div className="space-y-2">
-        <h4 className="text-sm font-medium">With Ellipsis</h4>
+      <div className="oui:space-y-2">
+        <h4 className="oui:text-sm oui:font-medium">With Ellipsis</h4>
         <Pagination>
           <PaginationContent>
             <PaginationItem>
@@ -387,12 +387,12 @@ export const AllVariants: Story = {
         </Pagination>
       </div>
 
-      <div className="space-y-2">
-        <h4 className="text-sm font-medium">First Page (Previous Disabled)</h4>
+      <div className="oui:space-y-2">
+        <h4 className="oui:text-sm oui:font-medium">First Page (Previous Disabled)</h4>
         <Pagination>
           <PaginationContent>
             <PaginationItem>
-              <PaginationPrevious href="#" className="pointer-events-none opacity-50" size="default" />
+              <PaginationPrevious href="#" className="oui:pointer-events-none oui:opacity-50" size="default" />
             </PaginationItem>
             <PaginationItem>
               <PaginationLink href="#" isActive size="icon">
@@ -412,8 +412,8 @@ export const AllVariants: Story = {
         </Pagination>
       </div>
 
-      <div className="space-y-2">
-        <h4 className="text-sm font-medium">Last Page (Next Disabled)</h4>
+      <div className="oui:space-y-2">
+        <h4 className="oui:text-sm oui:font-medium">Last Page (Next Disabled)</h4>
         <Pagination>
           <PaginationContent>
             <PaginationItem>
@@ -431,7 +431,7 @@ export const AllVariants: Story = {
               </PaginationLink>
             </PaginationItem>
             <PaginationItem>
-              <PaginationNext href="#" className="pointer-events-none opacity-50" size="default" />
+              <PaginationNext href="#" className="oui:pointer-events-none oui:opacity-50" size="default" />
             </PaginationItem>
           </PaginationContent>
         </Pagination>
@@ -608,8 +608,8 @@ export const InteractiveExample: Story = {
     };
 
     return (
-      <div className="space-y-4">
-        <div className="text-center text-sm text-muted-foreground">
+      <div className="oui:space-y-4">
+        <div className="oui:text-center oui:text-sm oui:text-muted-foreground">
           Showing results for page {currentPage} of {totalPages} (400 total items)
         </div>
         <Pagination>
@@ -617,7 +617,7 @@ export const InteractiveExample: Story = {
             <PaginationItem>
               <PaginationPrevious
                 href="#"
-                className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
+                className={currentPage === 1 ? "oui:pointer-events-none oui:opacity-50" : ""}
                 size="default"
                 onClick={(e) => {
                   e.preventDefault();
@@ -629,7 +629,7 @@ export const InteractiveExample: Story = {
             <PaginationItem>
               <PaginationNext
                 href="#"
-                className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
+                className={currentPage === totalPages ? "oui:pointer-events-none oui:opacity-50" : ""}
                 size="default"
                 onClick={(e) => {
                   e.preventDefault();

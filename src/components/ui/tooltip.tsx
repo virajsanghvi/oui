@@ -1,5 +1,3 @@
-"use client"
-
 import * as React from "react"
 import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 
@@ -46,13 +44,13 @@ function TooltipContent({
         data-slot="tooltip-content"
         sideOffset={sideOffset}
         className={cn(
-          "bg-primary text-primary-foreground animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-fit origin-(--radix-tooltip-content-transform-origin) rounded-md px-3 py-1.5 text-xs text-balance",
+          "oui:bg-foreground oui:text-background oui:animate-in oui:fade-in-0 oui:zoom-in-95 oui:data-[state=closed]:animate-out oui:data-[state=closed]:fade-out-0 oui:data-[state=closed]:zoom-out-95 oui:data-[side=bottom]:slide-in-from-top-2 oui:data-[side=left]:slide-in-from-right-2 oui:data-[side=right]:slide-in-from-left-2 oui:data-[side=top]:slide-in-from-bottom-2 oui:z-50 oui:w-fit oui:origin-(--radix-tooltip-content-transform-origin) oui:rounded-md oui:px-3 oui:py-1.5 oui:text-xs oui:text-balance",
           className
         )}
         {...props}
       >
         {children}
-        <TooltipPrimitive.Arrow className="bg-primary fill-primary z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px]" />
+        <TooltipPrimitive.Arrow className="oui:bg-foreground oui:fill-foreground oui:z-50 oui:size-2.5 oui:translate-y-[calc(-50%_-_2px)] oui:rotate-45 oui:rounded-[2px]" />
       </TooltipPrimitive.Content>
     </TooltipPrimitive.Portal>
   )

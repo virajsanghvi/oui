@@ -8,7 +8,7 @@
     "css": "src/styles/preset.css",
     "baseColor": "neutral",
     "cssVariables": true,
-    "prefix": ""
+    "prefix": "oui"
   },
   "aliases": {
     "components": "@/components",

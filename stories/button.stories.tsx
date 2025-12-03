@@ -25,7 +25,7 @@ const meta: Meta<typeof Button> = {
     },
     disabled: {
       control: { type: 'boolean' },
-      description: 'Whether the button is disabled',
+      description: 'Whether the button is oui:disabled',
     },
     loading: {
       control: { type: 'boolean' },
@@ -143,7 +143,7 @@ export const WithIcon: Story = {
 // Showcase stories
 export const AllVariants: Story = {
   render: () => (
-    <div className="flex flex-wrap gap-4">
+    <div className="oui:flex oui:flex-wrap oui:gap-4">
       <Button variant="default">Default</Button>
       <Button variant="destructive">Destructive</Button>
       <Button variant="outline">Outline</Button>
@@ -163,7 +163,7 @@ export const AllVariants: Story = {
 
 export const AllSizes: Story = {
   render: () => (
-    <div className="flex items-center gap-4">
+    <div className="oui:flex oui:items-center oui:gap-4">
       <Button size="sm">Small</Button>
       <Button size="default">Default</Button>
       <Button size="lg">Large</Button>
@@ -195,7 +195,7 @@ export const Loading: Story = {
 
 export const LoadingVariants: Story = {
   render: () => (
-    <div className="flex flex-wrap gap-4">
+    <div className="oui:flex oui:flex-wrap oui:gap-4">
       <Button loading>Default Loading</Button>
       <Button variant="destructive" loading>Deleting...</Button>
       <Button variant="outline" loading>Processing...</Button>
@@ -214,7 +214,7 @@ export const LoadingVariants: Story = {
 
 export const LoadingSizes: Story = {
   render: () => (
-    <div className="flex items-center gap-4">
+    <div className="oui:flex oui:items-center oui:gap-4">
       <Button size="sm" loading>Small</Button>
       <Button loading>Default</Button>
       <Button size="lg" loading>Large</Button>
@@ -232,18 +232,18 @@ export const LoadingSizes: Story = {
 
 export const LoadingComparison: Story = {
   render: () => (
-    <div className="space-y-6">
-      <div className="space-y-2">
-        <h4 className="text-sm font-medium">Normal State</h4>
-        <div className="flex gap-4">
+    <div className="oui:space-y-6">
+      <div className="oui:space-y-2">
+        <h4 className="oui:text-sm oui:font-medium">Normal State</h4>
+        <div className="oui:flex oui:gap-4">
           <Button>Save Changes</Button>
           <Button variant="destructive">Delete Item</Button>
           <Button variant="outline">Cancel</Button>
         </div>
       </div>
-      <div className="space-y-2">
-        <h4 className="text-sm font-medium">Loading State</h4>
-        <div className="flex gap-4">
+      <div className="oui:space-y-2">
+        <h4 className="oui:text-sm oui:font-medium">Loading State</h4>
+        <div className="oui:flex oui:gap-4">
           <Button loading>Save Changes</Button>
           <Button variant="destructive" loading>Delete Item</Button>
           <Button variant="outline" loading>Cancel</Button>

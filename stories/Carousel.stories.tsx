@@ -34,15 +34,15 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (args) => (
-    <div className="w-full max-w-xs mx-auto">
+    <div className="oui:w-full oui:max-w-xs oui:mx-auto">
       <Carousel {...args}>
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index}>
-              <div className="p-1">
+              <div className="oui:p-1">
                 <Card>
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <span className="text-4xl font-semibold">{index + 1}</span>
+                  <CardContent className="oui:flex oui:aspect-square oui:items-center oui:justify-center oui:p-6">
+                    <span className="oui:text-4xl oui:font-semibold">{index + 1}</span>
                   </CardContent>
                 </Card>
               </div>
@@ -58,7 +58,7 @@ export const Default: Story = {
 
 export const WithImages: Story = {
   render: (args) => (
-    <div className="w-full max-w-sm mx-auto">
+    <div className="oui:w-full oui:max-w-sm oui:mx-auto">
       <Carousel {...args}>
         <CarouselContent>
           {[
@@ -68,13 +68,13 @@ export const WithImages: Story = {
             'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&dpr=2&q=80',
           ].map((src, index) => (
             <CarouselItem key={index}>
-              <div className="p-1">
+              <div className="oui:p-1">
                 <Card>
-                  <CardContent className="p-0">
+                  <CardContent className="oui:p-0">
                     <img
                       src={src}
                       alt={`Slide ${index + 1}`}
-                      className="w-full h-64 object-cover rounded-lg"
+                      className="oui:w-full oui:h-64 oui:object-cover oui:rounded-lg"
                     />
                   </CardContent>
                 </Card>
@@ -91,7 +91,7 @@ export const WithImages: Story = {
 
 export const MultipleItems: Story = {
   render: (args) => (
-    <div className="w-full max-w-4xl mx-auto">
+    <div className="oui:w-full oui:max-w-4xl oui:mx-auto">
       <Carousel
         {...args}
         opts={{
@@ -99,15 +99,15 @@ export const MultipleItems: Story = {
           loop: true,
         }}
       >
-        <CarouselContent className="-ml-2 md:-ml-4">
+        <CarouselContent className="oui:-ml-2 oui:md:-ml-4">
           {Array.from({ length: 8 }).map((_, index) => (
-            <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-              <div className="p-1">
+            <CarouselItem key={index} className="oui:pl-2 oui:md:pl-4 oui:md:basis-1/2 oui:lg:basis-1/3">
+              <div className="oui:p-1">
                 <Card>
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <div className="text-center">
-                      <div className="text-2xl font-semibold">{index + 1}</div>
-                      <p className="text-sm text-muted-foreground">Item {index + 1}</p>
+                  <CardContent className="oui:flex oui:aspect-square oui:items-center oui:justify-center oui:p-6">
+                    <div className="oui:text-center">
+                      <div className="oui:text-2xl oui:font-semibold">{index + 1}</div>
+                      <p className="oui:text-sm oui:text-muted-foreground">Item {index + 1}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -127,15 +127,15 @@ export const Vertical: Story = {
     orientation: 'vertical',
   },
   render: (args) => (
-    <div className="w-full max-w-xs mx-auto">
-      <Carousel {...args} className="w-full max-w-xs">
-        <CarouselContent className="-mt-1 h-[300px]">
+    <div className="oui:w-full oui:max-w-xs oui:mx-auto">
+      <Carousel {...args} className="oui:w-full oui:max-w-xs">
+        <CarouselContent className="oui:-mt-1 oui:h-[300px]">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="pt-1 md:basis-1/2">
-              <div className="p-1">
+            <CarouselItem key={index} className="oui:pt-1 oui:md:basis-1/2">
+              <div className="oui:p-1">
                 <Card>
-                  <CardContent className="flex items-center justify-center p-6">
-                    <span className="text-3xl font-semibold">{index + 1}</span>
+                  <CardContent className="oui:flex oui:items-center oui:justify-center oui:p-6">
+                    <span className="oui:text-3xl oui:font-semibold">{index + 1}</span>
                   </CardContent>
                 </Card>
               </div>
@@ -151,7 +151,7 @@ export const Vertical: Story = {
 
 export const ProductShowcase: Story = {
   render: (args) => (
-    <div className="w-full max-w-5xl mx-auto">
+    <div className="oui:w-full oui:max-w-5xl oui:mx-auto">
       <Carousel
         {...args}
         opts={{
@@ -167,17 +167,17 @@ export const ProductShowcase: Story = {
             { name: 'Smartphone', price: '$699', image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&dpr=2&q=80' },
             { name: 'Tablet Device', price: '$449', image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&dpr=2&q=80' },
           ].map((product, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-              <div className="p-1">
+            <CarouselItem key={index} className="oui:md:basis-1/2 oui:lg:basis-1/3">
+              <div className="oui:p-1">
                 <Card>
-                  <CardContent className="p-4">
+                  <CardContent className="oui:p-4">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-48 object-cover rounded-md mb-4"
+                      className="oui:w-full oui:h-48 oui:object-cover oui:rounded-md oui:mb-4"
                     />
-                    <h3 className="font-semibold text-lg">{product.name}</h3>
-                    <p className="text-2xl font-bold text-primary">{product.price}</p>
+                    <h3 className="oui:font-semibold oui:text-lg">{product.name}</h3>
+                    <p className="oui:text-2xl oui:font-bold oui:text-primary">{product.price}</p>
                   </CardContent>
                 </Card>
               </div>
@@ -200,20 +200,20 @@ export const ProductShowcase: Story = {
 
 export const Showcase: Story = {
   render: () => (
-    <div className="space-y-8">
+    <div className="oui:space-y-8">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Carousel Variations</h3>
-        <div className="space-y-8">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Carousel Variations</h3>
+        <div className="oui:space-y-8">
           <div>
-            <p className="text-sm font-medium mb-4">Basic Carousel</p>
-            <div className="w-full max-w-xs mx-auto">
+            <p className="oui:text-sm oui:font-medium oui:mb-4">Basic Carousel</p>
+            <div className="oui:w-full oui:max-w-xs oui:mx-auto">
               <Carousel>
                 <CarouselContent>
                   {Array.from({ length: 3 }).map((_, index) => (
                     <CarouselItem key={index}>
                       <Card>
-                        <CardContent className="flex aspect-square items-center justify-center p-6">
-                          <span className="text-2xl font-semibold">{index + 1}</span>
+                        <CardContent className="oui:flex oui:aspect-square oui:items-center oui:justify-center oui:p-6">
+                          <span className="oui:text-2xl oui:font-semibold">{index + 1}</span>
                         </CardContent>
                       </Card>
                     </CarouselItem>
@@ -226,15 +226,15 @@ export const Showcase: Story = {
           </div>
           
           <div>
-            <p className="text-sm font-medium mb-4">Multiple Items</p>
-            <div className="w-full max-w-2xl mx-auto">
+            <p className="oui:text-sm oui:font-medium oui:mb-4">Multiple Items</p>
+            <div className="oui:w-full oui:max-w-2xl oui:mx-auto">
               <Carousel opts={{ align: 'start' }}>
                 <CarouselContent>
                   {Array.from({ length: 6 }).map((_, index) => (
-                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <CarouselItem key={index} className="oui:md:basis-1/2 oui:lg:basis-1/3">
                       <Card>
-                        <CardContent className="flex aspect-square items-center justify-center p-6">
-                          <span className="text-xl font-semibold">{index + 1}</span>
+                        <CardContent className="oui:flex oui:aspect-square oui:items-center oui:justify-center oui:p-6">
+                          <span className="oui:text-xl oui:font-semibold">{index + 1}</span>
                         </CardContent>
                       </Card>
                     </CarouselItem>

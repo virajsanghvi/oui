@@ -101,7 +101,7 @@ export const SeverityCritical: Story = {
 // Badge with icons
 export const WithIcons: Story = {
   render: () => (
-    <div className="flex flex-wrap gap-4">
+    <div className="oui:flex oui:flex-wrap oui:gap-4">
       <Badge variant="default">
         <Star size={12} />
         Featured
@@ -136,7 +136,7 @@ export const WithIcons: Story = {
 // Showcase stories
 export const AllVariants: Story = {
   render: () => (
-    <div className="flex flex-wrap gap-4">
+    <div className="oui:flex oui:flex-wrap oui:gap-4">
       <Badge variant="default">New</Badge>
       <Badge variant="secondary">Draft</Badge>
       <Badge variant="destructive">Urgent</Badge>
@@ -162,7 +162,7 @@ export const AllVariants: Story = {
 
 export const StatusBadges: Story = {
   render: () => (
-    <div className="flex flex-wrap gap-4">
+    <div className="oui:flex oui:flex-wrap oui:gap-4">
       <Badge variant="default">Active</Badge>
       <Badge variant="secondary">Pending</Badge>
       <Badge variant="outline">Inactive</Badge>
@@ -184,7 +184,7 @@ export const StatusBadges: Story = {
 
 export const PriorityBadges: Story = {
   render: () => (
-    <div className="flex flex-wrap gap-4">
+    <div className="oui:flex oui:flex-wrap oui:gap-4">
       <Badge variant="severity-low">Low Priority</Badge>
       <Badge variant="severity-med">Medium Priority</Badge>
       <Badge variant="severity-high">High Priority</Badge>

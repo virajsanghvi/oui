@@ -68,27 +68,27 @@ export const Default: Story = {
       <DropdownMenuTrigger asChild>
         <Button variant="outline">Open Menu</Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="oui:w-56">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <User className="mr-2 h-4 w-4" />
+            <User className="oui:mr-2 oui:h-4 oui:w-4" />
             <span>Profile</span>
             <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <CreditCard className="mr-2 h-4 w-4" />
+            <CreditCard className="oui:mr-2 oui:h-4 oui:w-4" />
             <span>Billing</span>
             <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Settings className="mr-2 h-4 w-4" />
+            <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
             <span>Settings</span>
             <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Keyboard className="mr-2 h-4 w-4" />
+            <Keyboard className="oui:mr-2 oui:h-4 oui:w-4" />
             <span>Keyboard shortcuts</span>
             <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
           </DropdownMenuItem>
@@ -96,54 +96,54 @@ export const Default: Story = {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <Users className="mr-2 h-4 w-4" />
+            <Users className="oui:mr-2 oui:h-4 oui:w-4" />
             <span>Team</span>
           </DropdownMenuItem>
           <DropdownMenuSub>
             <DropdownMenuSubTrigger>
-              <UserPlus className="mr-2 h-4 w-4" />
+              <UserPlus className="oui:mr-2 oui:h-4 oui:w-4" />
               <span>Invite users</span>
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
                 <DropdownMenuItem>
-                  <Mail className="mr-2 h-4 w-4" />
+                  <Mail className="oui:mr-2 oui:h-4 oui:w-4" />
                   <span>Email</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <MessageSquare className="mr-2 h-4 w-4" />
+                  <MessageSquare className="oui:mr-2 oui:h-4 oui:w-4" />
                   <span>Message</span>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
-                  <PlusCircle className="mr-2 h-4 w-4" />
+                  <PlusCircle className="oui:mr-2 oui:h-4 oui:w-4" />
                   <span>More...</span>
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
           </DropdownMenuSub>
           <DropdownMenuItem>
-            <Plus className="mr-2 h-4 w-4" />
+            <Plus className="oui:mr-2 oui:h-4 oui:w-4" />
             <span>New Team</span>
             <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <Github className="mr-2 h-4 w-4" />
+          <Github className="oui:mr-2 oui:h-4 oui:w-4" />
           <span>GitHub</span>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <LifeBuoy className="mr-2 h-4 w-4" />
+          <LifeBuoy className="oui:mr-2 oui:h-4 oui:w-4" />
           <span>Support</span>
         </DropdownMenuItem>
         <DropdownMenuItem disabled>
-          <Cloud className="mr-2 h-4 w-4" />
+          <Cloud className="oui:mr-2 oui:h-4 oui:w-4" />
           <span>API</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <LogOut className="mr-2 h-4 w-4" />
+          <LogOut className="oui:mr-2 oui:h-4 oui:w-4" />
           <span>Log out</span>
           <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
         </DropdownMenuItem>
@@ -163,7 +163,7 @@ export const WithCheckboxes: Story = {
         <DropdownMenuTrigger asChild>
           <Button variant="outline">View Options</Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56">
+        <DropdownMenuContent className="oui:w-56">
           <DropdownMenuLabel>Appearance</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuCheckboxItem
@@ -207,7 +207,7 @@ export const WithRadioGroup: Story = {
         <DropdownMenuTrigger asChild>
           <Button variant="outline">Panel Position</Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56">
+        <DropdownMenuContent className="oui:w-56">
           <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
@@ -234,7 +234,7 @@ export const WithSubmenus: Story = {
       <DropdownMenuTrigger asChild>
         <Button variant="outline">File Menu</Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="oui:w-56">
         <DropdownMenuItem>
           New File
           <DropdownMenuShortcut>⌘N</DropdownMenuShortcut>
@@ -295,15 +295,15 @@ export const Destructive: Story = {
       <DropdownMenuTrigger asChild>
         <Button variant="outline">Actions</Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="oui:w-56">
         <DropdownMenuLabel>Actions</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <Settings className="mr-2 h-4 w-4" />
+          <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
           <span>Edit</span>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <User className="mr-2 h-4 w-4" />
+          <User className="oui:mr-2 oui:h-4 oui:w-4" />
           <span>Duplicate</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
@@ -325,10 +325,10 @@ export const Destructive: Story = {
 
 export const Showcase: Story = {
   render: () => (
-    <div className="space-y-8">
+    <div className="oui:space-y-8">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Dropdown Menu Examples</h3>
-        <div className="flex flex-wrap gap-4">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Dropdown Menu Examples</h3>
+        <div className="oui:flex oui:flex-wrap oui:gap-4">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline">Basic Menu</Button>
@@ -345,18 +345,18 @@ export const Showcase: Story = {
             <DropdownMenuTrigger asChild>
               <Button variant="outline">With Icons</Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56">
+            <DropdownMenuContent className="oui:w-56">
               <DropdownMenuItem>
-                <User className="mr-2 h-4 w-4" />
+                <User className="oui:mr-2 oui:h-4 oui:w-4" />
                 <span>Profile</span>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Settings className="mr-2 h-4 w-4" />
+                <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
                 <span>Settings</span>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem>
-                <LogOut className="mr-2 h-4 w-4" />
+                <LogOut className="oui:mr-2 oui:h-4 oui:w-4" />
                 <span>Logout</span>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -366,7 +366,7 @@ export const Showcase: Story = {
             <DropdownMenuTrigger asChild>
               <Button variant="outline">With Shortcuts</Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56">
+            <DropdownMenuContent className="oui:w-56">
               <DropdownMenuItem>
                 <span>New File</span>
                 <DropdownMenuShortcut>⌘N</DropdownMenuShortcut>

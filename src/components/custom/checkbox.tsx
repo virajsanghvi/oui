@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 function Checkbox({ className, ...props }: React.ComponentProps<typeof BaseCheckbox>) {
   return (
     <BaseCheckbox
-      className={cn("[&_svg]:!text-white", className)}
+      className={cn("oui:[&_svg]:!text-white", className)}
       {...props}
     />
   )

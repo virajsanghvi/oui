@@ -136,7 +136,7 @@ export const WithKeyboardShortcut: Story = {
       </TooltipTrigger>
       <TooltipContent>
         <p>Copy to clipboard</p>
-        <p className="text-xs opacity-70 mt-1">⌘+C</p>
+        <p className="oui:text-xs oui:opacity-70 oui:mt-1">⌘+C</p>
       </TooltipContent>
     </Tooltip>
   ),
@@ -148,7 +148,7 @@ export const WithIconButton: Story = {
     <Tooltip>
       <TooltipTrigger asChild>
         <Button size="icon" variant="outline">
-          <HelpCircle className="h-4 w-4" />
+          <HelpCircle className="oui:h-4 oui:w-4" />
         </Button>
       </TooltipTrigger>
       <TooltipContent>
@@ -160,11 +160,11 @@ export const WithIconButton: Story = {
 
 export const WithTextTrigger: Story = {
   render: () => (
-    <div className="text-sm">
+    <div className="oui:text-sm">
       This is some text with a{' '}
       <Tooltip>
         <TooltipTrigger asChild>
-          <span className="underline decoration-dotted cursor-help">technical term</span>
+          <span className="oui:underline oui:decoration-dotted oui:cursor-help">technical term</span>
         </TooltipTrigger>
         <TooltipContent>
           <p>A technical term is a word or phrase that has a specific meaning within a particular field</p>
@@ -205,7 +205,7 @@ export const SlowTooltip: Story = {
 // Showcase stories
 export const AllPositions: Story = {
   render: () => (
-    <div className="grid grid-cols-3 gap-8 items-center justify-items-center min-h-[200px]">
+    <div className="oui:grid oui:grid-cols-3 oui:gap-8 oui:items-center justify-items-center oui:min-h-[200px]">
       <div></div>
       <Tooltip>
         <TooltipTrigger asChild>
@@ -267,47 +267,47 @@ export const AllPositions: Story = {
 
 export const CommonUseCases: Story = {
   render: () => (
-    <div className="flex flex-wrap gap-4 items-center">
+    <div className="oui:flex oui:flex-wrap oui:gap-4 oui:items-center">
       <Tooltip>
         <TooltipTrigger asChild>
           <Button size="icon" variant="outline">
-            <Trash2 className="h-4 w-4" />
+            <Trash2 className="oui:h-4 oui:w-4" />
           </Button>
         </TooltipTrigger>
         <TooltipContent>
           <p>Delete item</p>
-          <p className="text-xs opacity-70 mt-1">⌘+⌫</p>
+          <p className="oui:text-xs oui:opacity-70 oui:mt-1">⌘+⌫</p>
         </TooltipContent>
       </Tooltip>
 
       <Tooltip>
         <TooltipTrigger asChild>
           <Button size="icon" variant="outline">
-            <Edit className="h-4 w-4" />
+            <Edit className="oui:h-4 oui:w-4" />
           </Button>
         </TooltipTrigger>
         <TooltipContent>
           <p>Edit item</p>
-          <p className="text-xs opacity-70 mt-1">⌘+E</p>
+          <p className="oui:text-xs oui:opacity-70 oui:mt-1">⌘+E</p>
         </TooltipContent>
       </Tooltip>
 
       <Tooltip>
         <TooltipTrigger asChild>
           <Button size="icon" variant="outline">
-            <Copy className="h-4 w-4" />
+            <Copy className="oui:h-4 oui:w-4" />
           </Button>
         </TooltipTrigger>
         <TooltipContent>
           <p>Copy to clipboard</p>
-          <p className="text-xs opacity-70 mt-1">⌘+C</p>
+          <p className="oui:text-xs oui:opacity-70 oui:mt-1">⌘+C</p>
         </TooltipContent>
       </Tooltip>
 
       <Tooltip>
         <TooltipTrigger asChild>
           <Button size="icon" variant="outline">
-            <AlertTriangle className="h-4 w-4" />
+            <AlertTriangle className="oui:h-4 oui:w-4" />
           </Button>
         </TooltipTrigger>
         <TooltipContent>
@@ -327,11 +327,11 @@ export const CommonUseCases: Story = {
 
 export const InteractiveExample: Story = {
   render: () => (
-    <div className="space-y-4">
-      <p className="text-sm text-muted-foreground">
+    <div className="oui:space-y-4">
+      <p className="oui:text-sm oui:text-muted-foreground">
         Hover over the elements below to see different tooltip examples:
       </p>
-      <div className="flex flex-wrap gap-4">
+      <div className="oui:flex oui:flex-wrap oui:gap-4">
         <Tooltip>
           <TooltipTrigger asChild>
             <Button>Primary Action</Button>

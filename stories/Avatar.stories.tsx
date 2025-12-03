@@ -67,20 +67,20 @@ export const WithFallback: Story = {
 // Variant comparison
 export const VariantComparison: Story = {
   render: () => (
-    <div className="flex items-center gap-6">
-      <div className="text-center">
+    <div className="oui:flex oui:items-center oui:gap-6">
+      <div className="oui:text-center">
         <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" alt="Circular Avatar" />
           <AvatarFallback>CR</AvatarFallback>
         </Avatar>
-        <p className="text-xs mt-2 text-muted-foreground">Circular</p>
+        <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">Circular</p>
       </div>
-      <div className="text-center">
+      <div className="oui:text-center">
         <Avatar variant="squared">
           <AvatarImage src="https://github.com/shadcn.png" alt="Squared Avatar" />
           <AvatarFallback variant="squared">SQ</AvatarFallback>
         </Avatar>
-        <p className="text-xs mt-2 text-muted-foreground">Squared</p>
+        <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">Squared</p>
       </div>
     </div>
   ),
@@ -98,7 +98,7 @@ export const WithIconFallback: Story = {
   render: () => (
     <Avatar>
       <AvatarFallback>
-        <User className="size-4" />
+        <User className="oui:size-4" />
       </AvatarFallback>
     </Avatar>
   ),
@@ -114,9 +114,9 @@ export const WithIconFallback: Story = {
 // Different sizes
 export const Small: Story = {
   render: () => (
-    <Avatar className="size-6">
+    <Avatar className="oui:size-6">
       <AvatarImage src="https://github.com/shadcn.png" alt="Small Avatar" />
-      <AvatarFallback className="text-xs">SM</AvatarFallback>
+      <AvatarFallback className="oui:text-xs">SM</AvatarFallback>
     </Avatar>
   ),
   parameters: {
@@ -146,7 +146,7 @@ export const Medium: Story = {
 
 export const Large: Story = {
   render: () => (
-    <Avatar className="size-12">
+    <Avatar className="oui:size-12">
       <AvatarImage src="https://github.com/shadcn.png" alt="Large Avatar" />
       <AvatarFallback>LG</AvatarFallback>
     </Avatar>
@@ -162,9 +162,9 @@ export const Large: Story = {
 
 export const ExtraLarge: Story = {
   render: () => (
-    <Avatar className="size-16">
+    <Avatar className="oui:size-16">
       <AvatarImage src="https://github.com/shadcn.png" alt="Extra Large Avatar" />
-      <AvatarFallback className="text-lg">XL</AvatarFallback>
+      <AvatarFallback className="oui:text-lg">XL</AvatarFallback>
     </Avatar>
   ),
   parameters: {
@@ -179,7 +179,7 @@ export const ExtraLarge: Story = {
 // User profile examples
 export const UserProfiles: Story = {
   render: () => (
-    <div className="flex items-center gap-4">
+    <div className="oui:flex oui:items-center oui:gap-4">
       <Avatar>
         <AvatarImage src="https://github.com/shadcn.png" alt="Sarah Chen" />
         <AvatarFallback>SC</AvatarFallback>
@@ -193,7 +193,7 @@ export const UserProfiles: Story = {
       </Avatar>
       <Avatar>
         <AvatarFallback>
-          <User className="size-4" />
+          <User className="oui:size-4" />
         </AvatarFallback>
       </Avatar>
     </div>
@@ -210,25 +210,25 @@ export const UserProfiles: Story = {
 // Status indicators with avatars
 export const WithStatusIndicators: Story = {
   render: () => (
-    <div className="flex items-center gap-6">
-      <div className="relative">
+    <div className="oui:flex oui:items-center oui:gap-6">
+      <div className="oui:relative">
         <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" alt="Online User" />
           <AvatarFallback>ON</AvatarFallback>
         </Avatar>
-        <div className="absolute -bottom-0.5 -right-0.5 size-3 bg-green-500 border-2 border-background rounded-full"></div>
+        <div className="oui:absolute oui:-bottom-0.5 oui:-right-0.5 oui:size-3 oui:bg-green-500 oui:border-2 oui:border-background oui:rounded-full"></div>
       </div>
-      <div className="relative">
+      <div className="oui:relative">
         <Avatar>
           <AvatarFallback>AW</AvatarFallback>
         </Avatar>
-        <div className="absolute -bottom-0.5 -right-0.5 size-3 bg-yellow-500 border-2 border-background rounded-full"></div>
+        <div className="oui:absolute oui:-bottom-0.5 oui:-right-0.5 oui:size-3 oui:bg-yellow-500 oui:border-2 oui:border-background oui:rounded-full"></div>
       </div>
-      <div className="relative">
+      <div className="oui:relative">
         <Avatar>
           <AvatarFallback>OF</AvatarFallback>
         </Avatar>
-        <div className="absolute -bottom-0.5 -right-0.5 size-3 bg-gray-400 border-2 border-background rounded-full"></div>
+        <div className="oui:absolute oui:-bottom-0.5 oui:-right-0.5 oui:size-3 oui:bg-gray-400 oui:border-2 oui:border-background oui:rounded-full"></div>
       </div>
     </div>
   ),
@@ -244,22 +244,22 @@ export const WithStatusIndicators: Story = {
 // Team member avatars with roles
 export const TeamMembers: Story = {
   render: () => (
-    <div className="flex items-center gap-4">
-      <div className="relative">
+    <div className="oui:flex oui:items-center oui:gap-4">
+      <div className="oui:relative">
         <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" alt="Team Lead" />
           <AvatarFallback>TL</AvatarFallback>
         </Avatar>
-        <div className="absolute -top-1 -right-1 size-4 bg-yellow-500 rounded-full flex items-center justify-center">
-          <Crown className="size-2.5 text-white" />
+        <div className="oui:absolute oui:-top-1 oui:-right-1 oui:size-4 oui:bg-yellow-500 oui:rounded-full oui:flex oui:items-center oui:justify-center">
+          <Crown className="oui:size-2.5 oui:text-white" />
         </div>
       </div>
-      <div className="relative">
+      <div className="oui:relative">
         <Avatar>
           <AvatarFallback>AD</AvatarFallback>
         </Avatar>
-        <div className="absolute -top-1 -right-1 size-4 bg-blue-500 rounded-full flex items-center justify-center">
-          <Shield className="size-2.5 text-white" />
+        <div className="oui:absolute oui:-top-1 oui:-right-1 oui:size-4 oui:bg-blue-500 oui:rounded-full oui:flex oui:items-center oui:justify-center">
+          <Shield className="oui:size-2.5 oui:text-white" />
         </div>
       </div>
       <Avatar>
@@ -268,7 +268,7 @@ export const TeamMembers: Story = {
       <Avatar>
         <AvatarImage src="https://github.com/vercel.png" alt="Developer" />
         <AvatarFallback>
-          <UserCheck className="size-4" />
+          <UserCheck className="oui:size-4" />
         </AvatarFallback>
       </Avatar>
     </div>
@@ -285,85 +285,85 @@ export const TeamMembers: Story = {
 // All sizes showcase
 export const AllSizes: Story = {
   render: () => (
-    <div className="space-y-6">
+    <div className="oui:space-y-6">
       <div>
-        <p className="text-sm font-medium mb-4">Circular Avatars</p>
-        <div className="flex items-end gap-4">
-          <div className="text-center">
-            <Avatar className="size-6">
+        <p className="oui:text-sm oui:font-medium oui:mb-4">Circular Avatars</p>
+        <div className="oui:flex oui:items-end oui:gap-4">
+          <div className="oui:text-center">
+            <Avatar className="oui:size-6">
               <AvatarImage src="https://github.com/shadcn.png" alt="Small" />
-              <AvatarFallback className="text-xs">XS</AvatarFallback>
+              <AvatarFallback className="oui:text-xs">XS</AvatarFallback>
             </Avatar>
-            <p className="text-xs mt-2 text-muted-foreground">Small (24px)</p>
+            <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">Small (24px)</p>
           </div>
-          <div className="text-center">
+          <div className="oui:text-center">
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" alt="Default" />
               <AvatarFallback>SM</AvatarFallback>
             </Avatar>
-            <p className="text-xs mt-2 text-muted-foreground">Default (32px)</p>
+            <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">Default (32px)</p>
           </div>
-          <div className="text-center">
-            <Avatar className="size-12">
+          <div className="oui:text-center">
+            <Avatar className="oui:size-12">
               <AvatarImage src="https://github.com/shadcn.png" alt="Large" />
               <AvatarFallback>MD</AvatarFallback>
             </Avatar>
-            <p className="text-xs mt-2 text-muted-foreground">Large (48px)</p>
+            <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">Large (48px)</p>
           </div>
-          <div className="text-center">
-            <Avatar className="size-16">
+          <div className="oui:text-center">
+            <Avatar className="oui:size-16">
               <AvatarImage src="https://github.com/shadcn.png" alt="Extra Large" />
-              <AvatarFallback className="text-lg">LG</AvatarFallback>
+              <AvatarFallback className="oui:text-lg">LG</AvatarFallback>
             </Avatar>
-            <p className="text-xs mt-2 text-muted-foreground">XL (64px)</p>
+            <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">XL (64px)</p>
           </div>
-          <div className="text-center">
-            <Avatar className="size-20">
+          <div className="oui:text-center">
+            <Avatar className="oui:size-20">
               <AvatarImage src="https://github.com/shadcn.png" alt="Extra Extra Large" />
-              <AvatarFallback className="text-xl">XL</AvatarFallback>
+              <AvatarFallback className="oui:text-xl">XL</AvatarFallback>
             </Avatar>
-            <p className="text-xs mt-2 text-muted-foreground">XXL (80px)</p>
+            <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">XXL (80px)</p>
           </div>
         </div>
       </div>
       
       <div>
-        <p className="text-sm font-medium mb-4">Squared Avatars</p>
-        <div className="flex items-end gap-4">
-          <div className="text-center">
-            <Avatar variant="squared" className="size-6">
+        <p className="oui:text-sm oui:font-medium oui:mb-4">Squared Avatars</p>
+        <div className="oui:flex oui:items-end oui:gap-4">
+          <div className="oui:text-center">
+            <Avatar variant="squared" className="oui:size-6">
               <AvatarImage src="https://github.com/shadcn.png" alt="Small" />
-              <AvatarFallback variant="squared" className="text-xs">XS</AvatarFallback>
+              <AvatarFallback variant="squared" className="oui:text-xs">XS</AvatarFallback>
             </Avatar>
-            <p className="text-xs mt-2 text-muted-foreground">Small (24px)</p>
+            <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">Small (24px)</p>
           </div>
-          <div className="text-center">
+          <div className="oui:text-center">
             <Avatar variant="squared">
               <AvatarImage src="https://github.com/shadcn.png" alt="Default" />
               <AvatarFallback variant="squared">SM</AvatarFallback>
             </Avatar>
-            <p className="text-xs mt-2 text-muted-foreground">Default (32px)</p>
+            <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">Default (32px)</p>
           </div>
-          <div className="text-center">
-            <Avatar variant="squared" className="size-12">
+          <div className="oui:text-center">
+            <Avatar variant="squared" className="oui:size-12">
               <AvatarImage src="https://github.com/shadcn.png" alt="Large" />
               <AvatarFallback variant="squared">MD</AvatarFallback>
             </Avatar>
-            <p className="text-xs mt-2 text-muted-foreground">Large (48px)</p>
+            <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">Large (48px)</p>
           </div>
-          <div className="text-center">
-            <Avatar variant="squared" className="size-16">
+          <div className="oui:text-center">
+            <Avatar variant="squared" className="oui:size-16">
               <AvatarImage src="https://github.com/shadcn.png" alt="Extra Large" />
-              <AvatarFallback variant="squared" className="text-lg">LG</AvatarFallback>
+              <AvatarFallback variant="squared" className="oui:text-lg">LG</AvatarFallback>
             </Avatar>
-            <p className="text-xs mt-2 text-muted-foreground">XL (64px)</p>
+            <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">XL (64px)</p>
           </div>
-          <div className="text-center">
-            <Avatar variant="squared" className="size-20">
+          <div className="oui:text-center">
+            <Avatar variant="squared" className="oui:size-20">
               <AvatarImage src="https://github.com/shadcn.png" alt="Extra Extra Large" />
-              <AvatarFallback variant="squared" className="text-xl">XL</AvatarFallback>
+              <AvatarFallback variant="squared" className="oui:text-xl">XL</AvatarFallback>
             </Avatar>
-            <p className="text-xs mt-2 text-muted-foreground">XXL (80px)</p>
+            <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">XXL (80px)</p>
           </div>
         </div>
       </div>
@@ -381,19 +381,19 @@ export const AllSizes: Story = {
 // Avatar groups - overlapping avatars
 export const AvatarGroup: Story = {
   render: () => (
-    <div className="flex items-center">
-      <Avatar className="border-2 border-background">
+    <div className="oui:flex oui:items-center">
+      <Avatar className="oui:border-2 oui:border-background">
         <AvatarImage src="https://github.com/shadcn.png" alt="User 1" />
         <AvatarFallback>U1</AvatarFallback>
       </Avatar>
-      <Avatar className="-ml-2 border-2 border-background">
+      <Avatar className="oui:-ml-2 oui:border-2 oui:border-background">
         <AvatarImage src="https://github.com/vercel.png" alt="User 2" />
         <AvatarFallback>U2</AvatarFallback>
       </Avatar>
-      <Avatar className="-ml-2 border-2 border-background">
+      <Avatar className="oui:-ml-2 oui:border-2 oui:border-background">
         <AvatarFallback>U3</AvatarFallback>
       </Avatar>
-      <Avatar className="-ml-2 border-2 border-background">
+      <Avatar className="oui:-ml-2 oui:border-2 oui:border-background">
         <AvatarFallback>U4</AvatarFallback>
       </Avatar>
     </div>
@@ -410,20 +410,20 @@ export const AvatarGroup: Story = {
 // Avatar group with count indicator
 export const AvatarGroupWithCount: Story = {
   render: () => (
-    <div className="flex items-center">
-      <Avatar className="border-2 border-background">
+    <div className="oui:flex oui:items-center">
+      <Avatar className="oui:border-2 oui:border-background">
         <AvatarImage src="https://github.com/shadcn.png" alt="Sarah Chen" />
         <AvatarFallback>SC</AvatarFallback>
       </Avatar>
-      <Avatar className="-ml-2 border-2 border-background">
+      <Avatar className="oui:-ml-2 oui:border-2 oui:border-background">
         <AvatarImage src="https://github.com/vercel.png" alt="Alex Rodriguez" />
         <AvatarFallback>AR</AvatarFallback>
       </Avatar>
-      <Avatar className="-ml-2 border-2 border-background">
+      <Avatar className="oui:-ml-2 oui:border-2 oui:border-background">
         <AvatarFallback>MJ</AvatarFallback>
       </Avatar>
-      <Avatar className="-ml-2 border-2 border-background bg-muted">
-        <AvatarFallback className="text-xs font-medium">+5</AvatarFallback>
+      <Avatar className="oui:-ml-2 oui:border-2 oui:border-background oui:bg-muted">
+        <AvatarFallback className="oui:text-xs oui:font-medium">+5</AvatarFallback>
       </Avatar>
     </div>
   ),
@@ -441,50 +441,50 @@ export const AvatarGroupWithCount: Story = {
 // Different sized avatar groups
 export const AvatarGroupSizes: Story = {
   render: () => (
-    <div className="space-y-6">
+    <div className="oui:space-y-6">
       <div>
-        <p className="text-sm font-medium mb-2">Small Group</p>
-        <div className="flex items-center">
-          <Avatar className="size-6 border-2 border-background">
+        <p className="oui:text-sm oui:font-medium oui:mb-2">Small Group</p>
+        <div className="oui:flex oui:items-center">
+          <Avatar className="oui:size-6 oui:border-2 oui:border-background">
             <AvatarImage src="https://github.com/shadcn.png" alt="User 1" />
-            <AvatarFallback className="text-xs">U1</AvatarFallback>
+            <AvatarFallback className="oui:text-xs">U1</AvatarFallback>
           </Avatar>
-          <Avatar className="size-6 -ml-1.5 border-2 border-background">
-            <AvatarFallback className="text-xs">U2</AvatarFallback>
+          <Avatar className="oui:size-6 oui:-ml-1.5 oui:border-2 oui:border-background">
+            <AvatarFallback className="oui:text-xs">U2</AvatarFallback>
           </Avatar>
-          <Avatar className="size-6 -ml-1.5 border-2 border-background">
-            <AvatarFallback className="text-xs">U3</AvatarFallback>
+          <Avatar className="oui:size-6 oui:-ml-1.5 oui:border-2 oui:border-background">
+            <AvatarFallback className="oui:text-xs">U3</AvatarFallback>
           </Avatar>
         </div>
       </div>
       
       <div>
-        <p className="text-sm font-medium mb-2">Medium Group (Default)</p>
-        <div className="flex items-center">
-          <Avatar className="border-2 border-background">
+        <p className="oui:text-sm oui:font-medium oui:mb-2">Medium Group (Default)</p>
+        <div className="oui:flex oui:items-center">
+          <Avatar className="oui:border-2 oui:border-background">
             <AvatarImage src="https://github.com/shadcn.png" alt="User 1" />
             <AvatarFallback>U1</AvatarFallback>
           </Avatar>
-          <Avatar className="-ml-2 border-2 border-background">
+          <Avatar className="oui:-ml-2 oui:border-2 oui:border-background">
             <AvatarFallback>U2</AvatarFallback>
           </Avatar>
-          <Avatar className="-ml-2 border-2 border-background">
+          <Avatar className="oui:-ml-2 oui:border-2 oui:border-background">
             <AvatarFallback>U3</AvatarFallback>
           </Avatar>
         </div>
       </div>
       
       <div>
-        <p className="text-sm font-medium mb-2">Large Group</p>
-        <div className="flex items-center">
-          <Avatar className="size-12 border-2 border-background">
+        <p className="oui:text-sm oui:font-medium oui:mb-2">Large Group</p>
+        <div className="oui:flex oui:items-center">
+          <Avatar className="oui:size-12 oui:border-2 oui:border-background">
             <AvatarImage src="https://github.com/shadcn.png" alt="User 1" />
             <AvatarFallback>U1</AvatarFallback>
           </Avatar>
-          <Avatar className="size-12 -ml-3 border-2 border-background">
+          <Avatar className="oui:size-12 oui:-ml-3 oui:border-2 oui:border-background">
             <AvatarFallback>U2</AvatarFallback>
           </Avatar>
-          <Avatar className="size-12 -ml-3 border-2 border-background">
+          <Avatar className="oui:size-12 oui:-ml-3 oui:border-2 oui:border-background">
             <AvatarFallback>U3</AvatarFallback>
           </Avatar>
         </div>
@@ -503,36 +503,36 @@ export const AvatarGroupSizes: Story = {
 // Fallback variations showcase
 export const FallbackVariations: Story = {
   render: () => (
-    <div className="flex items-center gap-4">
-      <div className="text-center">
+    <div className="oui:flex oui:items-center oui:gap-4">
+      <div className="oui:text-center">
         <Avatar>
           <AvatarFallback>AB</AvatarFallback>
         </Avatar>
-        <p className="text-xs mt-2 text-muted-foreground">Initials</p>
+        <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">Initials</p>
       </div>
-      <div className="text-center">
+      <div className="oui:text-center">
         <Avatar>
           <AvatarFallback>
-            <User className="size-4" />
+            <User className="oui:size-4" />
           </AvatarFallback>
         </Avatar>
-        <p className="text-xs mt-2 text-muted-foreground">User Icon</p>
+        <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">User Icon</p>
       </div>
-      <div className="text-center">
+      <div className="oui:text-center">
         <Avatar>
           <AvatarFallback>
-            <UserCheck className="size-4" />
+            <UserCheck className="oui:size-4" />
           </AvatarFallback>
         </Avatar>
-        <p className="text-xs mt-2 text-muted-foreground">Verified Icon</p>
+        <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">Verified Icon</p>
       </div>
-      <div className="text-center">
+      <div className="oui:text-center">
         <Avatar>
-          <AvatarFallback className="bg-gradient-to-br from-purple-500 to-pink-500 text-white">
+          <AvatarFallback className="oui:bg-gradient-to-br oui:from-purple-500 oui:to-pink-500 oui:text-white">
             JD
           </AvatarFallback>
         </Avatar>
-        <p className="text-xs mt-2 text-muted-foreground">Custom Style</p>
+        <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">Custom Style</p>
       </div>
     </div>
   ),

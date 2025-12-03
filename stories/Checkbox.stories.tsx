@@ -82,17 +82,17 @@ export const DisabledChecked: Story = {
   args: {
     checked: true,
     disabled: true,
-    'aria-label': 'Disabled checked checkbox',
+    'aria-label': 'Disabled oui:checked checkbox',
   },
 };
 
 export const WithLabel: Story = {
   render: () => (
-    <div className="flex items-center space-x-2">
+    <div className="oui:flex oui:items-center oui:space-x-2">
       <Checkbox id="terms" />
       <label
         htmlFor="terms"
-        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className="oui:text-sm oui:font-medium oui:leading-none oui:peer-disabled:cursor-not-allowed oui:peer-disabled:opacity-70"
       >
         Accept terms and conditions
       </label>
@@ -109,16 +109,16 @@ export const WithLabel: Story = {
 
 export const WithDescription: Story = {
   render: () => (
-    <div className="flex items-start space-x-2">
-      <Checkbox id="notifications" className="mt-1" />
-      <div className="space-y-1">
+    <div className="oui:flex oui:items-start oui:space-x-2">
+      <Checkbox id="notifications" className="oui:mt-1" />
+      <div className="oui:space-y-1">
         <label
           htmlFor="notifications"
-          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          className="oui:text-sm oui:font-medium oui:leading-none oui:peer-disabled:cursor-not-allowed oui:peer-disabled:opacity-70"
         >
           Email notifications
         </label>
-        <p className="text-xs text-muted-foreground">
+        <p className="oui:text-xs oui:text-muted-foreground">
           Receive emails about your account activity and important updates.
         </p>
       </div>
@@ -146,11 +146,11 @@ export const FormIntegration: Story = {
     };
 
     return (
-      <form className="space-y-4 w-80">
+      <form className="oui:space-y-4 oui:w-80">
         <fieldset>
-          <legend className="text-sm font-medium mb-3">Communication Preferences</legend>
-          <div className="space-y-3">
-            <div className="flex items-center space-x-2">
+          <legend className="oui:text-sm oui:font-medium oui:mb-3">Communication Preferences</legend>
+          <div className="oui:space-y-3">
+            <div className="oui:flex oui:items-center oui:space-x-2">
               <Checkbox
                 id="newsletter"
                 checked={formData.newsletter}
@@ -158,12 +158,12 @@ export const FormIntegration: Story = {
               />
               <label
                 htmlFor="newsletter"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="oui:text-sm oui:font-medium oui:leading-none oui:peer-disabled:cursor-not-allowed oui:peer-disabled:opacity-70"
               >
                 Newsletter subscription
               </label>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="oui:flex oui:items-center oui:space-x-2">
               <Checkbox
                 id="marketing"
                 checked={formData.marketing}
@@ -171,12 +171,12 @@ export const FormIntegration: Story = {
               />
               <label
                 htmlFor="marketing"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="oui:text-sm oui:font-medium oui:leading-none oui:peer-disabled:cursor-not-allowed oui:peer-disabled:opacity-70"
               >
                 Marketing communications
               </label>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="oui:flex oui:items-center oui:space-x-2">
               <Checkbox
                 id="analytics"
                 checked={formData.analytics}
@@ -184,14 +184,14 @@ export const FormIntegration: Story = {
               />
               <label
                 htmlFor="analytics"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="oui:text-sm oui:font-medium oui:leading-none oui:peer-disabled:cursor-not-allowed oui:peer-disabled:opacity-70"
               >
                 Analytics and performance
               </label>
             </div>
           </div>
         </fieldset>
-        <div className="pt-2 text-xs text-muted-foreground">
+        <div className="oui:pt-2 oui:text-xs oui:text-muted-foreground">
           Current selections: {Object.entries(formData).filter(([, value]) => value).map(([key]) => key).join(', ') || 'None'}
         </div>
       </form>
@@ -230,8 +230,8 @@ export const SelectAllPattern: Story = {
     };
 
     return (
-      <div className="space-y-4 w-64">
-        <div className="flex items-center space-x-2 pb-2 border-b">
+      <div className="oui:space-y-4 oui:w-64">
+        <div className="oui:flex oui:items-center oui:space-x-2 oui:pb-2 oui:border-b">
           <Checkbox
             id="select-all"
             checked={isAllChecked ? true : isIndeterminate ? 'indeterminate' : false}
@@ -239,14 +239,14 @@ export const SelectAllPattern: Story = {
           />
           <label
             htmlFor="select-all"
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            className="oui:text-sm oui:font-medium oui:leading-none oui:peer-disabled:cursor-not-allowed oui:peer-disabled:opacity-70"
           >
             Select all projects ({checkedCount}/{items.length})
           </label>
         </div>
-        <div className="space-y-2">
+        <div className="oui:space-y-2">
           {items.map((item) => (
-            <div key={item.id} className="flex items-center space-x-2 pl-4">
+            <div key={item.id} className="oui:flex oui:items-center oui:space-x-2 oui:pl-4">
               <Checkbox
                 id={item.id}
                 checked={item.checked}
@@ -254,7 +254,7 @@ export const SelectAllPattern: Story = {
               />
               <label
                 htmlFor={item.id}
-                className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="oui:text-sm oui:leading-none oui:peer-disabled:cursor-not-allowed oui:peer-disabled:opacity-70"
               >
                 {item.label}
               </label>
@@ -275,56 +275,26 @@ export const SelectAllPattern: Story = {
 
 export const AccessibilityExample: Story = {
   render: () => (
-    <div className="space-y-4 w-80">
+    <div className="oui:space-y-4 oui:w-80">
       <fieldset>
-        <legend className="text-sm font-medium mb-3">Account Settings</legend>
-        <div className="space-y-3">
-          <div className="flex space-x-2">
+        <legend className="oui:text-sm oui:font-medium oui:mb-3">Account Settings</legend>
+        <div className="oui:space-y-3">
+          <div className="oui:flex oui:space-x-2">
             <Checkbox
               id="two-factor"
               required
               aria-describedby="two-factor-desc"
-              className="mt-0.5"
+              className="oui:mt-0.5"
             />
-            <div className="space-y-1">
+            <div className="oui:space-y-1">
               <label
                 htmlFor="two-factor"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="oui:text-sm oui:font-medium oui:leading-none oui:peer-disabled:cursor-not-allowed oui:peer-disabled:opacity-70"
               >
                 Enable two-factor authentication *
               </label>
-              <p id="two-factor-desc" className="text-xs text-muted-foreground">
-                Required for enhanced security. You'll receive codes via SMS or authenticator app.
-              </p>
-            </div>
-          </div>
-          <div className="flex space-x-2">
-            <Checkbox
-              id="backup-codes"
-              disabled
-              aria-describedby="backup-codes-desc"
-              className="mt-0.5"
-            />
-            <div className="space-y-1">
-              <label
-                htmlFor="backup-codes"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                Generate backup codes
-              </label>
-              <p id="backup-codes-desc" className="text-xs text-muted-foreground">
-                Available after enabling two-factor authentication.
-              </p>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story: 'Accessibility example with proper ARIA attributes, required fields, and descriptive text.',
+              <p id="two-factor-desc" className="oui:text-xs oui:text-muted-foreground">
+                Required for enhanced security. You'll receive codes via SMS or authenticator app. </p> </div> </div> <div className="oui:flex oui:space-x-2"> <Checkbox id="backup-codes" oui:disabled aria-describedby="backup-codes-desc" className="oui:mt-0.5" /> <div className="oui:space-y-1"> <label htmlFor="backup-codes" className="oui:text-sm oui:font-medium oui:leading-none oui:peer-disabled:cursor-not-allowed oui:peer-disabled:opacity-70" > Generate backup codes </label> <p id="backup-codes-desc" className="oui:text-xs oui:text-muted-foreground"> Available after enabling two-factor authentication. </p> </div> </div> </div> </fieldset> </div> ), parameters: { docs: { description: { story:'Accessibility example with proper ARIA attributes, required fields, and descriptive text.',
       },
     },
   },
@@ -332,35 +302,35 @@ export const AccessibilityExample: Story = {
 
 export const AllStates: Story = {
   render: () => (
-    <div className="space-y-4">
-      <h3 className="text-sm font-medium">All Checkbox States</h3>
-      <div className="grid grid-cols-2 gap-4">
-        <div className="space-y-3">
-          <div className="flex items-center space-x-2">
+    <div className="oui:space-y-4">
+      <h3 className="oui:text-sm oui:font-medium">All Checkbox States</h3>
+      <div className="oui:grid oui:grid-cols-2 oui:gap-4">
+        <div className="oui:space-y-3">
+          <div className="oui:flex oui:items-center oui:space-x-2">
             <Checkbox id="unchecked" />
-            <label htmlFor="unchecked" className="text-sm">Unchecked</label>
+            <label htmlFor="unchecked" className="oui:text-sm">Unchecked</label>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="oui:flex oui:items-center oui:space-x-2">
             <Checkbox id="checked" checked />
-            <label htmlFor="checked" className="text-sm">Checked</label>
+            <label htmlFor="checked" className="oui:text-sm">Checked</label>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="oui:flex oui:items-center oui:space-x-2">
             <Checkbox id="indeterminate" checked="indeterminate" />
-            <label htmlFor="indeterminate" className="text-sm">Indeterminate</label>
+            <label htmlFor="indeterminate" className="oui:text-sm">Indeterminate</label>
           </div>
         </div>
-        <div className="space-y-3">
-          <div className="flex items-center space-x-2">
+        <div className="oui:space-y-3">
+          <div className="oui:flex oui:items-center oui:space-x-2">
             <Checkbox id="disabled-unchecked" disabled />
-            <label htmlFor="disabled-unchecked" className="text-sm text-muted-foreground">Disabled unchecked</label>
+            <label htmlFor="disabled-unchecked" className="oui:text-sm oui:text-muted-foreground">Disabled unchecked</label>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="oui:flex oui:items-center oui:space-x-2">
             <Checkbox id="disabled-checked" checked disabled />
-            <label htmlFor="disabled-checked" className="text-sm text-muted-foreground">Disabled checked</label>
+            <label htmlFor="disabled-checked" className="oui:text-sm oui:text-muted-foreground">Disabled checked</label>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="oui:flex oui:items-center oui:space-x-2">
             <Checkbox id="disabled-indeterminate" checked="indeterminate" disabled />
-            <label htmlFor="disabled-indeterminate" className="text-sm text-muted-foreground">Disabled indeterminate</label>
+            <label htmlFor="disabled-indeterminate" className="oui:text-sm oui:text-muted-foreground">Disabled indeterminate</label>
           </div>
         </div>
       </div>

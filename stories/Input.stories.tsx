@@ -165,8 +165,8 @@ export const WithError: Story = {
 // Form integration examples
 export const WithLabel: Story = {
   render: () => (
-    <div className="space-y-2">
-      <label htmlFor="email-input" className="text-sm font-medium">
+    <div className="oui:space-y-2">
+      <label htmlFor="email-input" className="oui:text-sm oui:font-medium">
         Email Address
       </label>
       <Input
@@ -188,8 +188,8 @@ export const WithLabel: Story = {
 
 export const WithHelperText: Story = {
   render: () => (
-    <div className="space-y-2">
-      <label htmlFor="password-input" className="text-sm font-medium">
+    <div className="oui:space-y-2">
+      <label htmlFor="password-input" className="oui:text-sm oui:font-medium">
         Password
       </label>
       <Input
@@ -198,7 +198,7 @@ export const WithHelperText: Story = {
         placeholder="Enter your password"
         aria-describedby="password-help"
       />
-      <p id="password-help" className="text-sm text-muted-foreground">
+      <p id="password-help" className="oui:text-sm oui:text-muted-foreground">
         Password must be at least 8 characters long
       </p>
     </div>
@@ -214,8 +214,8 @@ export const WithHelperText: Story = {
 
 export const WithValidationError: Story = {
   render: () => (
-    <div className="space-y-2">
-      <label htmlFor="email-error-input" className="text-sm font-medium">
+    <div className="oui:space-y-2">
+      <label htmlFor="email-error-input" className="oui:text-sm oui:font-medium">
         Email Address
       </label>
       <Input
@@ -226,7 +226,7 @@ export const WithValidationError: Story = {
         aria-invalid={true}
         aria-describedby="email-error"
       />
-      <p id="email-error" className="text-sm text-destructive">
+      <p id="email-error" className="oui:text-sm oui:text-destructive">
         Please enter a valid email address
       </p>
     </div>
@@ -242,8 +242,8 @@ export const WithValidationError: Story = {
 
 export const WithSuccessState: Story = {
   render: () => (
-    <div className="space-y-2">
-      <label htmlFor="email-success-input" className="text-sm font-medium">
+    <div className="oui:space-y-2">
+      <label htmlFor="email-success-input" className="oui:text-sm oui:font-medium">
         Email Address
       </label>
       <Input
@@ -251,9 +251,9 @@ export const WithSuccessState: Story = {
         type="email"
         value="john.doe@company.com"
         aria-describedby="email-success"
-        className="border-green-500 focus-visible:border-green-500 focus-visible:ring-green-500/20"
+        className="oui:border-green-500 oui:focus-visible:border-green-500 oui:focus-visible:ring-green-500/20"
       />
-      <p id="email-success" className="text-sm text-green-600">
+      <p id="email-success" className="oui:text-sm oui:text-green-600">
         Email address is valid
       </p>
     </div>
@@ -270,8 +270,8 @@ export const WithSuccessState: Story = {
 // File input variants
 export const FileUpload: Story = {
   render: () => (
-    <div className="space-y-2">
-      <label htmlFor="file-upload" className="text-sm font-medium">
+    <div className="oui:space-y-2">
+      <label htmlFor="file-upload" className="oui:text-sm oui:font-medium">
         Upload Document
       </label>
       <Input
@@ -280,7 +280,7 @@ export const FileUpload: Story = {
         accept=".pdf,.doc,.docx,.txt"
         aria-describedby="file-help"
       />
-      <p id="file-help" className="text-sm text-muted-foreground">
+      <p id="file-help" className="oui:text-sm oui:text-muted-foreground">
         Accepted formats: PDF, DOC, DOCX, TXT (max 10MB)
       </p>
     </div>
@@ -296,8 +296,8 @@ export const FileUpload: Story = {
 
 export const ImageUpload: Story = {
   render: () => (
-    <div className="space-y-2">
-      <label htmlFor="image-upload" className="text-sm font-medium">
+    <div className="oui:space-y-2">
+      <label htmlFor="image-upload" className="oui:text-sm oui:font-medium">
         Profile Picture
       </label>
       <Input
@@ -306,7 +306,7 @@ export const ImageUpload: Story = {
         accept="image/*"
         aria-describedby="image-help"
       />
-      <p id="image-help" className="text-sm text-muted-foreground">
+      <p id="image-help" className="oui:text-sm oui:text-muted-foreground">
         Upload a profile picture (JPG, PNG, GIF)
       </p>
     </div>
@@ -323,37 +323,37 @@ export const ImageUpload: Story = {
 // Showcase stories
 export const AllInputTypes: Story = {
   render: () => (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl">
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Text</label>
+    <div className="oui:grid oui:grid-cols-1 oui:md:grid-cols-2 oui:gap-4 oui:w-full oui:max-w-2xl">
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Text</label>
         <Input type="text" placeholder="Enter text" />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Email</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Email</label>
         <Input type="email" placeholder="Enter email" />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Password</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Password</label>
         <Input type="password" placeholder="Enter password" />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Number</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Number</label>
         <Input type="number" placeholder="Enter number" />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Telephone</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Telephone</label>
         <Input type="tel" placeholder="Enter phone" />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">URL</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">URL</label>
         <Input type="url" placeholder="Enter URL" />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Search</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Search</label>
         <Input type="search" placeholder="Search..." />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">File</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">File</label>
         <Input type="file" />
       </div>
     </div>
@@ -369,30 +369,30 @@ export const AllInputTypes: Story = {
 
 export const ValidationStates: Story = {
   render: () => (
-    <div className="space-y-6 w-full max-w-md">
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Default State</label>
+    <div className="oui:space-y-6 oui:w-full oui:max-w-md">
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Default State</label>
         <Input placeholder="Enter your name" />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Error State</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Error State</label>
         <Input
           placeholder="Enter valid email"
           value="invalid-email"
           aria-invalid={true}
         />
-        <p className="text-sm text-destructive">Please enter a valid email</p>
+        <p className="oui:text-sm oui:text-destructive">Please enter a valid email</p>
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Success State</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Success State</label>
         <Input
           value="john.doe@company.com"
-          className="border-green-500 focus-visible:border-green-500 focus-visible:ring-green-500/20"
+          className="oui:border-green-500 oui:focus-visible:border-green-500 oui:focus-visible:ring-green-500/20"
         />
-        <p className="text-sm text-green-600">Email is valid</p>
+        <p className="oui:text-sm oui:text-green-600">Email is valid</p>
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Disabled State</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Disabled State</label>
         <Input disabled value="Cannot edit this field" />
       </div>
     </div>
@@ -408,9 +408,9 @@ export const ValidationStates: Story = {
 
 export const FormExample: Story = {
   render: () => (
-    <form className="space-y-4 w-full max-w-md">
-      <div className="space-y-2">
-        <label htmlFor="form-name" className="text-sm font-medium">
+    <form className="oui:space-y-4 oui:w-full oui:max-w-md">
+      <div className="oui:space-y-2">
+        <label htmlFor="form-name" className="oui:text-sm oui:font-medium">
           Full Name *
         </label>
         <Input
@@ -420,8 +420,8 @@ export const FormExample: Story = {
           required
         />
       </div>
-      <div className="space-y-2">
-        <label htmlFor="form-email" className="text-sm font-medium">
+      <div className="oui:space-y-2">
+        <label htmlFor="form-email" className="oui:text-sm oui:font-medium">
           Email Address *
         </label>
         <Input
@@ -431,8 +431,8 @@ export const FormExample: Story = {
           required
         />
       </div>
-      <div className="space-y-2">
-        <label htmlFor="form-phone" className="text-sm font-medium">
+      <div className="oui:space-y-2">
+        <label htmlFor="form-phone" className="oui:text-sm oui:font-medium">
           Phone Number
         </label>
         <Input
@@ -441,8 +441,8 @@ export const FormExample: Story = {
           placeholder="+1 (555) 123-4567"
         />
       </div>
-      <div className="space-y-2">
-        <label htmlFor="form-company" className="text-sm font-medium">
+      <div className="oui:space-y-2">
+        <label htmlFor="form-company" className="oui:text-sm oui:font-medium">
           Company
         </label>
         <Input

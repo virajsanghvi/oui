@@ -33,44 +33,44 @@ export const Default: Story = {
 // Size variants
 export const Small: Story = {
   args: {
-    className: 'size-3',
+    className: 'oui:size-3',
   },
 };
 
 export const Medium: Story = {
   args: {
-    className: 'size-4',
+    className: 'oui:size-4',
   },
 };
 
 export const Large: Story = {
   args: {
-    className: 'size-6',
+    className: 'oui:size-6',
   },
 };
 
 export const ExtraLarge: Story = {
   args: {
-    className: 'size-8',
+    className: 'oui:size-8',
   },
 };
 
 // Color variants
 export const Primary: Story = {
   args: {
-    className: 'text-primary',
+    className: 'oui:text-primary',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    className: 'text-muted-foreground',
+    className: 'oui:text-muted-foreground',
   },
 };
 
 export const Destructive: Story = {
   args: {
-    className: 'text-destructive',
+    className: 'oui:text-destructive',
   },
 };
 
@@ -90,13 +90,13 @@ export const InButton: Story = {
 
 export const InCard: Story = {
   render: () => (
-    <Card className="w-80">
+    <Card className="oui:w-80">
       <CardHeader>
         <CardTitle>Loading Data</CardTitle>
         <CardDescription>Please wait while we fetch your information</CardDescription>
       </CardHeader>
-      <CardContent className="flex justify-center py-8">
-        <Spinner className="size-6" />
+      <CardContent className="oui:flex oui:justify-center oui:py-8">
+        <Spinner className="oui:size-6" />
       </CardContent>
     </Card>
   ),
@@ -111,8 +111,8 @@ export const InCard: Story = {
 
 export const InlineWithText: Story = {
   render: () => (
-    <div className="flex items-center gap-2">
-      <Spinner className="size-4" />
+    <div className="oui:flex oui:items-center oui:gap-2">
+      <Spinner className="oui:size-4" />
       <span>Processing your request...</span>
     </div>
   ),
@@ -128,22 +128,22 @@ export const InlineWithText: Story = {
 // Showcase stories
 export const AllSizes: Story = {
   render: () => (
-    <div className="flex items-center gap-8">
-      <div className="flex flex-col items-center gap-2">
-        <Spinner className="size-3" />
-        <span className="text-xs text-muted-foreground">Small</span>
+    <div className="oui:flex oui:items-center oui:gap-8">
+      <div className="oui:flex oui:flex-col oui:items-center oui:gap-2">
+        <Spinner className="oui:size-3" />
+        <span className="oui:text-xs oui:text-muted-foreground">Small</span>
       </div>
-      <div className="flex flex-col items-center gap-2">
-        <Spinner className="size-4" />
-        <span className="text-xs text-muted-foreground">Medium</span>
+      <div className="oui:flex oui:flex-col oui:items-center oui:gap-2">
+        <Spinner className="oui:size-4" />
+        <span className="oui:text-xs oui:text-muted-foreground">Medium</span>
       </div>
-      <div className="flex flex-col items-center gap-2">
-        <Spinner className="size-6" />
-        <span className="text-xs text-muted-foreground">Large</span>
+      <div className="oui:flex oui:flex-col oui:items-center oui:gap-2">
+        <Spinner className="oui:size-6" />
+        <span className="oui:text-xs oui:text-muted-foreground">Large</span>
       </div>
-      <div className="flex flex-col items-center gap-2">
-        <Spinner className="size-8" />
-        <span className="text-xs text-muted-foreground">Extra Large</span>
+      <div className="oui:flex oui:flex-col oui:items-center oui:gap-2">
+        <Spinner className="oui:size-8" />
+        <span className="oui:text-xs oui:text-muted-foreground">Extra Large</span>
       </div>
     </div>
   ),
@@ -158,22 +158,22 @@ export const AllSizes: Story = {
 
 export const AllColors: Story = {
   render: () => (
-    <div className="flex items-center gap-8">
-      <div className="flex flex-col items-center gap-2">
-        <Spinner className="size-6 text-foreground" />
-        <span className="text-xs text-muted-foreground">Default</span>
+    <div className="oui:flex oui:items-center oui:gap-8">
+      <div className="oui:flex oui:flex-col oui:items-center oui:gap-2">
+        <Spinner className="oui:size-6 oui:text-foreground" />
+        <span className="oui:text-xs oui:text-muted-foreground">Default</span>
       </div>
-      <div className="flex flex-col items-center gap-2">
-        <Spinner className="size-6 text-primary" />
-        <span className="text-xs text-muted-foreground">Primary</span>
+      <div className="oui:flex oui:flex-col oui:items-center oui:gap-2">
+        <Spinner className="oui:size-6 oui:text-primary" />
+        <span className="oui:text-xs oui:text-muted-foreground">Primary</span>
       </div>
-      <div className="flex flex-col items-center gap-2">
-        <Spinner className="size-6 text-muted-foreground" />
-        <span className="text-xs text-muted-foreground">Secondary</span>
+      <div className="oui:flex oui:flex-col oui:items-center oui:gap-2">
+        <Spinner className="oui:size-6 oui:text-muted-foreground" />
+        <span className="oui:text-xs oui:text-muted-foreground">Secondary</span>
       </div>
-      <div className="flex flex-col items-center gap-2">
-        <Spinner className="size-6 text-destructive" />
-        <span className="text-xs text-muted-foreground">Destructive</span>
+      <div className="oui:flex oui:flex-col oui:items-center oui:gap-2">
+        <Spinner className="oui:size-6 oui:text-destructive" />
+        <span className="oui:text-xs oui:text-muted-foreground">Destructive</span>
       </div>
     </div>
   ),
@@ -188,24 +188,24 @@ export const AllColors: Story = {
 
 export const LoadingStates: Story = {
   render: () => (
-    <div className="space-y-6">
-      <div className="flex items-center gap-4">
+    <div className="oui:space-y-6">
+      <div className="oui:flex oui:items-center oui:gap-4">
         <Button loading>Saving Changes</Button>
         <Button variant="outline" loading>Uploading File</Button>
         <Button variant="destructive" loading>Deleting Item</Button>
       </div>
       
-      <div className="flex items-center gap-6">
-        <div className="flex items-center gap-2">
-          <Spinner className="size-4" />
+      <div className="oui:flex oui:items-center oui:gap-6">
+        <div className="oui:flex oui:items-center oui:gap-2">
+          <Spinner className="oui:size-4" />
           <span>Syncing data...</span>
         </div>
-        <div className="flex items-center gap-2">
-          <Spinner className="size-4 text-primary" />
+        <div className="oui:flex oui:items-center oui:gap-2">
+          <Spinner className="oui:size-4 oui:text-primary" />
           <span>Connecting to server...</span>
         </div>
-        <div className="flex items-center gap-2">
-          <Spinner className="size-4 text-destructive" />
+        <div className="oui:flex oui:items-center oui:gap-2">
+          <Spinner className="oui:size-4 oui:text-destructive" />
           <span>Retrying connection...</span>
         </div>
       </div>
@@ -222,10 +222,10 @@ export const LoadingStates: Story = {
 
 export const ButtonVariantsWithSpinner: Story = {
   render: () => (
-    <div className="space-y-6">
-      <div className="space-y-4">
-        <h4 className="text-sm font-medium text-muted-foreground">Default Size Buttons</h4>
-        <div className="flex flex-wrap items-center gap-3">
+    <div className="oui:space-y-6">
+      <div className="oui:space-y-4">
+        <h4 className="oui:text-sm oui:font-medium oui:text-muted-foreground">Default Size Buttons</h4>
+        <div className="oui:flex oui:flex-wrap oui:items-center oui:gap-3">
           <Button loading>Submit</Button>
           <Button variant="secondary" loading>Secondary</Button>
           <Button variant="outline" loading>Outline</Button>
@@ -234,9 +234,9 @@ export const ButtonVariantsWithSpinner: Story = {
         </div>
       </div>
 
-      <div className="space-y-4">
-        <h4 className="text-sm font-medium text-muted-foreground">Small Size Buttons</h4>
-        <div className="flex flex-wrap items-center gap-3">
+      <div className="oui:space-y-4">
+        <h4 className="oui:text-sm oui:font-medium oui:text-muted-foreground">Small Size Buttons</h4>
+        <div className="oui:flex oui:flex-wrap oui:items-center oui:gap-3">
           <Button size="sm" loading>Submit</Button>
           <Button variant="secondary" size="sm" loading>Secondary</Button>
           <Button variant="outline" size="sm" loading>Outline</Button>
@@ -245,9 +245,9 @@ export const ButtonVariantsWithSpinner: Story = {
         </div>
       </div>
 
-      <div className="space-y-4">
-        <h4 className="text-sm font-medium text-muted-foreground">Large Size Buttons</h4>
-        <div className="flex flex-wrap items-center gap-3">
+      <div className="oui:space-y-4">
+        <h4 className="oui:text-sm oui:font-medium oui:text-muted-foreground">Large Size Buttons</h4>
+        <div className="oui:flex oui:flex-wrap oui:items-center oui:gap-3">
           <Button size="lg" loading>Submit</Button>
           <Button variant="secondary" size="lg" loading>Secondary</Button>
           <Button variant="outline" size="lg" loading>Outline</Button>
@@ -256,9 +256,9 @@ export const ButtonVariantsWithSpinner: Story = {
         </div>
       </div>
 
-      <div className="space-y-4">
-        <h4 className="text-sm font-medium text-muted-foreground">Icon Buttons</h4>
-        <div className="flex flex-wrap items-center gap-3">
+      <div className="oui:space-y-4">
+        <h4 className="oui:text-sm oui:font-medium oui:text-muted-foreground">Icon Buttons</h4>
+        <div className="oui:flex oui:flex-wrap oui:items-center oui:gap-3">
           <Button size="icon" loading />
           <Button variant="secondary" size="icon" loading />
           <Button variant="outline" size="icon" loading />
@@ -279,23 +279,23 @@ export const ButtonVariantsWithSpinner: Story = {
 
 export const BadgeStyleButtons: Story = {
   render: () => (
-    <div className="space-y-4">
-      <h4 className="text-sm font-medium text-muted-foreground">Badge Components with Spinners</h4>
-      <div className="flex flex-wrap items-center gap-3">
+    <div className="oui:space-y-4">
+      <h4 className="oui:text-sm oui:font-medium oui:text-muted-foreground">Badge Components with Spinners</h4>
+      <div className="oui:flex oui:flex-wrap oui:items-center oui:gap-3">
         <Badge variant="default">
-          <Spinner className="mr-1 size-3" />
+          <Spinner className="oui:mr-1 oui:size-3" />
           Badge
         </Badge>
         <Badge variant="outline">
-          <Spinner className="mr-1 size-3" />
+          <Spinner className="oui:mr-1 oui:size-3" />
           Badge
         </Badge>
         <Badge variant="destructive">
-          <Spinner className="mr-1 size-3" />
+          <Spinner className="oui:mr-1 oui:size-3" />
           Badge
         </Badge>
         <Badge variant="secondary">
-          <Spinner className="mr-1 size-3" />
+          <Spinner className="oui:mr-1 oui:size-3" />
           Badge
         </Badge>
       </div>
@@ -313,19 +313,19 @@ export const BadgeStyleButtons: Story = {
 // Modal-style examples from Figma
 export const DownloadingModal: Story = {
   render: () => (
-    <Card className="w-96 mx-auto">
+    <Card className="oui:w-96 oui:mx-auto">
       <CardHeader>
         <CardTitle>Downloading...</CardTitle>
         <CardDescription>
           Please wait while we download your files
         </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
-        <div className="flex items-center justify-center">
-          <Spinner className="size-8" />
+      <CardContent className="oui:space-y-4">
+        <div className="oui:flex oui:items-center oui:justify-center">
+          <Spinner className="oui:size-8" />
         </div>
-        <Progress value={65} className="w-full" />
-        <div className="text-center text-sm text-muted-foreground">
+        <Progress value={65} className="oui:w-full" />
+        <div className="oui:text-center oui:text-sm oui:text-muted-foreground">
           65% complete (2.1 MB of 3.2 MB)
         </div>
       </CardContent>
@@ -342,15 +342,15 @@ export const DownloadingModal: Story = {
 
 export const ProcessingModal: Story = {
   render: () => (
-    <Card className="w-80 mx-auto">
+    <Card className="oui:w-80 oui:mx-auto">
       <CardHeader>
         <CardTitle>Processing request</CardTitle>
         <CardDescription>
           This may take a few moments...
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex items-center justify-center py-8">
-        <Spinner className="size-6" />
+      <CardContent className="oui:flex oui:items-center oui:justify-center oui:py-8">
+        <Spinner className="oui:size-6" />
       </CardContent>
     </Card>
   ),
@@ -365,15 +365,15 @@ export const ProcessingModal: Story = {
 
 export const SpinnerWithProgress: Story = {
   render: () => (
-    <div className="space-y-6 w-80">
+    <div className="oui:space-y-6 oui:w-80">
       <Card>
-        <CardContent className="pt-6">
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <Spinner className="size-5" />
-              <div className="flex-1">
-                <div className="text-sm font-medium">Uploading files...</div>
-                <div className="text-xs text-muted-foreground">3 of 12 files</div>
+        <CardContent className="oui:pt-6">
+          <div className="oui:space-y-4">
+            <div className="oui:flex oui:items-center oui:gap-3">
+              <Spinner className="oui:size-5" />
+              <div className="oui:flex-1">
+                <div className="oui:text-sm oui:font-medium">Uploading files...</div>
+                <div className="oui:text-xs oui:text-muted-foreground">3 of 12 files</div>
               </div>
             </div>
             <Progress value={25} />
@@ -382,13 +382,13 @@ export const SpinnerWithProgress: Story = {
       </Card>
       
       <Card>
-        <CardContent className="pt-6">
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <Spinner className="size-5 text-primary" />
-              <div className="flex-1">
-                <div className="text-sm font-medium">Installing packages...</div>
-                <div className="text-xs text-muted-foreground">npm install in progress</div>
+        <CardContent className="oui:pt-6">
+          <div className="oui:space-y-4">
+            <div className="oui:flex oui:items-center oui:gap-3">
+              <Spinner className="oui:size-5 oui:text-primary" />
+              <div className="oui:flex-1">
+                <div className="oui:text-sm oui:font-medium">Installing packages...</div>
+                <div className="oui:text-xs oui:text-muted-foreground">npm install in progress</div>
               </div>
             </div>
             <Progress value={78} />
@@ -408,24 +408,24 @@ export const SpinnerWithProgress: Story = {
 
 export const TableLoadingStates: Story = {
   render: () => (
-    <div className="space-y-4">
-      <div className="border rounded-lg">
-        <div className="p-4 border-b">
-          <h3 className="font-medium">Data Table</h3>
+    <div className="oui:space-y-4">
+      <div className="oui:border oui:rounded-lg">
+        <div className="oui:p-4 oui:border-b">
+          <h3 className="oui:font-medium">Data Table</h3>
         </div>
-        <div className="p-8 text-center">
-          <Spinner className="size-6 mx-auto mb-4" />
-          <p className="text-sm text-muted-foreground">Loading data...</p>
+        <div className="oui:p-8 oui:text-center">
+          <Spinner className="oui:size-6 oui:mx-auto oui:mb-4" />
+          <p className="oui:text-sm oui:text-muted-foreground">Loading data...</p>
         </div>
       </div>
       
-      <div className="border rounded-lg">
-        <div className="p-4 border-b">
-          <h3 className="font-medium">Search Results</h3>
+      <div className="oui:border oui:rounded-lg">
+        <div className="oui:p-4 oui:border-b">
+          <h3 className="oui:font-medium">Search Results</h3>
         </div>
-        <div className="p-8 text-center">
-          <Spinner className="size-5 mx-auto mb-3" />
-          <p className="text-sm text-muted-foreground">Searching...</p>
+        <div className="oui:p-8 oui:text-center">
+          <Spinner className="oui:size-5 oui:mx-auto oui:mb-3" />
+          <p className="oui:text-sm oui:text-muted-foreground">Searching...</p>
         </div>
       </div>
     </div>
@@ -441,33 +441,33 @@ export const TableLoadingStates: Story = {
 
 export const MiniSpinners: Story = {
   render: () => (
-    <div className="space-y-4">
-      <div className="flex items-center gap-4">
+    <div className="oui:space-y-4">
+      <div className="oui:flex oui:items-center oui:gap-4">
         <Button variant="ghost" size="sm" disabled>
-          <Spinner className="mr-2 size-3" />
+          <Spinner className="oui:mr-2 oui:size-3" />
           Save
         </Button>
         <Button variant="ghost" size="sm" disabled>
-          <Spinner className="mr-2 size-3" />
+          <Spinner className="oui:mr-2 oui:size-3" />
           Delete
         </Button>
         <Button variant="ghost" size="sm" disabled>
-          <Spinner className="mr-2 size-3" />
+          <Spinner className="oui:mr-2 oui:size-3" />
           Update
         </Button>
       </div>
       
-      <div className="flex items-center gap-6">
-        <div className="flex items-center gap-2 text-sm">
-          <Spinner className="size-3" />
+      <div className="oui:flex oui:items-center oui:gap-6">
+        <div className="oui:flex oui:items-center oui:gap-2 oui:text-sm">
+          <Spinner className="oui:size-3" />
           <span>Auto-saving...</span>
         </div>
-        <div className="flex items-center gap-2 text-sm">
-          <Spinner className="size-3 text-green-600" />
+        <div className="oui:flex oui:items-center oui:gap-2 oui:text-sm">
+          <Spinner className="oui:size-3 oui:text-green-600" />
           <span>Synced</span>
         </div>
-        <div className="flex items-center gap-2 text-sm">
-          <Spinner className="size-3 text-orange-600" />
+        <div className="oui:flex oui:items-center oui:gap-2 oui:text-sm">
+          <Spinner className="oui:size-3 oui:text-orange-600" />
           <span>Pending...</span>
         </div>
       </div>

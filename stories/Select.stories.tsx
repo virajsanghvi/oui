@@ -48,7 +48,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: (args) => (
     <Select {...args}>
-      <SelectTrigger className="w-[266px]">
+      <SelectTrigger className="oui:w-[266px]">
         <SelectValue placeholder="Select fruit" />
       </SelectTrigger>
       <SelectContent>
@@ -66,7 +66,7 @@ export const Default: Story = {
 export const WithDefaultValue: Story = {
   render: (args) => (
     <Select defaultValue="react" {...args}>
-      <SelectTrigger className="w-[200px]">
+      <SelectTrigger className="oui:w-[200px]">
         <SelectValue placeholder="Select a framework" />
       </SelectTrigger>
       <SelectContent>
@@ -83,7 +83,7 @@ export const WithDefaultValue: Story = {
 export const Small: Story = {
   render: (args) => (
     <Select {...args}>
-      <SelectTrigger size="sm" className="w-[200px]">
+      <SelectTrigger size="sm" className="oui:w-[200px]">
         <SelectValue placeholder="Select option" />
       </SelectTrigger>
       <SelectContent>
@@ -99,7 +99,7 @@ export const Small: Story = {
 export const Disabled: Story = {
   render: (args) => (
     <Select disabled {...args}>
-      <SelectTrigger className="w-[200px]">
+      <SelectTrigger className="oui:w-[200px]">
         <SelectValue placeholder="Select a framework" />
       </SelectTrigger>
       <SelectContent>
@@ -115,25 +115,25 @@ export const Disabled: Story = {
 export const WithIcon: Story = {
   render: (args) => (
     <Select {...args}>
-      <SelectTrigger className="w-[266px]">
+      <SelectTrigger className="oui:w-[266px]">
         <SelectValue placeholder="Select chart type" />
       </SelectTrigger>
       <SelectContent>
         <SelectItem value="line">
-          <div className="flex items-center gap-2">
-            <LineChart className="size-3 text-muted-foreground" />
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <LineChart className="oui:size-3 oui:text-muted-foreground" />
             Line
           </div>
         </SelectItem>
         <SelectItem value="bar">
-          <div className="flex items-center gap-2">
-            <BarChart3 className="size-3 text-muted-foreground" />
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <BarChart3 className="oui:size-3 oui:text-muted-foreground" />
             Bar
           </div>
         </SelectItem>
         <SelectItem value="pie">
-          <div className="flex items-center gap-2">
-            <PieChart className="size-3 text-muted-foreground" />
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <PieChart className="oui:size-3 oui:text-muted-foreground" />
             Pie
           </div>
         </SelectItem>
@@ -146,25 +146,25 @@ export const WithIcon: Story = {
 export const WithIconSelected: Story = {
   render: (args) => (
     <Select defaultValue="pie" {...args}>
-      <SelectTrigger className="w-[266px]">
+      <SelectTrigger className="oui:w-[266px]">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
         <SelectItem value="line">
-          <div className="flex items-center gap-2">
-            <LineChart className="size-3 text-muted-foreground" />
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <LineChart className="oui:size-3 oui:text-muted-foreground" />
             Line
           </div>
         </SelectItem>
         <SelectItem value="bar">
-          <div className="flex items-center gap-2">
-            <BarChart3 className="size-3 text-muted-foreground" />
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <BarChart3 className="oui:size-3 oui:text-muted-foreground" />
             Bar
           </div>
         </SelectItem>
         <SelectItem value="pie">
-          <div className="flex items-center gap-2">
-            <PieChart className="size-3 text-muted-foreground" />
+          <div className="oui:flex oui:items-center oui:gap-2">
+            <PieChart className="oui:size-3 oui:text-muted-foreground" />
             Pie
           </div>
         </SelectItem>
@@ -177,7 +177,7 @@ export const WithIconSelected: Story = {
 export const WithGroups: Story = {
   render: (args) => (
     <Select {...args}>
-      <SelectTrigger className="w-[250px]">
+      <SelectTrigger className="oui:w-[250px]">
         <SelectValue placeholder="Select a technology" />
       </SelectTrigger>
       <SelectContent>
@@ -212,13 +212,13 @@ export const WithGroups: Story = {
 // Form integration example
 export const FormIntegration: Story = {
   render: (args) => (
-    <div className="w-[300px] space-y-4">
-      <div className="space-y-2">
-        <label htmlFor="country-select" className="text-sm font-medium">
+    <div className="oui:w-[300px] oui:space-y-4">
+      <div className="oui:space-y-2">
+        <label htmlFor="country-select" className="oui:text-sm oui:font-medium">
           Country
         </label>
         <Select {...args}>
-          <SelectTrigger id="country-select" className="w-full">
+          <SelectTrigger id="country-select" className="oui:w-full">
             <SelectValue placeholder="Select your country" />
           </SelectTrigger>
           <SelectContent>
@@ -231,7 +231,7 @@ export const FormIntegration: Story = {
             <SelectItem value="au">Australia</SelectItem>
           </SelectContent>
         </Select>
-        <p className="text-sm text-muted-foreground">
+        <p className="oui:text-sm oui:text-muted-foreground">
           Select your country for shipping options
         </p>
       </div>
@@ -246,7 +246,7 @@ export const FormIntegration: Story = {
 export const LongList: Story = {
   render: (args) => (
     <Select {...args}>
-      <SelectTrigger className="w-[200px]">
+      <SelectTrigger className="oui:w-[200px]">
         <SelectValue placeholder="Select a city" />
       </SelectTrigger>
       <SelectContent>
@@ -278,11 +278,11 @@ export const LongList: Story = {
 // Showcase stories
 export const AllSizes: Story = {
   render: () => (
-    <div className="flex items-center gap-4">
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Small</label>
+    <div className="oui:flex oui:items-center oui:gap-4">
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Small</label>
         <Select defaultValue="react">
-          <SelectTrigger size="sm" className="w-[150px]">
+          <SelectTrigger size="sm" className="oui:w-[150px]">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -292,10 +292,10 @@ export const AllSizes: Story = {
           </SelectContent>
         </Select>
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Default</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Default</label>
         <Select defaultValue="vue">
-          <SelectTrigger className="w-[150px]">
+          <SelectTrigger className="oui:w-[150px]">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -319,11 +319,11 @@ export const AllSizes: Story = {
 
 export const AllStates: Story = {
   render: () => (
-    <div className="flex flex-wrap gap-6">
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Default</label>
+    <div className="oui:flex oui:flex-wrap oui:gap-6">
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Default</label>
         <Select>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="oui:w-[180px]">
             <SelectValue placeholder="Select option" />
           </SelectTrigger>
           <SelectContent>
@@ -332,10 +332,10 @@ export const AllStates: Story = {
           </SelectContent>
         </Select>
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">With Value</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">With Value</label>
         <Select defaultValue="selected">
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="oui:w-[180px]">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -344,10 +344,10 @@ export const AllStates: Story = {
           </SelectContent>
         </Select>
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Disabled</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Disabled</label>
         <Select disabled>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="oui:w-[180px]">
             <SelectValue placeholder="Disabled select" />
           </SelectTrigger>
           <SelectContent>

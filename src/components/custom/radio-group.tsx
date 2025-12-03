@@ -8,11 +8,11 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 import { RadioGroup as BaseRadioGroup, RadioGroupItem as BaseRadioGroupItem } from "../ui/radio-group"
 
-const radioGroupVariants = cva("grid", {
+const radioGroupVariants = cva("oui:grid", {
   variants: {
     variant: {
-      default: "gap-3",
-      box: "gap-2",
+      default: "oui:gap-3",
+      box: "oui:gap-2",
     },
   },
   defaultVariants: {
@@ -21,12 +21,12 @@ const radioGroupVariants = cva("grid", {
 })
 
 const radioGroupItemVariants = cva(
-  "border text-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
+  "oui:border oui:text-primary oui:focus-visible:border-ring oui:focus-visible:ring-ring/50 oui:aria-invalid:ring-destructive/20 oui:dark:aria-invalid:ring-destructive/40 oui:aria-invalid:border-destructive oui:transition-[color,box-shadow] oui:outline-none oui:focus-visible:ring-[3px] oui:disabled:cursor-not-allowed oui:disabled:opacity-50",
   {
     variants: {
       variant: {
-        default: "border-input dark:bg-input/30 aspect-square size-4 shrink-0 rounded-full shadow-xs",
-        box: "group border-input hover:border-violet-700 data-[state=checked]:border-violet-700 data-[state=checked]:bg-violet-700/5 flex items-start gap-3 p-3 rounded-lg cursor-pointer w-full text-left",
+        default: "oui:border-input oui:dark:bg-input/30 oui:aspect-square oui:size-4 oui:shrink-0 oui:rounded-full oui:shadow-xs",
+        box: "oui:group oui:border-input oui:hover:border-primary oui:data-[state=checked]:border-primary oui:data-[state=checked]:bg-primary/5 oui:flex oui:items-start oui:gap-3 oui:p-3 oui:rounded-lg oui:cursor-pointer oui:w-full oui:text-left",
       },
     },
     defaultVariants: {
@@ -84,16 +84,16 @@ function RadioGroupItem({
         className={cn(radioGroupItemVariants({ variant }), className)}
         {...props}
       >
-        <div className="aspect-square size-4 shrink-0 rounded-full border border-input flex items-center justify-center relative group-data-[state=checked]:border-violet-700 group-data-[state=checked]:bg-violet-700">
+        <div className="oui:aspect-square oui:size-4 oui:shrink-0 oui:rounded-full oui:border oui:border-input oui:flex oui:items-center oui:justify-center oui:relative oui:group-data-[state=checked]:border-primary oui:group-data-[state=checked]:bg-primary">
           <RadioGroupPrimitive.Indicator
             data-slot="radio-group-indicator"
-            className="relative flex items-center justify-center"
+            className="oui:relative oui:flex oui:items-center oui:justify-center"
           >
-            <div className="size-2 rounded-full bg-white" />
+            <div className="oui:size-2 oui:rounded-full oui:bg-white" />
           </RadioGroupPrimitive.Indicator>
         </div>
         {children && (
-          <div className="flex flex-col gap-1.5 flex-1">
+          <div className="oui:flex oui:flex-col oui:gap-1.5 oui:flex-1">
             {children}
           </div>
         )}

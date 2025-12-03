@@ -9,7 +9,7 @@ const switchVariants = cva("", {
   variants: {
     variant: {
       default: "",
-      box: "bg-card text-card-foreground border border-border rounded-lg p-4 shadow-sm",
+      box: "oui:bg-card oui:text-card-foreground oui:border oui:border-border oui:rounded-lg oui:p-4 oui:shadow-sm",
     },
   },
   defaultVariants: {
@@ -58,18 +58,18 @@ function Switch({
   if (variant === "box") {
     return (
       <div className={switchVariants({ variant })}>
-        <div className="flex items-center justify-between">
-          <div className="space-y-1">
+        <div className="oui:flex oui:items-center oui:justify-between">
+          <div className="oui:space-y-1">
             {label && (
               <label
                 htmlFor={switchId}
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="oui:text-sm oui:font-medium oui:leading-none oui:peer-disabled:cursor-not-allowed oui:peer-disabled:opacity-70"
               >
                 {label}
               </label>
             )}
             {description && (
-              <p className="text-xs text-muted-foreground">
+              <p className="oui:text-xs oui:text-muted-foreground">
                 {description}
               </p>
             )}
@@ -82,19 +82,19 @@ function Switch({
 
   // Default variant with label/description
   return (
-    <div className="flex items-center space-x-2">
+    <div className="oui:flex oui:items-center oui:space-x-2">
       {switchElement}
-      <div className="space-y-1">
+      <div className="oui:space-y-1">
         {label && (
           <label
             htmlFor={switchId}
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            className="oui:text-sm oui:font-medium oui:leading-none oui:peer-disabled:cursor-not-allowed oui:peer-disabled:opacity-70"
           >
             {label}
           </label>
         )}
         {description && (
-          <p className="text-xs text-muted-foreground">
+          <p className="oui:text-xs oui:text-muted-foreground">
             {description}
           </p>
         )}

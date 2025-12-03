@@ -103,7 +103,7 @@ export const Warning: Story = {
 // Showcase stories
 export const AllVariants: Story = {
     render: () => (
-        <div className="space-y-4 w-full max-w-md">
+        <div className="oui:space-y-4 oui:w-full oui:max-w-md">
             <Alert variant="default">
                 <Info />
                 <AlertTitle>Information</AlertTitle>
@@ -132,7 +132,7 @@ export const AllVariants: Story = {
 
 export const AlertTypes: Story = {
     render: () => (
-        <div className="space-y-4 w-full max-w-md">
+        <div className="oui:space-y-4 oui:w-full oui:max-w-md">
             <Alert>
                 <CheckCircle />
                 <AlertTitle>Success</AlertTitle>
@@ -177,7 +177,7 @@ export const AlertTypes: Story = {
 
 export const AlertStructures: Story = {
     render: () => (
-        <div className="space-y-4 w-full max-w-md">
+        <div className="oui:space-y-4 oui:w-full oui:max-w-md">
             <Alert>
                 <Info />
                 <AlertTitle>With Title and Description</AlertTitle>

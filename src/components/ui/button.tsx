@@ -5,26 +5,28 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "oui:inline-flex oui:items-center oui:justify-center oui:gap-2 oui:whitespace-nowrap oui:rounded-md oui:text-sm oui:font-medium oui:transition-all oui:disabled:pointer-events-none oui:disabled:opacity-50 oui:[&_svg]:pointer-events-none oui:[&_svg:not([class*=size-])]:size-4 oui:shrink-0 oui:[&_svg]:shrink-0 oui:outline-none oui:focus-visible:border-ring oui:focus-visible:ring-ring/50 oui:focus-visible:ring-[3px] oui:aria-invalid:ring-destructive/20 oui:dark:aria-invalid:ring-destructive/40 oui:aria-invalid:border-destructive",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "oui:bg-primary oui:text-primary-foreground oui:hover:bg-primary/90",
         destructive:
-          "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+          "oui:bg-destructive oui:text-white oui:hover:bg-destructive/90 oui:focus-visible:ring-destructive/20 oui:dark:focus-visible:ring-destructive/40 oui:dark:bg-destructive/60",
         outline:
-          "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "oui:border oui:bg-background oui:shadow-xs oui:hover:bg-accent oui:hover:text-accent-foreground oui:dark:bg-input/30 oui:dark:border-input oui:dark:hover:bg-input/50",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "oui:bg-secondary oui:text-secondary-foreground oui:hover:bg-secondary/80",
         ghost:
-          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
-        link: "text-primary underline-offset-4 hover:underline",
+          "oui:hover:bg-accent oui:hover:text-accent-foreground oui:dark:hover:bg-accent/50",
+        link: "oui:text-primary oui:underline-offset-4 oui:hover:underline",
       },
       size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
-        icon: "size-9",
+        default: "oui:h-9 oui:px-4 oui:py-2 oui:has-[>svg]:px-3",
+        sm: "oui:h-8 oui:rounded-md oui:gap-1.5 oui:px-3 oui:has-[>svg]:px-2.5",
+        lg: "oui:h-10 oui:rounded-md oui:px-6 oui:has-[>svg]:px-4",
+        icon: "oui:size-9",
+        "icon-sm": "oui:size-8",
+        "icon-lg": "oui:size-10",
       },
     },
     defaultVariants: {

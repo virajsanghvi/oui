@@ -58,13 +58,13 @@ export const Default: Story = {
         {...args}
       >
         <ToggleGroupItem value="bold" aria-label="Toggle bold">
-          <Bold className="h-4 w-4" />
+          <Bold className="oui:h-4 oui:w-4" />
         </ToggleGroupItem>
         <ToggleGroupItem value="italic" aria-label="Toggle italic">
-          <Italic className="h-4 w-4" />
+          <Italic className="oui:h-4 oui:w-4" />
         </ToggleGroupItem>
         <ToggleGroupItem value="underline" aria-label="Toggle underline">
-          <Underline className="h-4 w-4" />
+          <Underline className="oui:h-4 oui:w-4" />
         </ToggleGroupItem>
       </ToggleGroup>
     );
@@ -86,13 +86,13 @@ export const Multiple: Story = {
         {...args}
       >
         <ToggleGroupItem value="bold" aria-label="Toggle bold">
-          <Bold className="h-4 w-4" />
+          <Bold className="oui:h-4 oui:w-4" />
         </ToggleGroupItem>
         <ToggleGroupItem value="italic" aria-label="Toggle italic">
-          <Italic className="h-4 w-4" />
+          <Italic className="oui:h-4 oui:w-4" />
         </ToggleGroupItem>
         <ToggleGroupItem value="underline" aria-label="Toggle underline">
-          <Underline className="h-4 w-4" />
+          <Underline className="oui:h-4 oui:w-4" />
         </ToggleGroupItem>
       </ToggleGroup>
     );
@@ -121,13 +121,13 @@ export const Outline: Story = {
         {...args}
       >
         <ToggleGroupItem value="left" aria-label="Align left">
-          <AlignLeft className="h-4 w-4" />
+          <AlignLeft className="oui:h-4 oui:w-4" />
         </ToggleGroupItem>
         <ToggleGroupItem value="center" aria-label="Align center">
-          <AlignCenter className="h-4 w-4" />
+          <AlignCenter className="oui:h-4 oui:w-4" />
         </ToggleGroupItem>
         <ToggleGroupItem value="right" aria-label="Align right">
-          <AlignRight className="h-4 w-4" />
+          <AlignRight className="oui:h-4 oui:w-4" />
         </ToggleGroupItem>
       </ToggleGroup>
     );
@@ -153,15 +153,15 @@ export const WithText: Story = {
         {...args}
       >
         <ToggleGroupItem value="list" aria-label="List view">
-          <List className="h-4 w-4" />
+          <List className="oui:h-4 oui:w-4" />
           List
         </ToggleGroupItem>
         <ToggleGroupItem value="grid" aria-label="Grid view">
-          <Grid className="h-4 w-4" />
+          <Grid className="oui:h-4 oui:w-4" />
           Grid
         </ToggleGroupItem>
         <ToggleGroupItem value="calendar" aria-label="Calendar view">
-          <Calendar className="h-4 w-4" />
+          <Calendar className="oui:h-4 oui:w-4" />
           Calendar
         </ToggleGroupItem>
       </ToggleGroup>
@@ -183,9 +183,9 @@ export const Sizes: Story = {
     const [largeValue, setLargeValue] = useState<string>('bold');
 
     return (
-      <div className="space-y-4">
+      <div className="oui:space-y-4">
         <div>
-          <p className="text-sm font-medium mb-2">Small</p>
+          <p className="oui:text-sm oui:font-medium oui:mb-2">Small</p>
           <ToggleGroup
             type="single"
             size="sm"
@@ -194,19 +194,19 @@ export const Sizes: Story = {
             {...args}
           >
             <ToggleGroupItem value="bold" aria-label="Bold">
-              <Bold className="h-3 w-3" />
+              <Bold className="oui:h-3 oui:w-3" />
             </ToggleGroupItem>
             <ToggleGroupItem value="italic" aria-label="Italic">
-              <Italic className="h-3 w-3" />
+              <Italic className="oui:h-3 oui:w-3" />
             </ToggleGroupItem>
             <ToggleGroupItem value="underline" aria-label="Underline">
-              <Underline className="h-3 w-3" />
+              <Underline className="oui:h-3 oui:w-3" />
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
         
         <div>
-          <p className="text-sm font-medium mb-2">Default</p>
+          <p className="oui:text-sm oui:font-medium oui:mb-2">Default</p>
           <ToggleGroup
             type="single"
             size="default"
@@ -215,19 +215,19 @@ export const Sizes: Story = {
             {...args}
           >
             <ToggleGroupItem value="bold" aria-label="Bold">
-              <Bold className="h-4 w-4" />
+              <Bold className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
             <ToggleGroupItem value="italic" aria-label="Italic">
-              <Italic className="h-4 w-4" />
+              <Italic className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
             <ToggleGroupItem value="underline" aria-label="Underline">
-              <Underline className="h-4 w-4" />
+              <Underline className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
         
         <div>
-          <p className="text-sm font-medium mb-2">Large</p>
+          <p className="oui:text-sm oui:font-medium oui:mb-2">Large</p>
           <ToggleGroup
             type="single"
             size="lg"
@@ -236,13 +236,13 @@ export const Sizes: Story = {
             {...args}
           >
             <ToggleGroupItem value="bold" aria-label="Bold">
-              <Bold className="h-5 w-5" />
+              <Bold className="oui:h-5 oui:w-5" />
             </ToggleGroupItem>
             <ToggleGroupItem value="italic" aria-label="Italic">
-              <Italic className="h-5 w-5" />
+              <Italic className="oui:h-5 oui:w-5" />
             </ToggleGroupItem>
             <ToggleGroupItem value="underline" aria-label="Underline">
-              <Underline className="h-5 w-5" />
+              <Underline className="oui:h-5 oui:w-5" />
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
@@ -264,9 +264,9 @@ export const TextEditor: Story = {
     const [alignment, setAlignment] = useState<string>('left');
 
     return (
-      <div className="space-y-4">
+      <div className="oui:space-y-4">
         <div>
-          <p className="text-sm font-medium mb-2">Text Formatting</p>
+          <p className="oui:text-sm oui:font-medium oui:mb-2">Text Formatting</p>
           <ToggleGroup
             type="multiple"
             value={formatting}
@@ -274,19 +274,19 @@ export const TextEditor: Story = {
             {...args}
           >
             <ToggleGroupItem value="bold" aria-label="Bold">
-              <Bold className="h-4 w-4" />
+              <Bold className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
             <ToggleGroupItem value="italic" aria-label="Italic">
-              <Italic className="h-4 w-4" />
+              <Italic className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
             <ToggleGroupItem value="underline" aria-label="Underline">
-              <Underline className="h-4 w-4" />
+              <Underline className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
         
         <div>
-          <p className="text-sm font-medium mb-2">Text Alignment</p>
+          <p className="oui:text-sm oui:font-medium oui:mb-2">Text Alignment</p>
           <ToggleGroup
             type="single"
             value={alignment}
@@ -294,13 +294,13 @@ export const TextEditor: Story = {
             {...args}
           >
             <ToggleGroupItem value="left" aria-label="Align left">
-              <AlignLeft className="h-4 w-4" />
+              <AlignLeft className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
             <ToggleGroupItem value="center" aria-label="Align center">
-              <AlignCenter className="h-4 w-4" />
+              <AlignCenter className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
             <ToggleGroupItem value="right" aria-label="Align right">
-              <AlignRight className="h-4 w-4" />
+              <AlignRight className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
@@ -321,9 +321,9 @@ export const ViewSwitcher: Story = {
     const [view, setView] = useState<string>('list');
 
     return (
-      <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold">Products</h3>
+      <div className="oui:space-y-4">
+        <div className="oui:flex oui:items-center oui:justify-between">
+          <h3 className="oui:text-lg oui:font-semibold">Products</h3>
           <ToggleGroup
             type="single"
             variant="outline"
@@ -332,15 +332,15 @@ export const ViewSwitcher: Story = {
             {...args}
           >
             <ToggleGroupItem value="list" aria-label="List view">
-              <List className="h-4 w-4" />
+              <List className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
             <ToggleGroupItem value="grid" aria-label="Grid view">
-              <Grid className="h-4 w-4" />
+              <Grid className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
         
-        <div className="text-sm text-muted-foreground">
+        <div className="oui:text-sm oui:text-muted-foreground">
           Current view: {view}
         </div>
       </div>
@@ -362,50 +362,50 @@ export const Showcase: Story = {
     const [view, setView] = useState<string>('list');
 
     return (
-      <div className="space-y-8">
+      <div className="oui:space-y-8">
         <div>
-          <h3 className="text-lg font-semibold mb-4">Toggle Group Examples</h3>
-          <div className="space-y-6">
+          <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Toggle Group Examples</h3>
+          <div className="oui:space-y-6">
             <div>
-              <p className="text-sm font-medium mb-4">Single Selection</p>
+              <p className="oui:text-sm oui:font-medium oui:mb-4">Single Selection</p>
               <ToggleGroup
                 type="single"
                 value={alignment}
                 onValueChange={setAlignment}
               >
                 <ToggleGroupItem value="left" aria-label="Align left">
-                  <AlignLeft className="h-4 w-4" />
+                  <AlignLeft className="oui:h-4 oui:w-4" />
                 </ToggleGroupItem>
                 <ToggleGroupItem value="center" aria-label="Align center">
-                  <AlignCenter className="h-4 w-4" />
+                  <AlignCenter className="oui:h-4 oui:w-4" />
                 </ToggleGroupItem>
                 <ToggleGroupItem value="right" aria-label="Align right">
-                  <AlignRight className="h-4 w-4" />
+                  <AlignRight className="oui:h-4 oui:w-4" />
                 </ToggleGroupItem>
               </ToggleGroup>
             </div>
             
             <div>
-              <p className="text-sm font-medium mb-4">Multiple Selection</p>
+              <p className="oui:text-sm oui:font-medium oui:mb-4">Multiple Selection</p>
               <ToggleGroup
                 type="multiple"
                 value={formatting}
                 onValueChange={setFormatting}
               >
                 <ToggleGroupItem value="bold" aria-label="Bold">
-                  <Bold className="h-4 w-4" />
+                  <Bold className="oui:h-4 oui:w-4" />
                 </ToggleGroupItem>
                 <ToggleGroupItem value="italic" aria-label="Italic">
-                  <Italic className="h-4 w-4" />
+                  <Italic className="oui:h-4 oui:w-4" />
                 </ToggleGroupItem>
                 <ToggleGroupItem value="underline" aria-label="Underline">
-                  <Underline className="h-4 w-4" />
+                  <Underline className="oui:h-4 oui:w-4" />
                 </ToggleGroupItem>
               </ToggleGroup>
             </div>
             
             <div>
-              <p className="text-sm font-medium mb-4">Outline Variant</p>
+              <p className="oui:text-sm oui:font-medium oui:mb-4">Outline Variant</p>
               <ToggleGroup
                 type="single"
                 variant="outline"
@@ -413,11 +413,11 @@ export const Showcase: Story = {
                 onValueChange={setView}
               >
                 <ToggleGroupItem value="list" aria-label="List view">
-                  <List className="h-4 w-4" />
+                  <List className="oui:h-4 oui:w-4" />
                   List
                 </ToggleGroupItem>
                 <ToggleGroupItem value="grid" aria-label="Grid view">
-                  <Grid className="h-4 w-4" />
+                  <Grid className="oui:h-4 oui:w-4" />
                   Grid
                 </ToggleGroupItem>
               </ToggleGroup>

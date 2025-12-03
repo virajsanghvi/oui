@@ -18,7 +18,7 @@ function NavigationMenu({
       data-slot="navigation-menu"
       data-viewport={viewport}
       className={cn(
-        "group/navigation-menu relative flex max-w-max flex-1 items-center justify-center",
+        "oui:group/navigation-menu oui:relative oui:flex oui:max-w-max oui:flex-1 oui:items-center oui:justify-center",
         className
       )}
       {...props}
@@ -37,7 +37,7 @@ function NavigationMenuList({
     <NavigationMenuPrimitive.List
       data-slot="navigation-menu-list"
       className={cn(
-        "group flex flex-1 list-none items-center justify-center gap-1",
+        "oui:group oui:flex oui:flex-1 oui:list-none oui:items-center oui:justify-center oui:gap-1",
         className
       )}
       {...props}
@@ -52,14 +52,14 @@ function NavigationMenuItem({
   return (
     <NavigationMenuPrimitive.Item
       data-slot="navigation-menu-item"
-      className={cn("relative", className)}
+      className={cn("oui:relative", className)}
       {...props}
     />
   )
 }
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground disabled:pointer-events-none disabled:opacity-50 data-[state=open]:hover:bg-accent data-[state=open]:text-accent-foreground data-[state=open]:focus:bg-accent data-[state=open]:bg-accent/50 focus-visible:ring-ring/50 outline-none transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1"
+  "oui:group oui:inline-flex oui:h-9 oui:w-max oui:items-center oui:justify-center oui:rounded-md oui:bg-background oui:px-4 oui:py-2 oui:text-sm oui:font-medium oui:hover:bg-accent oui:hover:text-accent-foreground oui:focus:bg-accent oui:focus:text-accent-foreground oui:disabled:pointer-events-none oui:disabled:opacity-50 oui:data-[state=open]:hover:bg-accent oui:data-[state=open]:text-accent-foreground oui:data-[state=open]:focus:bg-accent oui:data-[state=open]:bg-accent/50 oui:focus-visible:ring-ring/50 oui:outline-none oui:transition-[color,box-shadow] oui:focus-visible:ring-[3px] oui:focus-visible:outline-1"
 )
 
 function NavigationMenuTrigger({
@@ -70,12 +70,12 @@ function NavigationMenuTrigger({
   return (
     <NavigationMenuPrimitive.Trigger
       data-slot="navigation-menu-trigger"
-      className={cn(navigationMenuTriggerStyle(), "group", className)}
+      className={cn(navigationMenuTriggerStyle(), "oui:group", className)}
       {...props}
     >
       {children}{" "}
       <ChevronDownIcon
-        className="relative top-[1px] ml-1 size-3 transition duration-300 group-data-[state=open]:rotate-180"
+        className="oui:relative oui:top-[1px] oui:ml-1 oui:size-3 oui:transition oui:duration-300 oui:group-data-[state=open]:rotate-180"
         aria-hidden="true"
       />
     </NavigationMenuPrimitive.Trigger>
@@ -90,8 +90,8 @@ function NavigationMenuContent({
     <NavigationMenuPrimitive.Content
       data-slot="navigation-menu-content"
       className={cn(
-        "data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 top-0 left-0 w-full p-2 pr-2.5 md:absolute md:w-auto",
-        "group-data-[viewport=false]/navigation-menu:bg-popover group-data-[viewport=false]/navigation-menu:text-popover-foreground group-data-[viewport=false]/navigation-menu:data-[state=open]:animate-in group-data-[viewport=false]/navigation-menu:data-[state=closed]:animate-out group-data-[viewport=false]/navigation-menu:data-[state=closed]:zoom-out-95 group-data-[viewport=false]/navigation-menu:data-[state=open]:zoom-in-95 group-data-[viewport=false]/navigation-menu:data-[state=open]:fade-in-0 group-data-[viewport=false]/navigation-menu:data-[state=closed]:fade-out-0 group-data-[viewport=false]/navigation-menu:top-full group-data-[viewport=false]/navigation-menu:mt-1.5 group-data-[viewport=false]/navigation-menu:overflow-hidden group-data-[viewport=false]/navigation-menu:rounded-md group-data-[viewport=false]/navigation-menu:border group-data-[viewport=false]/navigation-menu:shadow group-data-[viewport=false]/navigation-menu:duration-200 **:data-[slot=navigation-menu-link]:focus:ring-0 **:data-[slot=navigation-menu-link]:focus:outline-none",
+        "oui:data-[motion^=from-]:animate-in oui:data-[motion^=to-]:animate-out oui:data-[motion^=from-]:fade-in oui:data-[motion^=to-]:fade-out oui:data-[motion=from-end]:slide-in-from-right-52 oui:data-[motion=from-start]:slide-in-from-left-52 oui:data-[motion=to-end]:slide-out-to-right-52 oui:data-[motion=to-start]:slide-out-to-left-52 oui:top-0 oui:left-0 oui:w-full oui:p-2 oui:pr-2.5 oui:md:absolute oui:md:w-auto",
+        "oui:group-data-[viewport=false]/navigation-menu:bg-popover oui:group-data-[viewport=false]/navigation-menu:text-popover-foreground oui:group-data-[viewport=false]/navigation-menu:data-[state=open]:animate-in oui:group-data-[viewport=false]/navigation-menu:data-[state=closed]:animate-out oui:group-data-[viewport=false]/navigation-menu:data-[state=closed]:zoom-out-95 oui:group-data-[viewport=false]/navigation-menu:data-[state=open]:zoom-in-95 oui:group-data-[viewport=false]/navigation-menu:data-[state=open]:fade-in-0 oui:group-data-[viewport=false]/navigation-menu:data-[state=closed]:fade-out-0 oui:group-data-[viewport=false]/navigation-menu:top-full oui:group-data-[viewport=false]/navigation-menu:mt-1.5 oui:group-data-[viewport=false]/navigation-menu:overflow-hidden oui:group-data-[viewport=false]/navigation-menu:rounded-md oui:group-data-[viewport=false]/navigation-menu:border oui:group-data-[viewport=false]/navigation-menu:shadow oui:group-data-[viewport=false]/navigation-menu:duration-200 oui:**:data-[slot=navigation-menu-link]:focus:ring-0 oui:**:data-[slot=navigation-menu-link]:focus:outline-none",
         className
       )}
       {...props}
@@ -106,13 +106,13 @@ function NavigationMenuViewport({
   return (
     <div
       className={cn(
-        "absolute top-full left-0 isolate z-50 flex justify-center"
+        "oui:absolute oui:top-full oui:left-0 oui:isolate oui:z-50 oui:flex oui:justify-center"
       )}
     >
       <NavigationMenuPrimitive.Viewport
         data-slot="navigation-menu-viewport"
         className={cn(
-          "origin-top-center bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border shadow md:w-[var(--radix-navigation-menu-viewport-width)]",
+          "oui:origin-top-center oui:bg-popover oui:text-popover-foreground oui:data-[state=open]:animate-in oui:data-[state=closed]:animate-out oui:data-[state=closed]:zoom-out-95 oui:data-[state=open]:zoom-in-90 oui:relative oui:mt-1.5 oui:h-[var(--radix-navigation-menu-viewport-height)] oui:w-full oui:overflow-hidden oui:rounded-md oui:border oui:shadow oui:md:w-[var(--radix-navigation-menu-viewport-width)]",
           className
         )}
         {...props}
@@ -129,7 +129,7 @@ function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "data-[active=true]:focus:bg-accent data-[active=true]:hover:bg-accent data-[active=true]:bg-accent/50 data-[active=true]:text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:ring-ring/50 [&_svg:not([class*='text-'])]:text-muted-foreground flex flex-col gap-1 rounded-sm p-2 text-sm transition-all outline-none focus-visible:ring-[3px] focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
+        "oui:data-[active=true]:focus:bg-accent oui:data-[active=true]:hover:bg-accent oui:data-[active=true]:bg-accent/50 oui:data-[active=true]:text-accent-foreground oui:hover:bg-accent oui:hover:text-accent-foreground oui:focus:bg-accent oui:focus:text-accent-foreground oui:focus-visible:ring-ring/50 oui:[&_svg:not([class*=text-])]:text-muted-foreground oui:flex oui:flex-col oui:gap-1 oui:rounded-sm oui:p-2 oui:text-sm oui:transition-all oui:outline-none oui:focus-visible:ring-[3px] oui:focus-visible:outline-1 oui:[&_svg:not([class*=size-])]:size-4",
         className
       )}
       {...props}
@@ -145,12 +145,12 @@ function NavigationMenuIndicator({
     <NavigationMenuPrimitive.Indicator
       data-slot="navigation-menu-indicator"
       className={cn(
-        "data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden",
+        "oui:data-[state=visible]:animate-in oui:data-[state=hidden]:animate-out oui:data-[state=hidden]:fade-out oui:data-[state=visible]:fade-in oui:top-full oui:z-[1] oui:flex oui:h-1.5 oui:items-end oui:justify-center oui:overflow-hidden",
         className
       )}
       {...props}
     >
-      <div className="bg-border relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm shadow-md" />
+      <div className="oui:bg-border oui:relative oui:top-[60%] oui:h-2 oui:w-2 oui:rotate-45 oui:rounded-tl-sm oui:shadow-md" />
     </NavigationMenuPrimitive.Indicator>
   )
 }

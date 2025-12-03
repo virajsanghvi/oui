@@ -22,7 +22,7 @@ function TabsTrigger({
 }: React.ComponentProps<typeof BaseTabsTrigger>) {
   return (
     <BaseTabsTrigger
-      className={cn("rounded-full", className)}
+      className={cn("oui:rounded-full", className)}
       {...props}
     />
   )

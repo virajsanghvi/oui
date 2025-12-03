@@ -26,12 +26,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (args) => (
-    <div className="w-[450px]">
+    <div className="oui:w-[450px]">
       <AspectRatio {...args}>
         <img
           src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
           alt="Photo by Drew Beamer"
-          className="rounded-md object-cover w-full h-full"
+          className="oui:rounded-md oui:object-cover oui:w-full oui:h-full"
         />
       </AspectRatio>
     </div>
@@ -43,12 +43,12 @@ export const Square: Story = {
     ratio: 1,
   },
   render: (args) => (
-    <div className="w-[300px]">
+    <div className="oui:w-[300px]">
       <AspectRatio {...args}>
         <img
           src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800&dpr=2&q=80"
           alt="Photo by Pawel Czerwinski"
-          className="rounded-md object-cover w-full h-full"
+          className="oui:rounded-md oui:object-cover oui:w-full oui:h-full"
         />
       </AspectRatio>
     </div>
@@ -60,12 +60,12 @@ export const Portrait: Story = {
     ratio: 3 / 4,
   },
   render: (args) => (
-    <div className="w-[300px]">
+    <div className="oui:w-[300px]">
       <AspectRatio {...args}>
         <img
           src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=800&dpr=2&q=80"
           alt="Photo by Milad Fakurian"
-          className="rounded-md object-cover w-full h-full"
+          className="oui:rounded-md oui:object-cover oui:w-full oui:h-full"
         />
       </AspectRatio>
     </div>
@@ -77,13 +77,13 @@ export const VideoRatio: Story = {
     ratio: 16 / 9,
   },
   render: (args) => (
-    <div className="w-[500px]">
+    <div className="oui:w-[500px]">
       <AspectRatio {...args}>
-        <div className="flex items-center justify-center w-full h-full bg-muted rounded-md">
-          <div className="text-center">
-            <div className="text-4xl mb-2">▶️</div>
-            <p className="text-sm text-muted-foreground">Video Content</p>
-            <p className="text-xs text-muted-foreground">16:9 Aspect Ratio</p>
+        <div className="oui:flex oui:items-center oui:justify-center oui:w-full oui:h-full oui:bg-muted oui:rounded-md">
+          <div className="oui:text-center">
+            <div className="oui:text-4xl oui:mb-2">▶️</div>
+            <p className="oui:text-sm oui:text-muted-foreground">Video Content</p>
+            <p className="oui:text-xs oui:text-muted-foreground">16:9 Aspect Ratio</p>
           </div>
         </div>
       </AspectRatio>
@@ -93,39 +93,39 @@ export const VideoRatio: Story = {
 
 export const Showcase: Story = {
   render: () => (
-    <div className="space-y-6">
+    <div className="oui:space-y-6">
       <div>
-        <h3 className="text-lg font-semibold mb-3">Common Aspect Ratios</h3>
-        <div className="grid grid-cols-2 gap-4 max-w-2xl">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-3">Common Aspect Ratios</h3>
+        <div className="oui:grid oui:grid-cols-2 oui:gap-4 oui:max-w-2xl">
           <div>
-            <p className="text-sm font-medium mb-2">16:9 (Widescreen)</p>
+            <p className="oui:text-sm oui:font-medium oui:mb-2">16:9 (Widescreen)</p>
             <AspectRatio ratio={16 / 9}>
-              <div className="flex items-center justify-center w-full h-full bg-blue-100 rounded-md">
-                <span className="text-sm text-blue-800">16:9</span>
+              <div className="oui:flex oui:items-center oui:justify-center oui:w-full oui:h-full oui:bg-blue-100 oui:rounded-md">
+                <span className="oui:text-sm oui:text-blue-800">16:9</span>
               </div>
             </AspectRatio>
           </div>
           <div>
-            <p className="text-sm font-medium mb-2">4:3 (Standard)</p>
+            <p className="oui:text-sm oui:font-medium oui:mb-2">4:3 (Standard)</p>
             <AspectRatio ratio={4 / 3}>
-              <div className="flex items-center justify-center w-full h-full bg-green-100 rounded-md">
-                <span className="text-sm text-green-800">4:3</span>
+              <div className="oui:flex oui:items-center oui:justify-center oui:w-full oui:h-full oui:bg-green-100 oui:rounded-md">
+                <span className="oui:text-sm oui:text-green-800">4:3</span>
               </div>
             </AspectRatio>
           </div>
           <div>
-            <p className="text-sm font-medium mb-2">1:1 (Square)</p>
+            <p className="oui:text-sm oui:font-medium oui:mb-2">1:1 (Square)</p>
             <AspectRatio ratio={1}>
-              <div className="flex items-center justify-center w-full h-full bg-purple-100 rounded-md">
-                <span className="text-sm text-purple-800">1:1</span>
+              <div className="oui:flex oui:items-center oui:justify-center oui:w-full oui:h-full oui:bg-purple-100 oui:rounded-md">
+                <span className="oui:text-sm oui:text-purple-800">1:1</span>
               </div>
             </AspectRatio>
           </div>
           <div>
-            <p className="text-sm font-medium mb-2">3:4 (Portrait)</p>
+            <p className="oui:text-sm oui:font-medium oui:mb-2">3:4 (Portrait)</p>
             <AspectRatio ratio={3 / 4}>
-              <div className="flex items-center justify-center w-full h-full bg-orange-100 rounded-md">
-                <span className="text-sm text-orange-800">3:4</span>
+              <div className="oui:flex oui:items-center oui:justify-center oui:w-full oui:h-full oui:bg-orange-100 oui:rounded-md">
+                <span className="oui:text-sm oui:text-orange-800">3:4</span>
               </div>
             </AspectRatio>
           </div>

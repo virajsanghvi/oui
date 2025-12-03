@@ -150,20 +150,20 @@ export const DisabledDates: Story = {
 
 export const Showcase: Story = {
   render: () => (
-    <div className="space-y-8">
+    <div className="oui:space-y-8">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Calendar Modes</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Calendar Modes</h3>
+        <div className="oui:grid oui:grid-cols-1 oui:md:grid-cols-2 oui:lg:grid-cols-3 oui:gap-6">
           <div>
-            <p className="text-sm font-medium mb-2">Single Selection</p>
+            <p className="oui:text-sm oui:font-medium oui:mb-2">Single Selection</p>
             <Calendar mode="single" />
           </div>
           <div>
-            <p className="text-sm font-medium mb-2">Range Selection</p>
+            <p className="oui:text-sm oui:font-medium oui:mb-2">Range Selection</p>
             <Calendar mode="range" />
           </div>
           <div>
-            <p className="text-sm font-medium mb-2">With Dropdowns</p>
+            <p className="oui:text-sm oui:font-medium oui:mb-2">With Dropdowns</p>
             <Calendar 
               captionLayout="dropdown" 
               fromYear={2020} 

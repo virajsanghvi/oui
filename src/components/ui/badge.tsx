@@ -5,28 +5,28 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const badgeVariants = cva(
-  "inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden",
+  "oui:inline-flex oui:items-center oui:justify-center oui:rounded-md oui:border oui:px-2 oui:py-0.5 oui:text-xs oui:font-medium oui:w-fit oui:whitespace-nowrap oui:shrink-0 oui:[&>svg]:size-3 oui:gap-1 oui:[&>svg]:pointer-events-none oui:focus-visible:border-ring oui:focus-visible:ring-ring/50 oui:focus-visible:ring-[3px] oui:aria-invalid:ring-destructive/20 oui:dark:aria-invalid:ring-destructive/40 oui:aria-invalid:border-destructive transition-[color,box-shadow] oui:overflow-hidden",
   {
     variants: {
       variant: {
         default:
-          "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
+          "oui:border-transparent oui:bg-primary oui:text-primary-foreground oui:[a&]:hover:bg-primary/90",
         secondary:
-          "border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90",
+          "oui:border-transparent oui:bg-secondary oui:text-secondary-foreground oui:[a&]:hover:bg-secondary/90",
         destructive:
-          "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+          "oui:border-transparent oui:bg-destructive oui:text-white oui:[a&]:hover:bg-destructive/90 oui:focus-visible:ring-destructive/20 oui:dark:focus-visible:ring-destructive/40 oui:dark:bg-destructive/60",
         outline:
-          "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground",
+          "oui:text-foreground oui:[a&]:hover:bg-accent oui:[a&]:hover:text-accent-foreground",
         verified:
-          "rounded-[8px] border-transparent bg-[#3B82F6] text-white",
+          "oui:rounded-[8px] oui:border-transparent oui:bg-[#3B82F6] oui:text-white",
         "severity-low":
-          "border-transparent bg-severity-low text-white",
+          "oui:border-transparent oui:bg-severity-low oui:text-white",
         "severity-med":
-          "border-transparent bg-severity-med text-white",
+          "oui:border-transparent oui:bg-severity-med oui:text-white",
         "severity-high":
-          "border-transparent bg-severity-high text-white",
+          "oui:border-transparent oui:bg-severity-high oui:text-white",
         "severity-critical":
-          "border-transparent bg-severity-critical text-white",
+          "oui:border-transparent oui:bg-severity-critical oui:text-white",
       },
     },
     defaultVariants: {

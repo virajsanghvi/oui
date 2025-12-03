@@ -53,8 +53,8 @@ export const Default: Story = {
     const [value, setValue] = useState([50]);
 
     return (
-      <div className="w-[300px] space-y-4">
-        <div className="space-y-2">
+      <div className="oui:w-[300px] oui:space-y-4">
+        <div className="oui:space-y-2">
           <Label>Volume: {value[0]}</Label>
           <Slider
             value={value}
@@ -72,8 +72,8 @@ export const Range: Story = {
     const [value, setValue] = useState([20, 80]);
 
     return (
-      <div className="w-[300px] space-y-4">
-        <div className="space-y-2">
+      <div className="oui:w-[300px] oui:space-y-4">
+        <div className="oui:space-y-2">
           <Label>Price Range: ${value[0]} - ${value[1]}</Label>
           <Slider
             value={value}
@@ -101,8 +101,8 @@ export const WithSteps: Story = {
     const [value, setValue] = useState([50]);
 
     return (
-      <div className="w-[300px] space-y-4">
-        <div className="space-y-2">
+      <div className="oui:w-[300px] oui:space-y-4">
+        <div className="oui:space-y-2">
           <Label>Value: {value[0]} (Step: {args.step})</Label>
           <Slider
             value={value}
@@ -130,14 +130,14 @@ export const Vertical: Story = {
     const [value, setValue] = useState([50]);
 
     return (
-      <div className="flex items-center space-x-4 h-[200px]">
-        <Label className="text-sm">Volume</Label>
+      <div className="oui:flex oui:items-center oui:space-x-4 oui:h-[200px]">
+        <Label className="oui:text-sm">Volume</Label>
         <Slider
           value={value}
           onValueChange={setValue}
           {...args}
         />
-        <span className="text-sm font-medium">{value[0]}</span>
+        <span className="oui:text-sm oui:font-medium">{value[0]}</span>
       </div>
     );
   },
@@ -155,15 +155,15 @@ export const VolumeControl: Story = {
     const [volume, setVolume] = useState([75]);
 
     return (
-      <Card className="w-[350px]">
+      <Card className="oui:w-[350px]">
         <CardHeader>
           <CardTitle>Audio Settings</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div className="space-y-2">
-            <div className="flex items-center justify-between">
+        <CardContent className="oui:space-y-6">
+          <div className="oui:space-y-2">
+            <div className="oui:flex oui:items-center oui:justify-between">
               <Label htmlFor="volume">Volume</Label>
-              <span className="text-sm text-muted-foreground">{volume[0]}%</span>
+              <span className="oui:text-sm oui:text-muted-foreground">{volume[0]}%</span>
             </div>
             <Slider
               id="volume"
@@ -192,15 +192,15 @@ export const PriceFilter: Story = {
     const [priceRange, setPriceRange] = useState([25, 75]);
 
     return (
-      <Card className="w-[350px]">
+      <Card className="oui:w-[350px]">
         <CardHeader>
           <CardTitle>Filter Products</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div className="space-y-2">
-            <div className="flex items-center justify-between">
+        <CardContent className="oui:space-y-6">
+          <div className="oui:space-y-2">
+            <div className="oui:flex oui:items-center oui:justify-between">
               <Label>Price Range</Label>
-              <span className="text-sm text-muted-foreground">
+              <span className="oui:text-sm oui:text-muted-foreground">
                 ${priceRange[0]} - ${priceRange[1]}
               </span>
             </div>
@@ -211,7 +211,7 @@ export const PriceFilter: Story = {
               step={1}
               {...args}
             />
-            <div className="flex justify-between text-xs text-muted-foreground">
+            <div className="oui:flex oui:justify-between oui:text-xs oui:text-muted-foreground">
               <span>$0</span>
               <span>$100</span>
             </div>
@@ -236,15 +236,15 @@ export const MultipleSliders: Story = {
     const [saturation, setSaturation] = useState([70]);
 
     return (
-      <Card className="w-[400px]">
+      <Card className="oui:w-[400px]">
         <CardHeader>
           <CardTitle>Display Settings</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div className="space-y-2">
-            <div className="flex items-center justify-between">
+        <CardContent className="oui:space-y-6">
+          <div className="oui:space-y-2">
+            <div className="oui:flex oui:items-center oui:justify-between">
               <Label>Brightness</Label>
-              <span className="text-sm text-muted-foreground">{brightness[0]}%</span>
+              <span className="oui:text-sm oui:text-muted-foreground">{brightness[0]}%</span>
             </div>
             <Slider
               value={brightness}
@@ -254,10 +254,10 @@ export const MultipleSliders: Story = {
             />
           </div>
           
-          <div className="space-y-2">
-            <div className="flex items-center justify-between">
+          <div className="oui:space-y-2">
+            <div className="oui:flex oui:items-center oui:justify-between">
               <Label>Contrast</Label>
-              <span className="text-sm text-muted-foreground">{contrast[0]}%</span>
+              <span className="oui:text-sm oui:text-muted-foreground">{contrast[0]}%</span>
             </div>
             <Slider
               value={contrast}
@@ -267,10 +267,10 @@ export const MultipleSliders: Story = {
             />
           </div>
           
-          <div className="space-y-2">
-            <div className="flex items-center justify-between">
+          <div className="oui:space-y-2">
+            <div className="oui:flex oui:items-center oui:justify-between">
               <Label>Saturation</Label>
-              <span className="text-sm text-muted-foreground">{saturation[0]}%</span>
+              <span className="oui:text-sm oui:text-muted-foreground">{saturation[0]}%</span>
             </div>
             <Slider
               value={saturation}
@@ -300,8 +300,8 @@ export const Disabled: Story = {
     const [value, setValue] = useState([40]);
 
     return (
-      <div className="w-[300px] space-y-4">
-        <div className="space-y-2">
+      <div className="oui:w-[300px] oui:space-y-4">
+        <div className="oui:space-y-2">
           <Label>Disabled Slider: {value[0]}</Label>
           <Slider
             value={value}
@@ -328,13 +328,13 @@ export const Showcase: Story = {
     const [verticalValue, setVerticalValue] = useState([60]);
 
     return (
-      <div className="space-y-8">
+      <div className="oui:space-y-8">
         <div>
-          <h3 className="text-lg font-semibold mb-4">Slider Examples</h3>
-          <div className="space-y-6">
+          <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Slider Examples</h3>
+          <div className="oui:space-y-6">
             <div>
-              <p className="text-sm font-medium mb-4">Single Value</p>
-              <div className="w-[300px] space-y-2">
+              <p className="oui:text-sm oui:font-medium oui:mb-4">Single Value</p>
+              <div className="oui:w-[300px] oui:space-y-2">
                 <Label>Value: {singleValue[0]}</Label>
                 <Slider
                   value={singleValue}
@@ -345,8 +345,8 @@ export const Showcase: Story = {
             </div>
             
             <div>
-              <p className="text-sm font-medium mb-4">Range Selection</p>
-              <div className="w-[300px] space-y-2">
+              <p className="oui:text-sm oui:font-medium oui:mb-4">Range Selection</p>
+              <div className="oui:w-[300px] oui:space-y-2">
                 <Label>Range: {rangeValue[0]} - {rangeValue[1]}</Label>
                 <Slider
                   value={rangeValue}
@@ -357,16 +357,16 @@ export const Showcase: Story = {
             </div>
             
             <div>
-              <p className="text-sm font-medium mb-4">Vertical Orientation</p>
-              <div className="flex items-center space-x-4 h-[150px]">
-                <Label className="text-sm">Volume</Label>
+              <p className="oui:text-sm oui:font-medium oui:mb-4">Vertical Orientation</p>
+              <div className="oui:flex oui:items-center oui:space-x-4 oui:h-[150px]">
+                <Label className="oui:text-sm">Volume</Label>
                 <Slider
                   orientation="vertical"
                   value={verticalValue}
                   onValueChange={setVerticalValue}
                   max={100}
                 />
-                <span className="text-sm">{verticalValue[0]}</span>
+                <span className="oui:text-sm">{verticalValue[0]}</span>
               </div>
             </div>
           </div>

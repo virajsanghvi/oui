@@ -151,13 +151,13 @@ export const Large: Story = {
 // Contextual examples
 export const FileUpload: Story = {
   render: () => (
-    <div className="space-y-2">
-      <div className="flex justify-between text-sm w-80">
+    <div className="oui:space-y-2">
+      <div className="oui:flex oui:justify-between oui:text-sm oui:w-80">
         <span>Uploading document.pdf</span>
         <span>73%</span>
       </div>
       <Progress value={73} />
-      <div className="text-xs text-muted-foreground w-80">
+      <div className="oui:text-xs oui:text-muted-foreground oui:w-80">
         2.1 MB of 2.9 MB uploaded
       </div>
     </div>
@@ -173,13 +173,13 @@ export const FileUpload: Story = {
 
 export const TaskCompletion: Story = {
   render: () => (
-    <div className="space-y-2">
-      <div className="flex justify-between text-sm font-medium w-80">
+    <div className="oui:space-y-2">
+      <div className="oui:flex oui:justify-between oui:text-sm oui:font-medium oui:w-80">
         <span>Project Setup</span>
         <span>4 of 6 tasks</span>
       </div>
       <Progress value={67} />
-      <div className="text-xs text-muted-foreground w-80">
+      <div className="oui:text-xs oui:text-muted-foreground oui:w-80">
         2 tasks remaining
       </div>
     </div>
@@ -195,13 +195,13 @@ export const TaskCompletion: Story = {
 
 export const ProfileCompletion: Story = {
   render: () => (
-    <div className="space-y-2">
-      <div className="flex justify-between text-sm font-medium w-80">
+    <div className="oui:space-y-2">
+      <div className="oui:flex oui:justify-between oui:text-sm oui:font-medium oui:w-80">
         <span>Profile Completion</span>
         <span>85%</span>
       </div>
       <Progress value={85} />
-      <div className="text-xs text-muted-foreground w-80">
+      <div className="oui:text-xs oui:text-muted-foreground oui:w-80">
         Add phone number to complete your profile
       </div>
     </div>
@@ -218,25 +218,25 @@ export const ProfileCompletion: Story = {
 // Showcase stories
 export const AllValues: Story = {
   render: () => (
-    <div className="space-y-4">
-      <div className="space-y-2">
-        <div className="text-sm">0% - Not started</div>
+    <div className="oui:space-y-4">
+      <div className="oui:space-y-2">
+        <div className="oui:text-sm">0% - Not started</div>
         <Progress value={0} />
       </div>
-      <div className="space-y-2">
-        <div className="text-sm">25% - Getting started</div>
+      <div className="oui:space-y-2">
+        <div className="oui:text-sm">25% - Getting started</div>
         <Progress value={25} />
       </div>
-      <div className="space-y-2">
-        <div className="text-sm">50% - Halfway there</div>
+      <div className="oui:space-y-2">
+        <div className="oui:text-sm">50% - Halfway there</div>
         <Progress value={50} />
       </div>
-      <div className="space-y-2">
-        <div className="text-sm">75% - Almost done</div>
+      <div className="oui:space-y-2">
+        <div className="oui:text-sm">75% - Almost done</div>
         <Progress value={75} />
       </div>
-      <div className="space-y-2">
-        <div className="text-sm">100% - Complete</div>
+      <div className="oui:space-y-2">
+        <div className="oui:text-sm">100% - Complete</div>
         <Progress value={100} />
       </div>
     </div>
@@ -252,21 +252,21 @@ export const AllValues: Story = {
 
 export const AllSizes: Story = {
   render: () => (
-    <div className="space-y-6">
-      <div className="space-y-2">
-        <div className="text-sm font-medium">Small (h-1, w-64)</div>
+    <div className="oui:space-y-6">
+      <div className="oui:space-y-2">
+        <div className="oui:text-sm oui:font-medium">Small (h-1, w-64)</div>
         <Progress value={60} size="sm" />
       </div>
-      <div className="space-y-2">
-        <div className="text-sm font-medium">Default (h-2, w-80)</div>
+      <div className="oui:space-y-2">
+        <div className="oui:text-sm oui:font-medium">Default (h-2, w-80)</div>
         <Progress value={60} size="default" />
       </div>
-      <div className="space-y-2">
-        <div className="text-sm font-medium">Medium (h-3, w-80)</div>
+      <div className="oui:space-y-2">
+        <div className="oui:text-sm oui:font-medium">Medium (h-3, w-80)</div>
         <Progress value={60} size="md" />
       </div>
-      <div className="space-y-2">
-        <div className="text-sm font-medium">Large (h-4, w-80)</div>
+      <div className="oui:space-y-2">
+        <div className="oui:text-sm oui:font-medium">Large (h-4, w-80)</div>
         <Progress value={60} size="lg" />
       </div>
     </div>
@@ -282,51 +282,51 @@ export const AllSizes: Story = {
 
 export const RealWorldExamples: Story = {
   render: () => (
-    <div className="space-y-8">
+    <div className="oui:space-y-8">
       {/* Installation Progress */}
-      <div className="space-y-2">
-        <div className="flex justify-between text-sm font-medium w-80">
+      <div className="oui:space-y-2">
+        <div className="oui:flex oui:justify-between oui:text-sm oui:font-medium oui:w-80">
           <span>Installing Dependencies</span>
           <span>Installing...</span>
         </div>
         <Progress value={42} />
-        <div className="text-xs text-muted-foreground w-80">
+        <div className="oui:text-xs oui:text-muted-foreground oui:w-80">
           Installing react-router-dom (127 of 302 packages)
         </div>
       </div>
 
       {/* Download Progress */}
-      <div className="space-y-2">
-        <div className="flex justify-between text-sm font-medium w-80">
+      <div className="oui:space-y-2">
+        <div className="oui:flex oui:justify-between oui:text-sm oui:font-medium oui:w-80">
           <span>Downloading Update</span>
           <span>89%</span>
         </div>
         <Progress value={89} />
-        <div className="text-xs text-muted-foreground w-80">
+        <div className="oui:text-xs oui:text-muted-foreground oui:w-80">
           156.7 MB of 176.2 MB • 2 minutes remaining
         </div>
       </div>
 
       {/* Onboarding Progress */}
-      <div className="space-y-2">
-        <div className="flex justify-between text-sm font-medium w-80">
+      <div className="oui:space-y-2">
+        <div className="oui:flex oui:justify-between oui:text-sm oui:font-medium oui:w-80">
           <span>Account Setup</span>
           <span>Step 3 of 5</span>
         </div>
         <Progress value={60} />
-        <div className="text-xs text-muted-foreground w-80">
+        <div className="oui:text-xs oui:text-muted-foreground oui:w-80">
           Next: Verify your email address
         </div>
       </div>
 
       {/* Skill Assessment */}
-      <div className="space-y-2">
-        <div className="flex justify-between text-sm font-medium w-80">
+      <div className="oui:space-y-2">
+        <div className="oui:flex oui:justify-between oui:text-sm oui:font-medium oui:w-80">
           <span>JavaScript Proficiency</span>
           <span>Advanced</span>
         </div>
         <Progress value={92} />
-        <div className="text-xs text-muted-foreground w-80">
+        <div className="oui:text-xs oui:text-muted-foreground oui:w-80">
           Based on 15 completed assessments
         </div>
       </div>

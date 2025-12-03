@@ -42,20 +42,20 @@ export const Default: Story = {
       <HoverCardTrigger asChild>
         <Button variant="link">@nextjs</Button>
       </HoverCardTrigger>
-      <HoverCardContent className="w-80">
-        <div className="flex justify-between space-x-4">
+      <HoverCardContent className="oui:w-80">
+        <div className="oui:flex oui:justify-between oui:space-x-4">
           <Avatar>
             <AvatarImage src="https://github.com/vercel.png" />
             <AvatarFallback>VC</AvatarFallback>
           </Avatar>
-          <div className="space-y-1">
-            <h4 className="text-sm font-semibold">@nextjs</h4>
-            <p className="text-sm">
+          <div className="oui:space-y-1">
+            <h4 className="oui:text-sm oui:font-semibold">@nextjs</h4>
+            <p className="oui:text-sm">
               The React Framework – created and maintained by @vercel.
             </p>
-            <div className="flex items-center pt-2">
-              <CalendarDays className="mr-2 h-4 w-4 opacity-70" />{' '}
-              <span className="text-xs text-muted-foreground">
+            <div className="oui:flex oui:items-center oui:pt-2">
+              <CalendarDays className="oui:mr-2 oui:h-4 oui:w-4 oui:opacity-70" />{' '}
+              <span className="oui:text-xs oui:text-muted-foreground">
                 Joined December 2021
               </span>
             </div>
@@ -68,33 +68,33 @@ export const Default: Story = {
 
 export const UserProfile: Story = {
   render: (args) => (
-    <div className="space-y-4">
-      <p className="text-sm text-muted-foreground">
+    <div className="oui:space-y-4">
+      <p className="oui:text-sm oui:text-muted-foreground">
         Hover over the usernames to see their profiles:
       </p>
-      <div className="space-y-2">
-        <p className="text-sm">
+      <div className="oui:space-y-2">
+        <p className="oui:text-sm">
           Great work on the project{' '}
           <HoverCard {...args}>
             <HoverCardTrigger asChild>
-              <Button variant="link" className="p-0 h-auto font-semibold">
+              <Button variant="link" className="oui:p-0 oui:h-auto oui:font-semibold">
                 @johndoe
               </Button>
             </HoverCardTrigger>
-            <HoverCardContent className="w-80">
-              <div className="flex justify-between space-x-4">
+            <HoverCardContent className="oui:w-80">
+              <div className="oui:flex oui:justify-between oui:space-x-4">
                 <Avatar>
                   <AvatarImage src="https://github.com/shadcn.png" />
                   <AvatarFallback>JD</AvatarFallback>
                 </Avatar>
-                <div className="space-y-1">
-                  <h4 className="text-sm font-semibold">John Doe</h4>
-                  <p className="text-sm">
+                <div className="oui:space-y-1">
+                  <h4 className="oui:text-sm oui:font-semibold">John Doe</h4>
+                  <p className="oui:text-sm">
                     Senior Frontend Developer at Acme Corp. Passionate about React and TypeScript.
                   </p>
-                  <div className="flex items-center pt-2">
-                    <CalendarDays className="mr-2 h-4 w-4 opacity-70" />
-                    <span className="text-xs text-muted-foreground">
+                  <div className="oui:flex oui:items-center oui:pt-2">
+                    <CalendarDays className="oui:mr-2 oui:h-4 oui:w-4 oui:opacity-70" />
+                    <span className="oui:text-xs oui:text-muted-foreground">
                       Joined March 2020
                     </span>
                   </div>
@@ -105,28 +105,28 @@ export const UserProfile: Story = {
           ! The new features look amazing.
         </p>
         
-        <p className="text-sm">
+        <p className="oui:text-sm">
           Thanks to{' '}
           <HoverCard {...args}>
             <HoverCardTrigger asChild>
-              <Button variant="link" className="p-0 h-auto font-semibold">
+              <Button variant="link" className="oui:p-0 oui:h-auto oui:font-semibold">
                 @janesmith
               </Button>
             </HoverCardTrigger>
-            <HoverCardContent className="w-80">
-              <div className="flex justify-between space-x-4">
+            <HoverCardContent className="oui:w-80">
+              <div className="oui:flex oui:justify-between oui:space-x-4">
                 <Avatar>
                   <AvatarImage src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&dpr=2&q=80" />
                   <AvatarFallback>JS</AvatarFallback>
                 </Avatar>
-                <div className="space-y-1">
-                  <h4 className="text-sm font-semibold">Jane Smith</h4>
-                  <p className="text-sm">
+                <div className="oui:space-y-1">
+                  <h4 className="oui:text-sm oui:font-semibold">Jane Smith</h4>
+                  <p className="oui:text-sm">
                     UX Designer with 8+ years of experience. Loves creating intuitive user experiences.
                   </p>
-                  <div className="flex items-center pt-2">
-                    <CalendarDays className="mr-2 h-4 w-4 opacity-70" />
-                    <span className="text-xs text-muted-foreground">
+                  <div className="oui:flex oui:items-center oui:pt-2">
+                    <CalendarDays className="oui:mr-2 oui:h-4 oui:w-4 oui:opacity-70" />
+                    <span className="oui:text-xs oui:text-muted-foreground">
                       Joined January 2019
                     </span>
                   </div>
@@ -150,28 +150,28 @@ export const UserProfile: Story = {
 
 export const ProductInfo: Story = {
   render: (args) => (
-    <div className="space-y-4">
-      <p className="text-sm text-muted-foreground">
+    <div className="oui:space-y-4">
+      <p className="oui:text-sm oui:text-muted-foreground">
         Hover over the product names to see details:
       </p>
-      <div className="space-y-2">
-        <p className="text-sm">
+      <div className="oui:space-y-2">
+        <p className="oui:text-sm">
           Our{' '}
           <HoverCard {...args}>
             <HoverCardTrigger asChild>
-              <Button variant="link" className="p-0 h-auto font-semibold">
+              <Button variant="link" className="oui:p-0 oui:h-auto oui:font-semibold">
                 Pro Plan
               </Button>
             </HoverCardTrigger>
-            <HoverCardContent className="w-80">
-              <div className="space-y-2">
-                <h4 className="text-sm font-semibold">Pro Plan</h4>
-                <p className="text-sm text-muted-foreground">
+            <HoverCardContent className="oui:w-80">
+              <div className="oui:space-y-2">
+                <h4 className="oui:text-sm oui:font-semibold">Pro Plan</h4>
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Perfect for growing teams and businesses.
                 </p>
-                <div className="space-y-1">
-                  <div className="text-2xl font-bold">$29/month</div>
-                  <ul className="text-xs space-y-1">
+                <div className="oui:space-y-1">
+                  <div className="oui:text-2xl oui:font-bold">$29/month</div>
+                  <ul className="oui:text-xs oui:space-y-1">
                     <li>• Up to 10 team members</li>
                     <li>• 100GB storage</li>
                     <li>• Priority support</li>
@@ -184,23 +184,23 @@ export const ProductInfo: Story = {
           {' '}includes everything you need for your team.
         </p>
         
-        <p className="text-sm">
+        <p className="oui:text-sm">
           Upgrade from{' '}
           <HoverCard {...args}>
             <HoverCardTrigger asChild>
-              <Button variant="link" className="p-0 h-auto font-semibold">
+              <Button variant="link" className="oui:p-0 oui:h-auto oui:font-semibold">
                 Basic Plan
               </Button>
             </HoverCardTrigger>
-            <HoverCardContent className="w-80">
-              <div className="space-y-2">
-                <h4 className="text-sm font-semibold">Basic Plan</h4>
-                <p className="text-sm text-muted-foreground">
+            <HoverCardContent className="oui:w-80">
+              <div className="oui:space-y-2">
+                <h4 className="oui:text-sm oui:font-semibold">Basic Plan</h4>
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Great for individuals and small projects.
                 </p>
-                <div className="space-y-1">
-                  <div className="text-2xl font-bold">$9/month</div>
-                  <ul className="text-xs space-y-1">
+                <div className="oui:space-y-1">
+                  <div className="oui:text-2xl oui:font-bold">$9/month</div>
+                  <ul className="oui:text-xs oui:space-y-1">
                     <li>• Up to 3 team members</li>
                     <li>• 10GB storage</li>
                     <li>• Email support</li>
@@ -226,30 +226,30 @@ export const ProductInfo: Story = {
 
 export const Showcase: Story = {
   render: () => (
-    <div className="space-y-8">
+    <div className="oui:space-y-8">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Hover Card Examples</h3>
-        <div className="space-y-4">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Hover Card Examples</h3>
+        <div className="oui:space-y-4">
           <div>
-            <p className="text-sm font-medium mb-2">User Profile</p>
+            <p className="oui:text-sm oui:font-medium oui:mb-2">User Profile</p>
             <HoverCard>
               <HoverCardTrigger asChild>
                 <Button variant="link">@shadcn</Button>
               </HoverCardTrigger>
-              <HoverCardContent className="w-80">
-                <div className="flex justify-between space-x-4">
+              <HoverCardContent className="oui:w-80">
+                <div className="oui:flex oui:justify-between oui:space-x-4">
                   <Avatar>
                     <AvatarImage src="https://github.com/shadcn.png" />
                     <AvatarFallback>SC</AvatarFallback>
                   </Avatar>
-                  <div className="space-y-1">
-                    <h4 className="text-sm font-semibold">@shadcn</h4>
-                    <p className="text-sm">
+                  <div className="oui:space-y-1">
+                    <h4 className="oui:text-sm oui:font-semibold">@shadcn</h4>
+                    <p className="oui:text-sm">
                       The React Framework – created and maintained by @vercel.
                     </p>
-                    <div className="flex items-center pt-2">
-                      <CalendarDays className="mr-2 h-4 w-4 opacity-70" />
-                      <span className="text-xs text-muted-foreground">
+                    <div className="oui:flex oui:items-center oui:pt-2">
+                      <CalendarDays className="oui:mr-2 oui:h-4 oui:w-4 oui:opacity-70" />
+                      <span className="oui:text-xs oui:text-muted-foreground">
                         Joined December 2021
                       </span>
                     </div>
@@ -260,22 +260,22 @@ export const Showcase: Story = {
           </div>
           
           <div>
-            <p className="text-sm font-medium mb-2">Product Information</p>
-            <p className="text-sm">
+            <p className="oui:text-sm oui:font-medium oui:mb-2">Product Information</p>
+            <p className="oui:text-sm">
               Check out our{' '}
               <HoverCard>
                 <HoverCardTrigger asChild>
-                  <Button variant="link" className="p-0 h-auto">
+                  <Button variant="link" className="oui:p-0 oui:h-auto">
                     Premium Plan
                   </Button>
                 </HoverCardTrigger>
-                <HoverCardContent className="w-80">
-                  <div className="space-y-2">
-                    <h4 className="text-sm font-semibold">Premium Plan</h4>
-                    <p className="text-sm text-muted-foreground">
+                <HoverCardContent className="oui:w-80">
+                  <div className="oui:space-y-2">
+                    <h4 className="oui:text-sm oui:font-semibold">Premium Plan</h4>
+                    <p className="oui:text-sm oui:text-muted-foreground">
                       Everything you need for professional use.
                     </p>
-                    <div className="text-2xl font-bold">$49/month</div>
+                    <div className="oui:text-2xl oui:font-bold">$49/month</div>
                   </div>
                 </HoverCardContent>
               </HoverCard>

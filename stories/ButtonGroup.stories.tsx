@@ -48,7 +48,7 @@ export const Horizontal: Story = {
     };
     
     return (
-      <div className="space-y-4">
+      <div className="oui:space-y-4">
         <ButtonGroup>
           <Button 
             variant={formatting.includes('bold') ? 'default' : 'outline'}
@@ -63,13 +63,13 @@ export const Horizontal: Story = {
             Italic
           </Button>
           <Button 
-            variant={formatting.includes('underline') ? 'default' : 'outline'}
-            onClick={() => toggleFormat('underline')}
+            variant={formatting.includes('oui:underline') ? 'default' : 'outline'}
+            onClick={() => toggleFormat('oui:underline')}
           >
             Underline
           </Button>
         </ButtonGroup>
-        <p className="text-sm text-muted-foreground">
+        <p className="oui:text-sm oui:text-muted-foreground">
           Active formatting: {formatting.length > 0 ? formatting.join(', ') : 'none'}
         </p>
       </div>
@@ -106,7 +106,7 @@ export const MixedVariants: Story = {
 // With button sizes
 export const DifferentSizes: Story = {
   render: () => (
-    <div className="space-y-4">
+    <div className="oui:space-y-4">
       <ButtonGroup>
         <Button size="sm" variant="outline">Small</Button>
         <Button size="sm" variant="outline">Group</Button>
@@ -223,7 +223,7 @@ export const DisabledButtons: Story = {
 // Complex toolbar example
 export const ToolbarExample: Story = {
   render: () => (
-    <div className="space-y-4">
+    <div className="oui:space-y-4">
       <ButtonGroup>
         <ButtonGroupText>File:</ButtonGroupText>
         <Button variant="outline" size="sm">New</Button>

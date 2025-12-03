@@ -83,7 +83,7 @@ export const DestructiveAction: Story = {
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction className="bg-destructive text-white hover:bg-destructive/90">
+          <AlertDialogAction className="oui:bg-destructive oui:text-white oui:hover:bg-destructive/90">
             Delete Project
           </AlertDialogAction>
         </AlertDialogFooter>
@@ -145,7 +145,7 @@ export const DataLoss: Story = {
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Keep Data</AlertDialogCancel>
-          <AlertDialogAction className="bg-destructive text-white hover:bg-destructive/90">
+          <AlertDialogAction className="oui:bg-destructive oui:text-white oui:hover:bg-destructive/90">
             Clear All Data
           </AlertDialogAction>
         </AlertDialogFooter>
@@ -206,10 +206,10 @@ export const UnsavedChanges: Story = {
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Stay on Page</AlertDialogCancel>
-          <AlertDialogAction className="bg-secondary border border-primary hover:bg-secondary/80">
+          <AlertDialogAction className="oui:bg-secondary oui:border oui:border-primary oui:hover:bg-secondary/80">
             Save Changes
           </AlertDialogAction>
-          <AlertDialogAction className="bg-destructive text-white hover:bg-destructive/90">
+          <AlertDialogAction className="oui:bg-destructive oui:text-white oui:hover:bg-destructive/90">
             Leave Without Saving
           </AlertDialogAction>
         </AlertDialogFooter>
@@ -227,7 +227,7 @@ export const UnsavedChanges: Story = {
 
 export const Showcase: Story = {
   render: () => (
-    <div className="flex flex-wrap gap-4 p-4">
+    <div className="oui:flex oui:flex-wrap oui:gap-4 oui:p-4">
       <AlertDialog>
         <AlertDialogTrigger asChild>
           <Button variant="destructive" size="sm">Delete</Button>
@@ -241,7 +241,7 @@ export const Showcase: Story = {
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction className="bg-destructive text-white hover:bg-destructive/90">
+            <AlertDialogAction className="oui:bg-destructive oui:text-white oui:hover:bg-destructive/90">
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>

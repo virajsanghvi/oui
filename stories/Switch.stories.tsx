@@ -134,10 +134,10 @@ export const SettingsPanel: Story = {
     };
 
     return (
-      <div className="space-y-6 w-80">
+      <div className="oui:space-y-6 oui:w-80">
         <div>
-          <h3 className="text-sm font-medium mb-4">Application Settings</h3>
-          <div className="space-y-4">
+          <h3 className="oui:text-sm oui:font-medium oui:mb-4">Application Settings</h3>
+          <div className="oui:space-y-4">
             <Switch
               label="Push notifications"
               description="Receive notifications about important updates"
@@ -168,7 +168,7 @@ export const SettingsPanel: Story = {
           </div>
         </div>
         
-        <div className="pt-2 text-xs text-muted-foreground border-t">
+        <div className="oui:pt-2 oui:text-xs oui:text-muted-foreground oui:border-t">
           Active settings: {Object.entries(settings).filter(([, value]) => value).map(([key]) => key).join(', ') || 'None'}
         </div>
       </div>
@@ -198,10 +198,10 @@ export const FormIntegration: Story = {
     const isFormValid = formData.termsAccepted && formData.dataProcessing;
 
     return (
-      <form className="space-y-6 w-96">
+      <form className="oui:space-y-6 oui:w-96">
         <fieldset>
-          <legend className="text-sm font-medium mb-4">Account Preferences</legend>
-          <div className="space-y-4">
+          <legend className="oui:text-sm oui:font-medium oui:mb-4">Account Preferences</legend>
+          <div className="oui:space-y-4">
             <Switch
               label="Accept terms and conditions *"
               description="Required to create your account and use our services."
@@ -227,14 +227,14 @@ export const FormIntegration: Story = {
           </div>
         </fieldset>
         
-        <div className="flex items-center justify-between pt-4 border-t">
-          <div className="text-xs text-muted-foreground">
+        <div className="oui:flex oui:items-center oui:justify-between oui:pt-4 oui:border-t">
+          <div className="oui:text-xs oui:text-muted-foreground">
             Form status: {isFormValid ? 'Valid' : 'Missing required fields'}
           </div>
           <button
             type="submit"
             disabled={!isFormValid}
-            className="px-4 py-2 text-sm font-medium text-white bg-primary rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
+            className="oui:px-4 oui:py-2 oui:text-sm oui:font-medium oui:text-white oui:bg-primary oui:rounded-md oui:disabled:opacity-50 oui:disabled:cursor-not-allowed"
           >
             Create Account
           </button>
@@ -253,10 +253,10 @@ export const FormIntegration: Story = {
 
 export const AccessibilityExample: Story = {
   render: () => (
-    <div className="space-y-6 w-80">
+    <div className="oui:space-y-6 oui:w-80">
       <fieldset>
-        <legend className="text-sm font-medium mb-4">Privacy Controls</legend>
-        <div className="space-y-4">
+        <legend className="oui:text-sm oui:font-medium oui:mb-4">Privacy Controls</legend>
+        <div className="oui:space-y-4">
           <Switch
             label="Location sharing"
             description="Allow the app to access your location for personalized content."
@@ -311,7 +311,7 @@ export const BoxVariantChecked: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Box variant in checked state.',
+        story: 'Box variant in oui:checked state.',
       },
     },
   },
@@ -347,8 +347,8 @@ export const BoxVariantInteractive: Story = {
     };
 
     return (
-      <div className="space-y-4 max-w-md">
-        <h3 className="text-sm font-medium mb-4">Box Variant - Interactive Settings</h3>
+      <div className="oui:space-y-4 oui:max-w-md">
+        <h3 className="oui:text-sm oui:font-medium oui:mb-4">Box Variant - Interactive Settings</h3>
         
         <Switch
           variant="box"
@@ -395,12 +395,12 @@ export const BoxVariantInteractive: Story = {
 
 export const AllStates: Story = {
   render: () => (
-    <div className="space-y-6">
-      <h3 className="text-sm font-medium">All Switch States</h3>
-      <div className="grid grid-cols-2 gap-6">
-        <div className="space-y-4">
-          <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Default Variant</h4>
-          <div className="space-y-3">
+    <div className="oui:space-y-6">
+      <h3 className="oui:text-sm oui:font-medium">All Switch States</h3>
+      <div className="oui:grid oui:grid-cols-2 oui:gap-6">
+        <div className="oui:space-y-4">
+          <h4 className="oui:text-xs oui:font-medium oui:text-muted-foreground oui:uppercase oui:tracking-wide">Default Variant</h4>
+          <div className="oui:space-y-3">
             <Switch label="Unchecked" />
             <Switch label="Checked" checked />
             <Switch label="Disabled" disabled />
@@ -408,9 +408,9 @@ export const AllStates: Story = {
           </div>
         </div>
         
-        <div className="space-y-4">
-          <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Box Variant</h4>
-          <div className="space-y-3">
+        <div className="oui:space-y-4">
+          <h4 className="oui:text-xs oui:font-medium oui:text-muted-foreground oui:uppercase oui:tracking-wide">Box Variant</h4>
+          <div className="oui:space-y-3">
             <Switch variant="box" label="Unchecked" description="This is a description" />
             <Switch variant="box" label="Checked" description="This is a description" checked />
             <Switch variant="box" label="Disabled" description="This is a description" disabled />
@@ -419,9 +419,9 @@ export const AllStates: Story = {
         </div>
       </div>
       
-      <div className="pt-4 border-t">
-        <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-3">Interactive Examples</h4>
-        <div className="space-y-3">
+      <div className="oui:pt-4 oui:border-t">
+        <h4 className="oui:text-xs oui:font-medium oui:text-muted-foreground oui:uppercase oui:tracking-wide oui:mb-3">Interactive Examples</h4>
+        <div className="oui:space-y-3">
           <Switch label="Toggle me" defaultChecked />
           <Switch label="Click to enable" />
           <Switch variant="box" label="Box variant" description="Interactive box switch" />

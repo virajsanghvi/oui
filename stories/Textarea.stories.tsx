@@ -138,33 +138,33 @@ export const WithError: Story = {
 // Resize behavior examples
 export const ResizeBehavior: Story = {
   render: () => (
-    <div className="space-y-4 w-full max-w-md">
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Default Resize (Both)</label>
+    <div className="oui:space-y-4 oui:w-full oui:max-w-md">
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Default Resize (Both)</label>
         <Textarea
           placeholder="You can resize this textarea in both directions..."
           rows={3}
           style={{ resize: 'both' }}
         />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Vertical Resize Only</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Vertical Resize Only</label>
         <Textarea
           placeholder="You can only resize this textarea vertically..."
           rows={3}
           style={{ resize: 'vertical' }}
         />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Horizontal Resize Only</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Horizontal Resize Only</label>
         <Textarea
           placeholder="You can only resize this textarea horizontally..."
           rows={3}
           style={{ resize: 'horizontal' }}
         />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">No Resize</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">No Resize</label>
         <Textarea
           placeholder="This textarea cannot be resized..."
           rows={3}
@@ -176,7 +176,7 @@ export const ResizeBehavior: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Different resize behaviors for textarea elements.',
+        story: 'Different oui:resize behaviors for textarea elements.',
       },
     },
   },
@@ -190,8 +190,8 @@ export const WithCharacterCount: Story = {
     const remaining = maxLength - value.length;
     
     return (
-      <div className="space-y-2 w-full max-w-md">
-        <label htmlFor="char-count-textarea" className="text-sm font-medium">
+      <div className="oui:space-y-2 oui:w-full oui:max-w-md">
+        <label htmlFor="char-count-textarea" className="oui:text-sm oui:font-medium">
           Product Review
         </label>
         <Textarea
@@ -203,11 +203,11 @@ export const WithCharacterCount: Story = {
           rows={4}
           aria-describedby="char-count-help"
         />
-        <div className="flex justify-between text-sm">
-          <p id="char-count-help" className="text-muted-foreground">
+        <div className="oui:flex oui:justify-between oui:text-sm">
+          <p id="char-count-help" className="oui:text-muted-foreground">
             Share your experience to help others
           </p>
-          <p className={`${remaining < 20 ? 'text-destructive' : 'text-muted-foreground'}`}>
+          <p className={`${remaining < 20 ? 'oui:text-destructive' : 'oui:text-muted-foreground'}`}>
             {remaining} characters remaining
           </p>
         </div>
@@ -232,8 +232,8 @@ export const CharacterCountWarning: Story = {
     const isOverLimit = remaining < 0;
     
     return (
-      <div className="space-y-2 w-full max-w-md">
-        <label htmlFor="warning-textarea" className="text-sm font-medium">
+      <div className="oui:space-y-2 oui:w-full oui:max-w-md">
+        <label htmlFor="warning-textarea" className="oui:text-sm oui:font-medium">
           Feedback Message
         </label>
         <Textarea
@@ -244,18 +244,18 @@ export const CharacterCountWarning: Story = {
           maxLength={maxLength}
           rows={4}
           aria-describedby="warning-help"
-          className={isOverLimit ? 'border-destructive focus-visible:border-destructive' : ''}
+          className={isOverLimit ? 'oui:border-destructive oui:focus-visible:border-destructive' : ''}
         />
-        <div className="flex justify-between text-sm">
-          <p id="warning-help" className="text-muted-foreground">
+        <div className="oui:flex oui:justify-between oui:text-sm">
+          <p id="warning-help" className="oui:text-muted-foreground">
             Please keep your feedback concise
           </p>
-          <p className={`${isOverLimit ? 'text-destructive font-medium' : isNearLimit ? 'text-orange-600' : 'text-muted-foreground'}`}>
+          <p className={`${isOverLimit ? 'oui:text-destructive oui:font-medium' : isNearLimit ? 'oui:text-orange-600' : 'oui:text-muted-foreground'}`}>
             {Math.abs(remaining)} {remaining < 0 ? 'characters over limit' : 'characters remaining'}
           </p>
         </div>
         {isOverLimit && (
-          <p className="text-sm text-destructive">
+          <p className="oui:text-sm oui:text-destructive">
             Please reduce your message by {Math.abs(remaining)} characters
           </p>
         )}
@@ -274,8 +274,8 @@ export const CharacterCountWarning: Story = {
 // Form integration examples
 export const WithLabel: Story = {
   render: () => (
-    <div className="space-y-2 w-full max-w-md">
-      <label htmlFor="message-textarea" className="text-sm font-medium">
+    <div className="oui:space-y-2 oui:w-full oui:max-w-md">
+      <label htmlFor="message-textarea" className="oui:text-sm oui:font-medium">
         Message
       </label>
       <Textarea
@@ -296,8 +296,8 @@ export const WithLabel: Story = {
 
 export const WithHelperText: Story = {
   render: () => (
-    <div className="space-y-2 w-full max-w-md">
-      <label htmlFor="description-textarea" className="text-sm font-medium">
+    <div className="oui:space-y-2 oui:w-full oui:max-w-md">
+      <label htmlFor="description-textarea" className="oui:text-sm oui:font-medium">
         Project Description
       </label>
       <Textarea
@@ -306,7 +306,7 @@ export const WithHelperText: Story = {
         rows={5}
         aria-describedby="description-help"
       />
-      <p id="description-help" className="text-sm text-muted-foreground">
+      <p id="description-help" className="oui:text-sm oui:text-muted-foreground">
         Provide a detailed description to help team members understand the project scope
       </p>
     </div>
@@ -322,8 +322,8 @@ export const WithHelperText: Story = {
 
 export const WithValidationError: Story = {
   render: () => (
-    <div className="space-y-2 w-full max-w-md">
-      <label htmlFor="comment-error-textarea" className="text-sm font-medium">
+    <div className="oui:space-y-2 oui:w-full oui:max-w-md">
+      <label htmlFor="comment-error-textarea" className="oui:text-sm oui:font-medium">
         Comments
       </label>
       <Textarea
@@ -334,7 +334,7 @@ export const WithValidationError: Story = {
         aria-describedby="comment-error"
         rows={4}
       />
-      <p id="comment-error" className="text-sm text-destructive">
+      <p id="comment-error" className="oui:text-sm oui:text-destructive">
         Comments must be at least 20 characters long
       </p>
     </div>
@@ -350,8 +350,8 @@ export const WithValidationError: Story = {
 
 export const WithSuccessState: Story = {
   render: () => (
-    <div className="space-y-2 w-full max-w-md">
-      <label htmlFor="review-success-textarea" className="text-sm font-medium">
+    <div className="oui:space-y-2 oui:w-full oui:max-w-md">
+      <label htmlFor="review-success-textarea" className="oui:text-sm oui:font-medium">
         Product Review
       </label>
       <Textarea
@@ -359,9 +359,9 @@ export const WithSuccessState: Story = {
         value="This product exceeded my expectations! The quality is outstanding and it arrived exactly as described. I would definitely recommend it to others looking for a reliable solution."
         aria-describedby="review-success"
         rows={4}
-        className="border-green-500 focus-visible:border-green-500 focus-visible:ring-green-500/20"
+        className="oui:border-green-500 oui:focus-visible:border-green-500 oui:focus-visible:ring-green-500/20"
       />
-      <p id="review-success" className="text-sm text-green-600">
+      <p id="review-success" className="oui:text-sm oui:text-green-600">
         Thank you for your detailed review!
       </p>
     </div>
@@ -378,9 +378,9 @@ export const WithSuccessState: Story = {
 // Realistic form scenarios
 export const ContactForm: Story = {
   render: () => (
-    <form className="space-y-4 w-full max-w-md">
-      <div className="space-y-2">
-        <label htmlFor="contact-name" className="text-sm font-medium">
+    <form className="oui:space-y-4 oui:w-full oui:max-w-md">
+      <div className="oui:space-y-2">
+        <label htmlFor="contact-name" className="oui:text-sm oui:font-medium">
           Full Name *
         </label>
         <input
@@ -388,11 +388,11 @@ export const ContactForm: Story = {
           type="text"
           placeholder="John Smith"
           required
-          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          className="oui:flex oui:h-10 oui:w-full oui:rounded-md oui:border oui:border-input oui:bg-background oui:px-3 oui:py-2 oui:text-sm oui:ring-offset-background oui:file:border-0 oui:file:bg-transparent oui:file:text-sm oui:file:font-medium oui:placeholder:text-muted-foreground oui:focus-visible:outline-none oui:focus-visible:ring-2 oui:focus-visible:ring-ring oui:focus-visible:ring-offset-2 oui:disabled:cursor-not-allowed oui:disabled:opacity-50"
         />
       </div>
-      <div className="space-y-2">
-        <label htmlFor="contact-email" className="text-sm font-medium">
+      <div className="oui:space-y-2">
+        <label htmlFor="contact-email" className="oui:text-sm oui:font-medium">
           Email Address *
         </label>
         <input
@@ -400,11 +400,11 @@ export const ContactForm: Story = {
           type="email"
           placeholder="john.smith@company.com"
           required
-          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          className="oui:flex oui:h-10 oui:w-full oui:rounded-md oui:border oui:border-input oui:bg-background oui:px-3 oui:py-2 oui:text-sm oui:ring-offset-background oui:file:border-0 oui:file:bg-transparent oui:file:text-sm oui:file:font-medium oui:placeholder:text-muted-foreground oui:focus-visible:outline-none oui:focus-visible:ring-2 oui:focus-visible:ring-ring oui:focus-visible:ring-offset-2 oui:disabled:cursor-not-allowed oui:disabled:opacity-50"
         />
       </div>
-      <div className="space-y-2">
-        <label htmlFor="contact-subject" className="text-sm font-medium">
+      <div className="oui:space-y-2">
+        <label htmlFor="contact-subject" className="oui:text-sm oui:font-medium">
           Subject *
         </label>
         <input
@@ -412,11 +412,11 @@ export const ContactForm: Story = {
           type="text"
           placeholder="How can we help you?"
           required
-          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          className="oui:flex oui:h-10 oui:w-full oui:rounded-md oui:border oui:border-input oui:bg-background oui:px-3 oui:py-2 oui:text-sm oui:ring-offset-background oui:file:border-0 oui:file:bg-transparent oui:file:text-sm oui:file:font-medium oui:placeholder:text-muted-foreground oui:focus-visible:outline-none oui:focus-visible:ring-2 oui:focus-visible:ring-ring oui:focus-visible:ring-offset-2 oui:disabled:cursor-not-allowed oui:disabled:opacity-50"
         />
       </div>
-      <div className="space-y-2">
-        <label htmlFor="contact-message" className="text-sm font-medium">
+      <div className="oui:space-y-2">
+        <label htmlFor="contact-message" className="oui:text-sm oui:font-medium">
           Message *
         </label>
         <Textarea
@@ -426,7 +426,7 @@ export const ContactForm: Story = {
           rows={5}
           aria-describedby="message-help"
         />
-        <p id="message-help" className="text-sm text-muted-foreground">
+        <p id="message-help" className="oui:text-sm oui:text-muted-foreground">
           The more details you provide, the better we can assist you
         </p>
       </div>
@@ -450,15 +450,15 @@ export const FeedbackForm: Story = {
     const remaining = maxLength - feedback.length;
     
     return (
-      <form className="space-y-4 w-full max-w-md">
-        <div className="space-y-2">
-          <label htmlFor="feedback-rating" className="text-sm font-medium">
+      <form className="oui:space-y-4 oui:w-full oui:max-w-md">
+        <div className="oui:space-y-2">
+          <label htmlFor="feedback-rating" className="oui:text-sm oui:font-medium">
             Overall Rating *
           </label>
           <select
             id="feedback-rating"
             required
-            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            className="oui:flex oui:h-10 oui:w-full oui:rounded-md oui:border oui:border-input oui:bg-background oui:px-3 oui:py-2 oui:text-sm oui:ring-offset-background oui:focus-visible:outline-none oui:focus-visible:ring-2 oui:focus-visible:ring-ring oui:focus-visible:ring-offset-2 oui:disabled:cursor-not-allowed oui:disabled:opacity-50"
           >
             <option value="">Select a rating</option>
             <option value="5">5 - Excellent</option>
@@ -468,8 +468,8 @@ export const FeedbackForm: Story = {
             <option value="1">1 - Poor</option>
           </select>
         </div>
-        <div className="space-y-2">
-          <label htmlFor="feedback-comments" className="text-sm font-medium">
+        <div className="oui:space-y-2">
+          <label htmlFor="feedback-comments" className="oui:text-sm oui:font-medium">
             Comments *
           </label>
           <Textarea
@@ -480,16 +480,16 @@ export const FeedbackForm: Story = {
             maxLength={maxLength}
             rows={5}
             aria-describedby="feedback-help"
-            className={!isValid && feedback.length > 0 ? 'border-destructive focus-visible:border-destructive' : ''}
+            className={!isValid && feedback.length > 0 ? 'oui:border-destructive oui:focus-visible:border-destructive' : ''}
           />
-          <div className="flex justify-between text-sm">
-            <p id="feedback-help" className={!isValid && feedback.length > 0 ? 'text-destructive' : 'text-muted-foreground'}>
+          <div className="oui:flex oui:justify-between oui:text-sm">
+            <p id="feedback-help" className={!isValid && feedback.length > 0 ? 'oui:text-destructive' : 'oui:text-muted-foreground'}>
               {!isValid && feedback.length > 0 
                 ? `Please write at least ${minLength - feedback.length} more characters`
                 : 'Help us improve by sharing your experience'
               }
             </p>
-            <p className={remaining < 50 ? 'text-orange-600' : 'text-muted-foreground'}>
+            <p className={remaining < 50 ? 'oui:text-orange-600' : 'oui:text-muted-foreground'}>
               {remaining} remaining
             </p>
           </div>
@@ -509,23 +509,23 @@ export const FeedbackForm: Story = {
 // Showcase stories
 export const AllSizes: Story = {
   render: () => (
-    <div className="space-y-6 w-full max-w-md">
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Small (2 rows)</label>
+    <div className="oui:space-y-6 oui:w-full oui:max-w-md">
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Small (2 rows)</label>
         <Textarea
           placeholder="Brief comment..."
           rows={2}
         />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Medium (4 rows)</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Medium (4 rows)</label>
         <Textarea
           placeholder="Standard message..."
           rows={4}
         />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Large (8 rows)</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Large (8 rows)</label>
         <Textarea
           placeholder="Detailed description..."
           rows={8}
@@ -544,32 +544,32 @@ export const AllSizes: Story = {
 
 export const ValidationStates: Story = {
   render: () => (
-    <div className="space-y-6 w-full max-w-md">
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Default State</label>
+    <div className="oui:space-y-6 oui:w-full oui:max-w-md">
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Default State</label>
         <Textarea placeholder="Enter your message..." rows={3} />
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Error State</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Error State</label>
         <Textarea
           placeholder="Enter your message..."
           value="Too short"
           aria-invalid={true}
           rows={3}
         />
-        <p className="text-sm text-destructive">Message must be at least 20 characters</p>
+        <p className="oui:text-sm oui:text-destructive">Message must be at least 20 characters</p>
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Success State</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Success State</label>
         <Textarea
           value="This is a well-written message that meets all the requirements and provides valuable information."
           rows={3}
-          className="border-green-500 focus-visible:border-green-500 focus-visible:ring-green-500/20"
+          className="oui:border-green-500 oui:focus-visible:border-green-500 oui:focus-visible:ring-green-500/20"
         />
-        <p className="text-sm text-green-600">Message looks great!</p>
+        <p className="oui:text-sm oui:text-green-600">Message looks great!</p>
       </div>
-      <div className="space-y-2">
-        <label className="text-sm font-medium">Disabled State</label>
+      <div className="oui:space-y-2">
+        <label className="oui:text-sm oui:font-medium">Disabled State</label>
         <Textarea
           disabled
           value="This field is disabled and cannot be edited."

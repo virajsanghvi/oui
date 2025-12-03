@@ -84,9 +84,9 @@ export function Combobox({
     : options.find((option) => option.value === value && !option.isAction)
 
   const sizeClasses = {
-    sm: "h-8 px-2 text-sm",
-    default: "h-9 px-3",
-    lg: "h-10 px-4",
+    sm: "oui:h-8 oui:px-2 oui:text-sm",
+    default: "oui:h-9 oui:px-3",
+    lg: "oui:h-10 oui:px-4",
   }
 
   const handleSelect = (currentValue: string) => {
@@ -126,14 +126,14 @@ export function Combobox({
         role="combobox"
         aria-expanded={open}
         className={cn(
-          "justify-between font-normal",
+          "oui:justify-between oui:font-normal",
           sizeClasses[size],
-          selectedCount === 0 ? "text-muted-foreground" : "text-foreground",
+          selectedCount === 0 ? "oui:text-muted-foreground" : "oui:text-foreground",
           className
         )}
         disabled={disabled}
       >
-        <div className="flex gap-1 flex-1 min-w-0 items-center overflow-hidden">
+        <div className="oui:flex oui:gap-1 oui:flex-1 oui:min-w-0 oui:items-center oui:overflow-hidden">
           {selectedCount === 0 ? (
             <span>{placeholder}</span>
           ) : (
@@ -142,11 +142,11 @@ export function Combobox({
                 <Badge
                   key={option.value}
                   variant="secondary"
-                  className="text-xs"
+                  className="oui:text-xs"
                 >
                   {option.label}
                   <button
-                    className="ml-1 ring-offset-background rounded-full outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                    className="oui:ml-1 oui:ring-offset-background oui:rounded-full oui:outline-none oui:focus:ring-2 oui:focus:ring-ring oui:focus:ring-offset-2"
                     onKeyDown={(e) => {
                       if (e.key === "Enter") {
                         handleRemoveValue(option.value)
@@ -158,19 +158,19 @@ export function Combobox({
                     }}
                     onClick={() => handleRemoveValue(option.value)}
                   >
-                    <X className="h-3 w-3 text-muted-foreground hover:text-foreground" />
+                    <X className="oui:h-3 oui:w-3 oui:text-muted-foreground oui:hover:text-foreground" />
                   </button>
                 </Badge>
               ))}
               {selectedCount > maxVisibleItems && (
-                <Badge variant="outline" className="text-xs text-muted-foreground">
+                <Badge variant="outline" className="oui:text-xs oui:text-muted-foreground">
                   +{selectedCount - maxVisibleItems} more
                 </Badge>
               )}
             </>
           )}
         </div>
-        <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+        <ChevronsUpDown className="oui:ml-2 oui:h-4 oui:w-4 oui:shrink-0 oui:opacity-50" />
       </Button>
     )
   }
@@ -184,15 +184,15 @@ export function Combobox({
         role="combobox"
         aria-expanded={open}
         className={cn(
-          "justify-between font-normal",
+          "oui:justify-between oui:font-normal",
           sizeClasses[size],
-          selectedOption ? "text-foreground" : "text-muted-foreground",
+          selectedOption ? "oui:text-foreground" : "oui:text-muted-foreground",
           className
         )}
         disabled={disabled}
       >
         {selectedOption ? (selectedOption.content || selectedOption.label) : placeholder}
-        <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+        <ChevronsUpDown className="oui:ml-2 oui:h-4 oui:w-4 oui:shrink-0 oui:opacity-50" />
       </Button>
     )
   }
@@ -204,7 +204,7 @@ export function Combobox({
       <PopoverTrigger asChild>
         {renderTrigger ? renderTrigger(selectedOptions) : defaultTrigger}
       </PopoverTrigger>
-      <PopoverContent className={cn("w-[200px] p-0", popoverClassName)}>
+      <PopoverContent className={cn("oui:w-[200px] oui:p-0", popoverClassName)}>
         <Command>
           <CommandInput placeholder={searchPlaceholder} />
           <CommandList>
@@ -226,17 +226,17 @@ export function Combobox({
                       {multiple ? (
                         <Checkbox
                           checked={isSelected}
-                          className="mr-2 h-4 w-4"
+                          className="oui:mr-2 oui:h-4 oui:w-4"
                         />
                       ) : (
                         <Check
                           className={cn(
-                            "mr-2 h-4 w-4",
-                            isSelected ? "opacity-100" : "opacity-0"
+                            "oui:mr-2 oui:h-4 oui:w-4",
+                            isSelected ? "oui:opacity-100" : "oui:opacity-0"
                           )}
                         />
                       )}
-                      <span className="text-foreground">
+                      <span className="oui:text-foreground">
                         {option.content || option.label}
                       </span>
                     </CommandItem>
@@ -255,7 +255,7 @@ export function Combobox({
                     value={option.value}
                     disabled={option.disabled}
                     onSelect={handleSelect}
-                    className="text-muted-foreground"
+                    className="oui:text-muted-foreground"
                   >
                     {option.content || option.label}
                   </CommandItem>

@@ -54,27 +54,27 @@ export const Default: Story = {
         }, [args.open]);
 
         return (
-            <div className="w-[350px]">
+            <div className="oui:w-[350px]">
                 <Collapsible open={isOpen} onOpenChange={setIsOpen} disabled={args.disabled}>
-                    <div className="flex items-center justify-between space-x-4 px-4">
-                        <h4 className="text-sm font-semibold">
+                    <div className="oui:flex oui:items-center oui:justify-between oui:space-x-4 oui:px-4">
+                        <h4 className="oui:text-sm oui:font-semibold">
                             @peduarte starred 3 repositories
                         </h4>
                         <CollapsibleTrigger asChild>
-                            <Button variant="ghost" size="sm" className="w-9 p-0">
-                                <ChevronsUpDown className="h-4 w-4 text-foreground" />
-                                <span className="sr-only">Toggle</span>
+                            <Button variant="ghost" size="sm" className="oui:w-9 oui:p-0">
+                                <ChevronsUpDown className="oui:h-4 oui:w-4 oui:text-foreground" />
+                                <span className="oui:sr-only">Toggle</span>
                             </Button>
                         </CollapsibleTrigger>
                     </div>
-                    <div className="rounded-md border px-4 py-3 font-mono text-sm mb-2">
+                    <div className="oui:rounded-md oui:border oui:px-4 oui:py-3 oui:font-mono oui:text-sm oui:mb-2">
                         @radix-ui/primitives
                     </div>
-                    <CollapsibleContent className="space-y-2">
-                        <div className="rounded-md border px-4 py-3 font-mono text-sm">
+                    <CollapsibleContent className="oui:space-y-2">
+                        <div className="oui:rounded-md oui:border oui:px-4 oui:py-3 oui:font-mono oui:text-sm">
                             @radix-ui/colors
                         </div>
-                        <div className="rounded-md border px-4 py-3 font-mono text-sm">
+                        <div className="oui:rounded-md oui:border oui:px-4 oui:py-3 oui:font-mono oui:text-sm">
                             @stitches/react
                         </div>
                     </CollapsibleContent>
@@ -120,9 +120,9 @@ export const Navigation: Story = {
         ];
 
         return (
-            <div className="w-[280px] border rounded-lg p-4">
-                <h3 className="font-semibold mb-4">Navigation</h3>
-                <div className="space-y-2">
+            <div className="oui:w-[280px] oui:border oui:rounded-lg oui:p-4">
+                <h3 className="oui:font-semibold oui:mb-4">Navigation</h3>
+                <div className="oui:space-y-2">
                     {navItems.map((section) => (
                         <Collapsible
                             key={section.id}
@@ -130,16 +130,16 @@ export const Navigation: Story = {
                             onOpenChange={() => toggleSection(section.id)}
                             disabled={args.disabled}
                         >
-                            <CollapsibleTrigger className="flex items-center justify-between w-full p-2 text-left hover:bg-accent rounded-md">
-                                <span className="font-medium">{section.title}</span>
-                                <ChevronsUpDown className="h-4 w-4 text-foreground" />
+                            <CollapsibleTrigger className="oui:flex oui:items-center oui:justify-between oui:w-full oui:p-2 oui:text-left oui:hover:bg-accent oui:rounded-md">
+                                <span className="oui:font-medium">{section.title}</span>
+                                <ChevronsUpDown className="oui:h-4 oui:w-4 oui:text-foreground" />
                             </CollapsibleTrigger>
-                            <CollapsibleContent className="ml-4 mt-1">
-                                <div className="space-y-1">
+                            <CollapsibleContent className="oui:ml-4 oui:mt-1">
+                                <div className="oui:space-y-1">
                                     {section.items.map((item) => (
                                         <button
                                             key={item}
-                                            className="block w-full text-left p-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md"
+                                            className="oui:block oui:w-full oui:text-left oui:p-2 oui:text-sm oui:text-muted-foreground oui:hover:text-foreground oui:hover:bg-accent oui:rounded-md"
                                         >
                                             {item}
                                         </button>

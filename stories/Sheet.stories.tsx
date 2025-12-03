@@ -57,18 +57,18 @@ export const Default: Story = {
             Make changes to your profile here. Click save when you're done.
           </SheetDescription>
         </SheetHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
+        <div className="oui:grid oui:gap-4 oui:py-4">
+          <div className="oui:grid oui:grid-cols-4 oui:items-center oui:gap-4">
+            <Label htmlFor="name" className="oui:text-right">
               Name
             </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
+            <Input id="name" value="Pedro Duarte" className="oui:col-span-3" />
           </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
+          <div className="oui:grid oui:grid-cols-4 oui:items-center oui:gap-4">
+            <Label htmlFor="username" className="oui:text-right">
               Username
             </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
+            <Input id="username" value="@peduarte" className="oui:col-span-3" />
           </div>
         </div>
         <SheetFooter>
@@ -86,7 +86,7 @@ export const FromLeft: Story = {
     <Sheet {...args}>
       <SheetTrigger asChild>
         <Button variant="outline">
-          <Menu className="mr-2 h-4 w-4" />
+          <Menu className="oui:mr-2 oui:h-4 oui:w-4" />
           Menu
         </Button>
       </SheetTrigger>
@@ -97,25 +97,25 @@ export const FromLeft: Story = {
             Navigate through the application sections.
           </SheetDescription>
         </SheetHeader>
-        <div className="py-4">
-          <nav className="space-y-2">
-            <Button variant="ghost" className="w-full justify-start">
-              <User className="mr-2 h-4 w-4" />
+        <div className="oui:py-4">
+          <nav className="oui:space-y-2">
+            <Button variant="ghost" className="oui:w-full oui:justify-start">
+              <User className="oui:mr-2 oui:h-4 oui:w-4" />
               Profile
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
-              <Settings className="mr-2 h-4 w-4" />
+            <Button variant="ghost" className="oui:w-full oui:justify-start">
+              <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
               Settings
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
-              <Bell className="mr-2 h-4 w-4" />
+            <Button variant="ghost" className="oui:w-full oui:justify-start">
+              <Bell className="oui:mr-2 oui:h-4 oui:w-4" />
               Notifications
             </Button>
-            <Separator className="my-2" />
-            <Button variant="ghost" className="w-full justify-start">
+            <Separator className="oui:my-2" />
+            <Button variant="ghost" className="oui:w-full oui:justify-start">
               Help & Support
             </Button>
-            <Button variant="ghost" className="w-full justify-start">
+            <Button variant="ghost" className="oui:w-full oui:justify-start">
               Logout
             </Button>
           </nav>
@@ -137,7 +137,7 @@ export const FromTop: Story = {
     <Sheet {...args}>
       <SheetTrigger asChild>
         <Button variant="outline">
-          <Search className="mr-2 h-4 w-4" />
+          <Search className="oui:mr-2 oui:h-4 oui:w-4" />
           Search
         </Button>
       </SheetTrigger>
@@ -148,22 +148,22 @@ export const FromTop: Story = {
             Search for anything across the application.
           </SheetDescription>
         </SheetHeader>
-        <div className="py-4">
-          <div className="space-y-4">
+        <div className="oui:py-4">
+          <div className="oui:space-y-4">
             <Input
               placeholder="Type your search query..."
-              className="w-full"
+              className="oui:w-full"
             />
-            <div className="space-y-2">
-              <h4 className="text-sm font-medium">Recent Searches</h4>
-              <div className="space-y-1">
-                <Button variant="ghost" className="w-full justify-start text-sm">
+            <div className="oui:space-y-2">
+              <h4 className="oui:text-sm oui:font-medium">Recent Searches</h4>
+              <div className="oui:space-y-1">
+                <Button variant="ghost" className="oui:w-full oui:justify-start oui:text-sm">
                   React components
                 </Button>
-                <Button variant="ghost" className="w-full justify-start text-sm">
+                <Button variant="ghost" className="oui:w-full oui:justify-start oui:text-sm">
                   TypeScript tutorial
                 </Button>
-                <Button variant="ghost" className="w-full justify-start text-sm">
+                <Button variant="ghost" className="oui:w-full oui:justify-start oui:text-sm">
                   UI design patterns
                 </Button>
               </div>
@@ -187,7 +187,7 @@ export const FromBottom: Story = {
     <Sheet {...args}>
       <SheetTrigger asChild>
         <Button variant="outline">
-          <Settings className="mr-2 h-4 w-4" />
+          <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
           Quick Settings
         </Button>
       </SheetTrigger>
@@ -198,22 +198,22 @@ export const FromBottom: Story = {
             Adjust your preferences quickly.
           </SheetDescription>
         </SheetHeader>
-        <div className="py-4">
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
+        <div className="oui:py-4">
+          <div className="oui:space-y-4">
+            <div className="oui:flex oui:items-center oui:justify-between">
               <Label htmlFor="notifications">Push Notifications</Label>
               <Switch id="notifications" />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="oui:flex oui:items-center oui:justify-between">
               <Label htmlFor="dark-mode">Dark Mode</Label>
               <Switch id="dark-mode" />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="oui:flex oui:items-center oui:justify-between">
               <Label htmlFor="auto-save">Auto Save</Label>
               <Switch id="auto-save" defaultChecked />
             </div>
             <Separator />
-            <div className="flex items-center justify-between">
+            <div className="oui:flex oui:items-center oui:justify-between">
               <Label htmlFor="analytics">Analytics</Label>
               <Switch id="analytics" />
             </div>
@@ -254,15 +254,15 @@ export const ContactForm: Story = {
         <SheetTrigger asChild>
           <Button>Contact Us</Button>
         </SheetTrigger>
-        <SheetContent className="sm:max-w-md">
+        <SheetContent className="oui:sm:max-w-md">
           <SheetHeader>
             <SheetTitle>Contact Us</SheetTitle>
             <SheetDescription>
               Send us a message and we'll get back to you as soon as possible.
             </SheetDescription>
           </SheetHeader>
-          <form onSubmit={handleSubmit} className="space-y-4 py-4">
-            <div className="space-y-2">
+          <form onSubmit={handleSubmit} className="oui:space-y-4 oui:py-4">
+            <div className="oui:space-y-2">
               <Label htmlFor="contact-name">Name</Label>
               <Input
                 id="contact-name"
@@ -271,7 +271,7 @@ export const ContactForm: Story = {
                 placeholder="Your name"
               />
             </div>
-            <div className="space-y-2">
+            <div className="oui:space-y-2">
               <Label htmlFor="contact-email">Email</Label>
               <Input
                 id="contact-email"
@@ -281,11 +281,11 @@ export const ContactForm: Story = {
                 placeholder="your@email.com"
               />
             </div>
-            <div className="space-y-2">
+            <div className="oui:space-y-2">
               <Label htmlFor="contact-message">Message</Label>
               <textarea
                 id="contact-message"
-                className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="oui:flex oui:min-h-[80px] oui:w-full oui:rounded-md oui:border oui:border-input oui:bg-background oui:px-3 oui:py-2 oui:text-sm oui:ring-offset-background oui:placeholder:text-muted-foreground oui:focus-visible:outline-none oui:focus-visible:ring-2 oui:focus-visible:ring-ring oui:focus-visible:ring-offset-2 oui:disabled:cursor-not-allowed oui:disabled:opacity-50"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 placeholder="Your message..."
@@ -315,13 +315,13 @@ export const ContactForm: Story = {
 
 export const Showcase: Story = {
   render: () => (
-    <div className="space-y-8">
+    <div className="oui:space-y-8">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Sheet Directions</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <h3 className="oui:text-lg oui:font-semibold oui:mb-4">Sheet Directions</h3>
+        <div className="oui:grid oui:grid-cols-2 oui:md:grid-cols-4 oui:gap-4">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" className="w-full">
+              <Button variant="outline" className="oui:w-full">
                 From Right
               </Button>
             </SheetTrigger>
@@ -332,8 +332,8 @@ export const Showcase: Story = {
                   This sheet opens from the right side.
                 </SheetDescription>
               </SheetHeader>
-              <div className="py-4">
-                <p className="text-sm text-muted-foreground">
+              <div className="oui:py-4">
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Content goes here...
                 </p>
               </div>
@@ -342,7 +342,7 @@ export const Showcase: Story = {
 
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" className="w-full">
+              <Button variant="outline" className="oui:w-full">
                 From Left
               </Button>
             </SheetTrigger>
@@ -353,8 +353,8 @@ export const Showcase: Story = {
                   This sheet opens from the left side.
                 </SheetDescription>
               </SheetHeader>
-              <div className="py-4">
-                <p className="text-sm text-muted-foreground">
+              <div className="oui:py-4">
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Content goes here...
                 </p>
               </div>
@@ -363,7 +363,7 @@ export const Showcase: Story = {
 
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" className="w-full">
+              <Button variant="outline" className="oui:w-full">
                 From Top
               </Button>
             </SheetTrigger>
@@ -374,8 +374,8 @@ export const Showcase: Story = {
                   This sheet opens from the top.
                 </SheetDescription>
               </SheetHeader>
-              <div className="py-4">
-                <p className="text-sm text-muted-foreground">
+              <div className="oui:py-4">
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Content goes here...
                 </p>
               </div>
@@ -384,7 +384,7 @@ export const Showcase: Story = {
 
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" className="w-full">
+              <Button variant="outline" className="oui:w-full">
                 From Bottom
               </Button>
             </SheetTrigger>
@@ -395,8 +395,8 @@ export const Showcase: Story = {
                   This sheet opens from the bottom.
                 </SheetDescription>
               </SheetHeader>
-              <div className="py-4">
-                <p className="text-sm text-muted-foreground">
+              <div className="oui:py-4">
+                <p className="oui:text-sm oui:text-muted-foreground">
                   Content goes here...
                 </p>
               </div>

@@ -12,7 +12,7 @@ function Menubar({
     <MenubarPrimitive.Root
       data-slot="menubar"
       className={cn(
-        "bg-background flex h-9 items-center gap-1 rounded-md border p-1 shadow-xs",
+        "oui:bg-background oui:flex oui:h-9 oui:items-center oui:gap-1 oui:rounded-md oui:border oui:p-1 oui:shadow-xs",
         className
       )}
       {...props}
@@ -54,7 +54,7 @@ function MenubarTrigger({
     <MenubarPrimitive.Trigger
       data-slot="menubar-trigger"
       className={cn(
-        "focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground flex items-center rounded-sm px-2 py-1 text-sm font-medium outline-hidden select-none",
+        "oui:focus:bg-accent oui:focus:text-accent-foreground oui:data-[state=open]:bg-accent oui:data-[state=open]:text-accent-foreground oui:flex oui:items-center oui:rounded-sm oui:px-2 oui:py-1 oui:text-sm oui:font-medium oui:outline-hidden oui:select-none",
         className
       )}
       {...props}
@@ -77,7 +77,7 @@ function MenubarContent({
         alignOffset={alignOffset}
         sideOffset={sideOffset}
         className={cn(
-          "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-[12rem] origin-(--radix-menubar-content-transform-origin) overflow-hidden rounded-md border p-1 shadow-md",
+          "oui:bg-popover oui:text-popover-foreground oui:data-[state=open]:animate-in oui:data-[state=closed]:fade-out-0 oui:data-[state=open]:fade-in-0 oui:data-[state=closed]:zoom-out-95 oui:data-[state=open]:zoom-in-95 oui:data-[side=bottom]:slide-in-from-top-2 oui:data-[side=left]:slide-in-from-right-2 oui:data-[side=right]:slide-in-from-left-2 oui:data-[side=top]:slide-in-from-bottom-2 oui:z-50 oui:min-w-[12rem] oui:origin-(--radix-menubar-content-transform-origin) oui:overflow-hidden oui:rounded-md oui:border oui:p-1 oui:shadow-md",
           className
         )}
         {...props}
@@ -101,7 +101,7 @@ function MenubarItem({
       data-inset={inset}
       data-variant={variant}
       className={cn(
-        "focus:bg-accent focus:text-accent-foreground data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive/10 dark:data-[variant=destructive]:focus:bg-destructive/20 data-[variant=destructive]:focus:text-destructive data-[variant=destructive]:*:[svg]:!text-destructive [&_svg:not([class*='text-'])]:text-muted-foreground relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[inset]:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "oui:focus:bg-accent oui:focus:text-accent-foreground oui:data-[variant=destructive]:text-destructive oui:data-[variant=destructive]:focus:bg-destructive/10 oui:dark:data-[variant=destructive]:focus:bg-destructive/20 oui:data-[variant=destructive]:focus:text-destructive oui:data-[variant=destructive]:*:[svg]:!text-destructive oui:[&_svg:not([class*=text-])]:text-muted-foreground oui:relative oui:flex oui:cursor-default oui:items-center oui:gap-2 oui:rounded-sm oui:px-2 oui:py-1.5 oui:text-sm oui:outline-hidden oui:select-none oui:data-[disabled]:pointer-events-none oui:data-[disabled]:opacity-50 oui:data-[inset]:pl-8 oui:[&_svg]:pointer-events-none oui:[&_svg]:shrink-0 oui:[&_svg:not([class*=size-])]:size-4",
         className
       )}
       {...props}
@@ -119,15 +119,15 @@ function MenubarCheckboxItem({
     <MenubarPrimitive.CheckboxItem
       data-slot="menubar-checkbox-item"
       className={cn(
-        "focus:bg-accent focus:text-accent-foreground relative flex cursor-default items-center gap-2 rounded-xs py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "oui:focus:bg-accent oui:focus:text-accent-foreground oui:relative oui:flex oui:cursor-default oui:items-center oui:gap-2 oui:rounded-xs oui:py-1.5 oui:pr-2 oui:pl-8 oui:text-sm oui:outline-hidden oui:select-none oui:data-[disabled]:pointer-events-none oui:data-[disabled]:opacity-50 oui:[&_svg]:pointer-events-none oui:[&_svg]:shrink-0 oui:[&_svg:not([class*=size-])]:size-4",
         className
       )}
       checked={checked}
       {...props}
     >
-      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
+      <span className="oui:pointer-events-none oui:absolute oui:left-2 oui:flex oui:size-3.5 oui:items-center oui:justify-center">
         <MenubarPrimitive.ItemIndicator>
-          <CheckIcon className="size-4" />
+          <CheckIcon className="oui:size-4" />
         </MenubarPrimitive.ItemIndicator>
       </span>
       {children}
@@ -144,14 +144,14 @@ function MenubarRadioItem({
     <MenubarPrimitive.RadioItem
       data-slot="menubar-radio-item"
       className={cn(
-        "focus:bg-accent focus:text-accent-foreground relative flex cursor-default items-center gap-2 rounded-xs py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "oui:focus:bg-accent oui:focus:text-accent-foreground oui:relative oui:flex oui:cursor-default oui:items-center oui:gap-2 oui:rounded-xs oui:py-1.5 oui:pr-2 oui:pl-8 oui:text-sm oui:outline-hidden oui:select-none oui:data-[disabled]:pointer-events-none oui:data-[disabled]:opacity-50 oui:[&_svg]:pointer-events-none oui:[&_svg]:shrink-0 oui:[&_svg:not([class*=size-])]:size-4",
         className
       )}
       {...props}
     >
-      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
+      <span className="oui:pointer-events-none oui:absolute oui:left-2 oui:flex oui:size-3.5 oui:items-center oui:justify-center">
         <MenubarPrimitive.ItemIndicator>
-          <CircleIcon className="size-2 fill-current" />
+          <CircleIcon className="oui:size-2 oui:fill-current" />
         </MenubarPrimitive.ItemIndicator>
       </span>
       {children}
@@ -171,7 +171,7 @@ function MenubarLabel({
       data-slot="menubar-label"
       data-inset={inset}
       className={cn(
-        "px-2 py-1.5 text-sm font-medium data-[inset]:pl-8",
+        "oui:px-2 oui:py-1.5 oui:text-sm oui:font-medium oui:data-[inset]:pl-8",
         className
       )}
       {...props}
@@ -186,7 +186,7 @@ function MenubarSeparator({
   return (
     <MenubarPrimitive.Separator
       data-slot="menubar-separator"
-      className={cn("bg-border -mx-1 my-1 h-px", className)}
+      className={cn("oui:bg-border oui:-mx-1 oui:my-1 oui:h-px", className)}
       {...props}
     />
   )
@@ -200,7 +200,7 @@ function MenubarShortcut({
     <span
       data-slot="menubar-shortcut"
       className={cn(
-        "text-muted-foreground ml-auto text-xs tracking-widest",
+        "oui:text-muted-foreground oui:ml-auto oui:text-xs oui:tracking-widest",
         className
       )}
       {...props}
@@ -227,13 +227,13 @@ function MenubarSubTrigger({
       data-slot="menubar-sub-trigger"
       data-inset={inset}
       className={cn(
-        "focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground flex cursor-default items-center rounded-sm px-2 py-1.5 text-sm outline-none select-none data-[inset]:pl-8",
+        "oui:focus:bg-accent oui:focus:text-accent-foreground oui:data-[state=open]:bg-accent oui:data-[state=open]:text-accent-foreground oui:flex oui:cursor-default oui:items-center oui:rounded-sm oui:px-2 oui:py-1.5 oui:text-sm oui:outline-none oui:select-none oui:data-[inset]:pl-8",
         className
       )}
       {...props}
     >
       {children}
-      <ChevronRightIcon className="ml-auto h-4 w-4" />
+      <ChevronRightIcon className="oui:ml-auto oui:h-4 oui:w-4" />
     </MenubarPrimitive.SubTrigger>
   )
 }
@@ -246,7 +246,7 @@ function MenubarSubContent({
     <MenubarPrimitive.SubContent
       data-slot="menubar-sub-content"
       className={cn(
-        "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-[8rem] origin-(--radix-menubar-content-transform-origin) overflow-hidden rounded-md border p-1 shadow-lg",
+        "oui:bg-popover oui:text-popover-foreground oui:data-[state=open]:animate-in oui:data-[state=closed]:animate-out oui:data-[state=closed]:fade-out-0 oui:data-[state=open]:fade-in-0 oui:data-[state=closed]:zoom-out-95 oui:data-[state=open]:zoom-in-95 oui:data-[side=bottom]:slide-in-from-top-2 oui:data-[side=left]:slide-in-from-right-2 oui:data-[side=right]:slide-in-from-left-2 oui:data-[side=top]:slide-in-from-bottom-2 oui:z-50 oui:min-w-[8rem] oui:origin-(--radix-menubar-content-transform-origin) oui:overflow-hidden oui:rounded-md oui:border oui:p-1 oui:shadow-lg",
         className
       )}
       {...props}
