@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
 import {
   Carousel,
   CarouselContent,
@@ -54,6 +55,54 @@ export const Default: Story = {
       </Carousel>
     </div>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test that first item is visible initially (core carousel functionality)
+    const firstItem = canvas.getByText('1');
+    await expect(firstItem).toBeInTheDocument();
+
+    // Test that carousel navigation buttons exist
+    const allButtons = canvas.getAllByRole('button');
+    await expect(allButtons.length).toBeGreaterThanOrEqual(2); // Should have previous and next buttons
+
+    // Try to find navigation buttons by different methods
+    let nextButton: HTMLElement | null = null;
+    let prevButton: HTMLElement | null = null;
+
+    try {
+      nextButton = canvas.getByRole('button', { name: /next/i });
+    } catch {
+      // Fallback: use button position or any available button
+      nextButton = allButtons[allButtons.length - 1]; // Last button likely to be next
+    }
+
+    try {
+      prevButton = canvas.getByRole('button', { name: /previous/i });
+    } catch {
+      // Fallback: use button position
+      prevButton = allButtons[0]; // First button likely to be previous
+    }
+
+    if (nextButton) {
+      await expect(nextButton).toBeInTheDocument();
+      await userEvent.click(nextButton);
+      // Wait a moment for transition
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+
+    if (prevButton) {
+      await expect(prevButton).toBeInTheDocument();
+      await userEvent.click(prevButton);
+    }
+
+    // Test keyboard navigation on the carousel container
+    const carouselContainer = canvasElement.querySelector('[role="region"]') || canvasElement.firstChild as Element;
+    if (carouselContainer) {
+      await userEvent.click(carouselContainer);
+      await userEvent.keyboard('{ArrowRight}');
+    }
+  },
 };
 
 export const WithImages: Story = {

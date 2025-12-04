@@ -47,6 +47,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  args: {} as never,
   render: (args) => {
     const [value, setValue] = useState<string>('');
 
@@ -55,7 +56,6 @@ export const Default: Story = {
         type="single"
         value={value}
         onValueChange={setValue}
-        {...args}
       >
         <ToggleGroupItem value="bold" aria-label="Toggle bold">
           <Bold className="oui:h-4 oui:w-4" />
@@ -72,9 +72,7 @@ export const Default: Story = {
 };
 
 export const Multiple: Story = {
-  args: {
-    type: 'multiple',
-  },
+  args: {} as never,
   render: (args) => {
     const [value, setValue] = useState<string[]>([]);
 
@@ -83,7 +81,6 @@ export const Multiple: Story = {
         type="multiple"
         value={value}
         onValueChange={setValue}
-        {...args}
       >
         <ToggleGroupItem value="bold" aria-label="Toggle bold">
           <Bold className="oui:h-4 oui:w-4" />
@@ -107,18 +104,16 @@ export const Multiple: Story = {
 };
 
 export const Outline: Story = {
-  args: {
-    variant: 'outline',
-  },
+  args: {} as never,
   render: (args) => {
     const [value, setValue] = useState<string>('left');
 
     return (
       <ToggleGroup
         type="single"
+        variant="outline"
         value={value}
         onValueChange={setValue}
-        {...args}
       >
         <ToggleGroupItem value="left" aria-label="Align left">
           <AlignLeft className="oui:h-4 oui:w-4" />
@@ -142,6 +137,7 @@ export const Outline: Story = {
 };
 
 export const WithText: Story = {
+  args: {} as never,
   render: (args) => {
     const [value, setValue] = useState<string>('list');
 
@@ -150,7 +146,6 @@ export const WithText: Story = {
         type="single"
         value={value}
         onValueChange={setValue}
-        {...args}
       >
         <ToggleGroupItem value="list" aria-label="List view">
           <List className="oui:h-4 oui:w-4" />
@@ -177,6 +172,7 @@ export const WithText: Story = {
 };
 
 export const Sizes: Story = {
+  args: {} as never,
   render: (args) => {
     const [smallValue, setSmallValue] = useState<string>('bold');
     const [defaultValue, setDefaultValue] = useState<string>('bold');
@@ -191,8 +187,7 @@ export const Sizes: Story = {
             size="sm"
             value={smallValue}
             onValueChange={setSmallValue}
-            {...args}
-          >
+              >
             <ToggleGroupItem value="bold" aria-label="Bold">
               <Bold className="oui:h-3 oui:w-3" />
             </ToggleGroupItem>
@@ -212,8 +207,7 @@ export const Sizes: Story = {
             size="default"
             value={defaultValue}
             onValueChange={setDefaultValue}
-            {...args}
-          >
+              >
             <ToggleGroupItem value="bold" aria-label="Bold">
               <Bold className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
@@ -233,8 +227,7 @@ export const Sizes: Story = {
             size="lg"
             value={largeValue}
             onValueChange={setLargeValue}
-            {...args}
-          >
+              >
             <ToggleGroupItem value="bold" aria-label="Bold">
               <Bold className="oui:h-5 oui:w-5" />
             </ToggleGroupItem>
@@ -259,6 +252,7 @@ export const Sizes: Story = {
 };
 
 export const TextEditor: Story = {
+  args: {} as never,
   render: (args) => {
     const [formatting, setFormatting] = useState<string[]>([]);
     const [alignment, setAlignment] = useState<string>('left');
@@ -271,8 +265,7 @@ export const TextEditor: Story = {
             type="multiple"
             value={formatting}
             onValueChange={setFormatting}
-            {...args}
-          >
+              >
             <ToggleGroupItem value="bold" aria-label="Bold">
               <Bold className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
@@ -291,8 +284,7 @@ export const TextEditor: Story = {
             type="single"
             value={alignment}
             onValueChange={setAlignment}
-            {...args}
-          >
+              >
             <ToggleGroupItem value="left" aria-label="Align left">
               <AlignLeft className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
@@ -317,6 +309,7 @@ export const TextEditor: Story = {
 };
 
 export const ViewSwitcher: Story = {
+  args: {} as never,
   render: (args) => {
     const [view, setView] = useState<string>('list');
 
@@ -329,8 +322,7 @@ export const ViewSwitcher: Story = {
             variant="outline"
             value={view}
             onValueChange={setView}
-            {...args}
-          >
+              >
             <ToggleGroupItem value="list" aria-label="List view">
               <List className="oui:h-4 oui:w-4" />
             </ToggleGroupItem>
@@ -356,6 +348,7 @@ export const ViewSwitcher: Story = {
 };
 
 export const Showcase: Story = {
+  args: {} as never,
   render: () => {
     const [formatting, setFormatting] = useState<string[]>(['bold']);
     const [alignment, setAlignment] = useState<string>('left');

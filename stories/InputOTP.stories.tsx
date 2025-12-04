@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
 import { useState } from 'react';
 import {
   InputOTP,
@@ -39,6 +40,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  args: {} as never,
   render: (args) => {
     const [value, setValue] = useState("");
 
@@ -51,7 +53,6 @@ export const Default: Story = {
             maxLength={6}
             value={value}
             onChange={setValue}
-            {...args}
           >
             <InputOTPGroup>
               <InputOTPSlot index={0} />
@@ -73,9 +74,39 @@ export const Default: Story = {
       </div>
     );
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test that OTP input slots are present
+    const otpInput = canvas.getByLabelText('One-Time Password');
+    await expect(otpInput).toBeInTheDocument();
+
+    // Test initial state message
+    await expect(canvas.getByText('Enter your one-time password.')).toBeInTheDocument();
+
+    // Test typing in OTP - type individual characters
+    await userEvent.click(otpInput);
+    await userEvent.type(otpInput, '123456');
+
+    // Verify that the value is displayed
+    await expect(canvas.getByText('You entered: 123456')).toBeInTheDocument();
+
+    // Test that max length is enforced (should not accept more than 6 characters)
+    await userEvent.type(otpInput, '789');
+    // Should still show only 6 characters
+    await expect(canvas.getByText('You entered: 123456')).toBeInTheDocument();
+
+    // Test clearing and partial input
+    await userEvent.clear(otpInput);
+    await userEvent.type(otpInput, '12');
+
+    // Should show partial input
+    await expect(canvas.getByText('You entered: 12')).toBeInTheDocument();
+  },
 };
 
 export const WithSeparator: Story = {
+  args: {} as never,
   render: (args) => {
     const [value, setValue] = useState("");
 
@@ -88,7 +119,6 @@ export const WithSeparator: Story = {
             maxLength={6}
             value={value}
             onChange={setValue}
-            {...args}
           >
             <InputOTPGroup>
               <InputOTPSlot index={0} />
@@ -119,9 +149,7 @@ export const WithSeparator: Story = {
 };
 
 export const FourDigit: Story = {
-  args: {
-    maxLength: 4,
-  },
+  args: {} as never,
   render: (args) => {
     const [value, setValue] = useState("");
 
@@ -134,7 +162,6 @@ export const FourDigit: Story = {
             maxLength={4}
             value={value}
             onChange={setValue}
-            {...args}
           >
             <InputOTPGroup>
               <InputOTPSlot index={0} />
@@ -160,6 +187,7 @@ export const FourDigit: Story = {
 };
 
 export const TwoFactor: Story = {
+  args: {} as never,
   render: (args) => {
     const [value, setValue] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -195,8 +223,7 @@ export const TwoFactor: Story = {
               value={value}
               onChange={setValue}
               disabled={isSubmitting}
-              {...args}
-            >
+              >
               <InputOTPGroup>
                 <InputOTPSlot index={0} />
                 <InputOTPSlot index={1} />
@@ -238,6 +265,7 @@ export const TwoFactor: Story = {
 };
 
 export const PhoneVerification: Story = {
+  args: {} as never,
   render: (args) => {
     const [value, setValue] = useState("");
     const [timeLeft, setTimeLeft] = useState(60);
@@ -263,7 +291,6 @@ export const PhoneVerification: Story = {
             maxLength={6}
             value={value}
             onChange={setValue}
-            {...args}
           >
             <InputOTPGroup>
               <InputOTPSlot index={0} />
@@ -309,6 +336,7 @@ export const PhoneVerification: Story = {
 };
 
 export const Showcase: Story = {
+  args: {} as never,
   render: () => {
     const [value1, setValue1] = useState("");
     const [value2, setValue2] = useState("");

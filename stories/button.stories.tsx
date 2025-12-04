@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from '@storybook/test';
 import { Button } from '@/components';
 
 const meta: Meta<typeof Button> = { 
@@ -183,6 +184,20 @@ export const Loading: Story = {
   args: {
     loading: true,
     children: 'Please wait',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button', { name: /please wait/i });
+
+    // Test that button is disabled when loading
+    await expect(button).toBeDisabled();
+
+    // Test that spinner is present
+    const spinner = canvas.getByRole('status', { name: /loading/i });
+    await expect(spinner).toBeInTheDocument();
+
+    // Test that children text is still visible
+    await expect(button).toHaveTextContent('Please wait');
   },
   parameters: {
     docs: {

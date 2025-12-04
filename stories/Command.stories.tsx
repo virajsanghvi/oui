@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
 import { useState } from 'react';
 import {
   Calculator,
@@ -88,6 +89,39 @@ export const Default: Story = {
       </Command>
     </div>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test that all command items are initially visible
+    await expect(canvas.getByText('Calendar')).toBeInTheDocument();
+    await expect(canvas.getByText('Search Emoji')).toBeInTheDocument();
+    await expect(canvas.getByText('Calculator')).toBeInTheDocument();
+    await expect(canvas.getByText('Profile')).toBeInTheDocument();
+    await expect(canvas.getByText('Billing')).toBeInTheDocument();
+    await expect(canvas.getAllByText('Settings')[1]).toBeInTheDocument(); // Use the second instance (the item, not the heading)
+
+    // Test search functionality
+    const searchInput = canvas.getByPlaceholderText('Type a command or search...');
+    await userEvent.type(searchInput, 'cal');
+
+    // After typing 'cal', should show Calendar and Calculator, but not other items
+    await expect(canvas.getByText('Calendar')).toBeInTheDocument();
+    await expect(canvas.getByText('Calculator')).toBeInTheDocument();
+
+    // Clear search and test with another term
+    await userEvent.clear(searchInput);
+    await userEvent.type(searchInput, 'profile');
+
+    // Should show only Profile
+    await expect(canvas.getByText('Profile')).toBeInTheDocument();
+
+    // Test empty state
+    await userEvent.clear(searchInput);
+    await userEvent.type(searchInput, 'nonexistent');
+
+    // Should show empty state
+    await expect(canvas.getByText('No results found.')).toBeInTheDocument();
+  },
 };
 
 export const Dialog: Story = {

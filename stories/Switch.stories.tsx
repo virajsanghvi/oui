@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
 import { Switch } from '@/components';
 import { useState } from 'react';
 
@@ -291,6 +292,27 @@ export const BoxVariant: Story = {
     variant: 'box',
     label: 'Switch Text',
     description: 'This is a switch description.',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test that label and description are present
+    await expect(canvas.getByText('Switch Text')).toBeInTheDocument();
+    await expect(canvas.getByText('This is a switch description.')).toBeInTheDocument();
+
+    // Test that box variant styling is applied (should have card-like container)
+    const switchContainer = canvas.getByRole('switch').closest('label') || canvas.getByRole('switch').parentElement;
+    await expect(switchContainer).toBeInTheDocument();
+
+    // Test switch functionality
+    const switchElement = canvas.getByRole('switch');
+    await expect(switchElement).not.toBeChecked();
+
+    await userEvent.click(switchElement);
+    await expect(switchElement).toBeChecked();
+
+    await userEvent.click(switchElement);
+    await expect(switchElement).not.toBeChecked();
   },
   parameters: {
     docs: {

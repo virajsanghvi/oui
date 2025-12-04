@@ -8,6 +8,13 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-a11y",
     "@storybook/addon-docs",
+    {
+      name: "@storybook/addon-vitest",
+      options: {
+        // Point to the workspace configuration
+        configFile: '../vitest.workspace.ts'
+      }
+    },
   ],
 
   framework: {
@@ -30,6 +37,13 @@ const config: StorybookConfig = {
         "@": resolve(__dirname, "../src"),
       };
     }
+
+    // Configure for better Vitest integration
+    config.define = {
+      ...config.define,
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+    };
+
     return config;
   }
 };

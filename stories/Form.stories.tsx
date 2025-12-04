@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -128,11 +129,41 @@ export const Default: Story = {
       </div>
     );
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test that form elements exist
+    const usernameInput = canvas.getByPlaceholderText('shadcn');
+    const emailInput = canvas.getByPlaceholderText('you@example.com');
+    const bioInput = canvas.getByPlaceholderText('Tell us a little bit about yourself');
+    const submitButton = canvas.getByRole('button', { name: /update profile/i });
+
+    await expect(usernameInput).toBeInTheDocument();
+    await expect(emailInput).toBeInTheDocument();
+    await expect(bioInput).toBeInTheDocument();
+    await expect(submitButton).toBeInTheDocument();
+
+    // Test form interaction - type in fields to test validation logic
+    await userEvent.type(usernameInput, 'a'); // Too short
+    await userEvent.clear(usernameInput);
+    await userEvent.type(usernameInput, 'validuser'); // Valid
+
+    // Test email validation
+    await userEvent.type(emailInput, 'invalid');
+    await userEvent.clear(emailInput);
+    await userEvent.type(emailInput, 'test@example.com'); // Valid
+
+    // Test bio field
+    await userEvent.type(bioInput, 'This is a test bio that meets the minimum requirements');
+
+    // Test that submit button is clickable
+    await userEvent.click(submitButton);
+  },
 };
 
 const settingsFormSchema = z.object({
   theme: z.enum(["light", "dark", "system"], {
-    required_error: "Please select a theme.",
+    message: "Please select a theme.",
   }),
   notifications: z.boolean().default(false).optional(),
   marketing_emails: z.boolean().default(false).optional(),

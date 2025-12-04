@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
 import { RadioGroup, RadioGroupItem } from '@/components';
 import { Label } from '@/components';
 
@@ -90,6 +91,27 @@ export const BoxVariant: Story = {
       </RadioGroup>
     </div>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test that premium text exists
+    const premiumText = canvas.getByText('Premium Plan');
+    await expect(premiumText).toBeInTheDocument();
+
+    // Find the premium radio by its value attribute
+    const premiumRadio = canvas.getByRole('radio', { name: /premium plan/i }) ||
+                         canvas.querySelector('input[value="premium"]') as HTMLInputElement;
+    await expect(premiumRadio).toBeInTheDocument();
+
+    // Test switching to a different option by clicking the basic plan text/container
+    const basicText = canvas.getByText('Basic Plan');
+    await userEvent.click(basicText);
+
+    // Verify the basic radio is now checked
+    const basicRadio = canvas.getByRole('radio', { name: /basic plan/i }) ||
+                      canvas.querySelector('input[value="basic"]') as HTMLInputElement;
+    await expect(basicRadio).toBeChecked();
+  },
 };
 
 export const PaymentMethods: Story = {

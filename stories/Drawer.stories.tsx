@@ -40,8 +40,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  args: {} as never,
   render: (args) => (
-    <Drawer {...args}>
+    <Drawer>
       <DrawerTrigger asChild>
         <Button variant="outline">Open Drawer</Button>
       </DrawerTrigger>
@@ -76,6 +77,7 @@ export const Default: Story = {
 };
 
 export const WithCounter: Story = {
+  args: {} as never,
   render: (args) => {
     const [goal, setGoal] = useState(350);
 
@@ -84,7 +86,7 @@ export const WithCounter: Story = {
     }
 
     return (
-      <Drawer {...args}>
+      <Drawer>
         <DrawerTrigger asChild>
           <Button variant="outline">Set Goal</Button>
         </DrawerTrigger>
@@ -160,11 +162,9 @@ export const WithCounter: Story = {
 };
 
 export const FromTop: Story = {
-  args: {
-    direction: 'top',
-  },
+  args: {} as never,
   render: (args) => (
-    <Drawer {...args}>
+    <Drawer direction="top">
       <DrawerTrigger asChild>
         <Button variant="outline">Open from Top</Button>
       </DrawerTrigger>
@@ -221,11 +221,9 @@ export const FromTop: Story = {
 };
 
 export const FromRight: Story = {
-  args: {
-    direction: 'right',
-  },
+  args: {} as never,
   render: (args) => (
-    <Drawer {...args}>
+    <Drawer direction="right">
       <DrawerTrigger asChild>
         <Button variant="outline">Open from Right</Button>
       </DrawerTrigger>
@@ -270,6 +268,7 @@ export const FromRight: Story = {
 };
 
 export const Showcase: Story = {
+  args: {} as never,
   render: () => (
     <div className="oui:space-y-8">
       <div>

@@ -9,7 +9,7 @@ import {
   SelectLabel,
   SelectSeparator,
 } from '@/components';
-import { LineChart, BarChart3, PieChart, CircleDashed } from 'lucide-react';
+import { LineChart, BarChart3, PieChart } from 'lucide-react';
 
 const meta: Meta<typeof Select> = {
   title: 'UI/Select',

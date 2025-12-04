@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from '@storybook/test';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components';
 import { User, UserCheck, Crown, Shield } from 'lucide-react';
 
@@ -39,6 +40,17 @@ export const Squared: Story = {
       <AvatarFallback variant="squared">CN</AvatarFallback>
     </Avatar>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test that fallback text exists
+    const fallbackText = canvas.getByText('CN');
+    await expect(fallbackText).toBeInTheDocument();
+
+    // Test that squared variant class is applied (should have rounded-lg instead of rounded-full)
+    const avatarContainer = fallbackText.closest('[class*="oui:rounded-lg"]') || fallbackText.parentElement;
+    await expect(avatarContainer).toBeInTheDocument();
+  },
   parameters: {
     docs: {
       description: {

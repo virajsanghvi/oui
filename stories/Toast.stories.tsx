@@ -127,37 +127,37 @@ export const ToastShowcase: Story = {
         <div className="oui:grid oui:grid-cols-3 oui:gap-4">
           <Button
             size="sm"
-            onClick={() => toast('Top Left', { position: 'oui:top-left' })}
+            onClick={() => toast('Top Left', { position: 'top-left' })}
           >
             Top Left
           </Button>
           <Button
             size="sm"
-            onClick={() => toast('Top Center', { position: 'oui:top-center' })}
+            onClick={() => toast('Top Center', { position: 'top-center' })}
           >
             Top Center
           </Button>
           <Button
             size="sm"
-            onClick={() => toast('Top Right', { position: 'oui:top-right' })}
+            onClick={() => toast('Top Right', { position: 'top-right' })}
           >
             Top Right
           </Button>
           <Button
             size="sm"
-            onClick={() => toast('Bottom Left', { position: 'oui:bottom-left' })}
+            onClick={() => toast('Bottom Left', { position: 'bottom-left' })}
           >
             Bottom Left
           </Button>
           <Button
             size="sm"
-            onClick={() => toast('Bottom Center', { position: 'oui:bottom-center' })}
+            onClick={() => toast('Bottom Center', { position: 'bottom-center' })}
           >
             Bottom Center
           </Button>
           <Button
             size="sm"
-            onClick={() => toast('Bottom Right', { position: 'oui:bottom-right' })}
+            onClick={() => toast('Bottom Right', { position: 'bottom-right' })}
           >
             Bottom Right
           </Button>

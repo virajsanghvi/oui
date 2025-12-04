@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { MoreHorizontal, ArrowUpDown, ChevronDown } from 'lucide-react';
+import { MoreHorizontal, ArrowUpDown } from 'lucide-react';
 import {
   Table,
   TableBody,
