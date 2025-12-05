@@ -35,6 +35,7 @@
     "build:lib": "tsc && tsc-alias && npx @tailwindcss/cli -i src/styles/preset.css -o dist/style.css && npx tsx scripts/scope-css.ts",
     "build:storybook": "storybook build -o ./build/storybook",
     "clean": "rm -rf build node_modules dist lib",
+    "fix:shadcn": "npx tsx scripts/fix-shadcn-components.ts",
     "lint": "yarn run lint:ts",
     "lint:ts": "tsc --project tsconfig.typecheck.json --noEmit",
     "lint:ts:watch": "tsc --project tsconfig.typecheck.json --noEmit --watch",

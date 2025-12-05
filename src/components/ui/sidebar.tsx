@@ -478,7 +478,7 @@ const sidebarMenuButtonVariants = cva(
       variant: {
         default: "oui:hover:bg-sidebar-accent oui:hover:text-sidebar-accent-foreground",
         outline:
-          "oui:bg-background oui:shadow-[0_0_0_1px_hsl(var(--sidebar-border))] oui:hover:bg-sidebar-accent oui:hover:text-sidebar-accent-foreground oui:hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))]",
+          "oui:bg-background oui:shadow-[0_0_0_1px_hsl(var(--oui-sidebar-border))] oui:hover:bg-sidebar-accent oui:hover:text-sidebar-accent-foreground oui:hover:shadow-[0_0_0_1px_hsl(var(--oui-sidebar-accent))]",
       },
       size: {
         default: "oui:h-8 oui:text-sm",
