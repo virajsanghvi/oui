@@ -100,7 +100,7 @@ export const BoxVariant: Story = {
 
     // Find the premium radio by its value attribute
     const premiumRadio = canvas.getByRole('radio', { name: /premium plan/i }) ||
-                         canvas.querySelector('input[value="premium"]') as HTMLInputElement;
+                         canvasElement.querySelector('input[value="premium"]') as HTMLInputElement;
     await expect(premiumRadio).toBeInTheDocument();
 
     // Test switching to a different option by clicking the basic plan text/container
@@ -109,7 +109,7 @@ export const BoxVariant: Story = {
 
     // Verify the basic radio is now checked
     const basicRadio = canvas.getByRole('radio', { name: /basic plan/i }) ||
-                      canvas.querySelector('input[value="basic"]') as HTMLInputElement;
+                      canvasElement.querySelector('input[value="basic"]') as HTMLInputElement;
     await expect(basicRadio).toBeChecked();
   },
 };

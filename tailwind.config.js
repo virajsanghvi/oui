@@ -5,10 +5,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        'severity-low': 'hsl(var(--severity-low))',
-        'severity-med': 'hsl(var(--severity-med))',
-        'severity-high': 'hsl(var(--severity-high))',
-        'severity-critical': 'hsl(var(--severity-critical))'
+        'severity-low': 'hsl(var(--oui-severity-low))',
+        'severity-med': 'hsl(var(--oui-severity-med))',
+        'severity-high': 'hsl(var(--oui-severity-high))',
+        'severity-critical': 'hsl(var(--oui-severity-critical))'
       }
     }
   },
