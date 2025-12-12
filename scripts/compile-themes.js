@@ -58,7 +58,7 @@ async function compileScssFiles(
           path.join(destinationDirectory, `oui_${name}.css`),
           path.join(destinationDirectory, `oui_${name}.json`),
           path.join(destinationDirectory, `oui_${name}.json.d.ts`),
-          packageName
+          '@opensearch-project/oui'
         );
 
         console.log(
@@ -83,7 +83,7 @@ async function compileScssFiles(
           path.join(destinationDirectory, `eui_${name}.css`),
           path.join(destinationDirectory, `eui_${name}.json`),
           path.join(destinationDirectory, `eui_${name}.json.d.ts`),
-          packageName,
+          '@elastic/eui',
           true
         );
         console.log(
