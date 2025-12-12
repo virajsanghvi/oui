@@ -12,6 +12,7 @@ import {
 } from "react-hook-form"
 
 import { cn } from "@/lib/utils"
+import { useCompatId } from "@/lib/react-compat"
 import { Label } from "@/components/ui/label"
 
 const Form = FormProvider
@@ -72,7 +73,7 @@ const FormItemContext = React.createContext<FormItemContextValue>(
 )
 
 function FormItem({ className, ...props }: React.ComponentProps<"div">) {
-  const id = React.useId()
+  const id = useCompatId()
 
   return (
     <FormItemContext.Provider value={{ id }}>

@@ -4,6 +4,7 @@ import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { Switch as BaseSwitch } from "../ui/switch"
+import { useCompatId } from "@/lib/react-compat"
 
 const switchVariants = cva("", {
   variants: {
@@ -33,7 +34,7 @@ function Switch({
   id,
   ...props
 }: SwitchProps) {
-  const switchId = id || React.useId()
+  const switchId = id || useCompatId()
 
   const switchElement = (
     <BaseSwitch
