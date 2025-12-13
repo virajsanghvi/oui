@@ -36,6 +36,15 @@ function scopeCSS(): void {
 
   const tailwindResetCSS = layerBaseMatch[0];
 
+  // Extract HTML reset styles from the Tailwind reset
+  const htmlResetRegex = /html,\s*:host\s*\{([^}]+)\}/;
+  const htmlResetMatch = tailwindResetCSS.match(htmlResetRegex);
+
+  let htmlResetStyles = '';
+  if (htmlResetMatch) {
+    htmlResetStyles = htmlResetMatch[1].trim();
+  }
+
   // Remove the first @layer base section from the original CSS
   const cssWithoutFirstLayerBase = css.replace(layerBaseRegex, '');
 
@@ -49,8 +58,16 @@ ${resetCSS.replace(/^/gm, '  ')}
 
   /* Tailwind Reset CSS */
   ${tailwindResetCSS.replace(/^/gm, '  ')}
+  
+  /* Apply HTML reset styles to .oui2 root container */
+  @layer base {
+    .oui2 {
+      ${htmlResetStyles ? htmlResetStyles.replace(/^/gm, '    ') : '    /* No HTML reset styles found */'}
+      font-size: 16px; /* to override OUI */
+    }
+  }
 }
-
+      
 /* Unscoped OUI2 Component Styles */
 ${cssWithoutFirstLayerBase}`;
 
