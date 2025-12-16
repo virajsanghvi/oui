@@ -61,7 +61,7 @@ ${resetCSS.replace(/^/gm, '  ')}
   
   /* Apply HTML reset styles to .oui2 root container */
   @layer base {
-    .oui2 {
+    :scope {
       ${htmlResetStyles ? htmlResetStyles.replace(/^/gm, '    ') : '    /* No HTML reset styles found */'}
       font-size: 16px; /* to override OUI */
     }
